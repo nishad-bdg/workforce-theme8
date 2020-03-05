@@ -90,9 +90,9 @@
                         </v-card>
                       </v-col>
                       <v-col cols="12" md="12">
-                        <v-card flat color="transparent" rounded>
+                        <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                           <v-card-text>
-                            <v-row no-gutters align="center">
+                            <v-row no-gutters align="center" class="mt-n4">
                               <v-col cols="12" md="3">
                                 <v-list disabled color="transparent">
                                   <v-list-item-group color="primary">
@@ -141,13 +141,37 @@
               </v-col>
               <!-- Column 2 -->
               <!-- Coumn 3 tabs -->
-              <v-col cols="12" md="10" align="center" offset-md="1" class="mt-n8 mb-n7" >
+              <v-col cols="12" md="10" align="center" offset-md="1" class="mt-n2 mb-n7">
                 <v-card color="transparent" flat>
-                  <v-tabs background-color="#00CDF7" height="64" class="parent-tab" centered dark hide-slider>
-                    <v-tab>Option</v-tab>
-                    <v-tab>Another Selection</v-tab>
-                    <v-tab>Items</v-tab>
-                    <v-tab>Another Screen</v-tab>
+                  <v-tabs
+                    background-color="#00CDF7"
+                    height="64"
+                    class="parent-tab"
+                    grow
+                    centered
+                    dark
+                    hide-slider
+                  >
+                    <v-tab
+                      v-for="tab in tabs"
+                      :key="tab.id"
+                      @click="currentTab = tab.id"
+                      class="ct-tab-title text-capitalize"
+                      :class="[
+                        currentTab == tab.id ? 'active-tab' : '',
+                        tab.id == 1 ? 'round-left' : '',
+                        tab.id == 4 ? 'round-right' : '',
+                        tab.id != 4 ? 'mr-xs-2 mr-md-12' : ''
+                      ]"
+                    >
+                      <v-avatar tile height="20" width="23">
+                        <img
+                          src="../assets/icons/tabs/1.png"
+                          class="mr-4"
+                        />
+                      </v-avatar>
+                      {{tab.title}}
+                    </v-tab>
                   </v-tabs>
                 </v-card>
               </v-col>
@@ -247,7 +271,7 @@ export default {
   font-family: "Open Sans" !important;
   font-size: 18px !important;
   text-transform: capitalize !important;
-  padding: 30px !important;
+  padding: 25px !important;
   border-radius: 38px !important;
 }
 
@@ -259,20 +283,16 @@ export default {
 .parent-tab {
   border-radius: 26px 26px 0 0 !important;
 }
-.ct-tab {
-  background-color: rgb(233, 233, 233);
-  color: rgb(87, 86, 86) !important;
-  transition: 0.2s;
-}
 
 .ct-tab-title {
+  color: #ffffff !important;
   font-size: 1.2rem !important;
   font-weight: 400 !important;
 }
 
 .active-tab {
-  background-color: #4e6ef1;
-  color: white !important;
+  background-color: #ffffff !important;
+  color: #fc5283 !important;
 }
 /* tab styles */
 
