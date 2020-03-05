@@ -10,7 +10,7 @@
               <v-col cols="12" md="6">
                 <v-card color="transparent" flat>
                   <v-card-text>
-                    <v-list-item three-line>
+                    <v-list-item>
                       <!-- avatar -->
                       <v-list-item-avatar
                         color="grey darken-3"
@@ -22,63 +22,29 @@
                       </v-list-item-avatar>
                       <!-- Avatar -->
                       <!-- Name -->
-                      <v-list color="transparent" class="ml-n5" disabled>
-                        <!-- Group Name -->
-                        <v-list-item-group>
-                          <v-list-item>
-                            <v-list-item-content>
-                              <v-list-item-title class="headline">
-                                <span class="profile-title">Olivia Emily</span>
-                              </v-list-item-title>
-                            </v-list-item-content>
-                          </v-list-item>
-                        </v-list-item-group>
-                        <!-- Group Name -->
-                        <!-- Group Designation-->
-                        <v-list-item-group class="mt-n6">
-                          <v-list-item>
-                            <v-list-item-content>
-                              <v-list-item-subtitle class="profile-subtitle">UI/UX Designer</v-list-item-subtitle>
-                            </v-list-item-content>
-                          </v-list-item>
-                        </v-list-item-group>
-                        <!-- Group Desigantion -->
-                        <!-- Social Icons -->
-                        <v-list-item-group>
-                          <v-list-item>
-                            <v-list-item-content>
-                              <v-list-item-subtitle>
-                                <v-row no-gutters>
-                                  <v-col cols="12" md="3">
-                                    <v-btn icon>
-                                      <v-img src="../assets/icons/behance.png"></v-img>
-                                    </v-btn>
-                                  </v-col>
-
-                                  <v-col cols="12" md="3">
-                                    <v-btn icon>
-                                      <v-img src="../assets/icons/dribble.png"></v-img>
-                                    </v-btn>
-                                  </v-col>
-
-                                  <v-col cols="12" md="3">
-                                    <v-btn icon>
-                                      <v-img src="../assets/icons/instagram.png"></v-img>
-                                    </v-btn>
-                                  </v-col>
-
-                                  <v-col cols="12" md="3">
-                                    <v-btn icon>
-                                      <v-img src="../assets/icons/google.png"></v-img>
-                                    </v-btn>
-                                  </v-col>
-                                </v-row>
-                              </v-list-item-subtitle>
-                            </v-list-item-content>
-                          </v-list-item>
-                        </v-list-item-group>
-                        <!-- Social Icons -->
-                      </v-list>
+                      <v-list-item-content>
+                        <v-list-item-title class="headline ml-4" >
+                          <span class="profile-title">Olivia Emily</span>
+                        </v-list-item-title>
+                        <v-list-item-subtitle class="ml-4">
+                          <span class="profile-subtitle">UX/UI Designer</span>
+                        </v-list-item-subtitle>
+                        
+                        <v-list-item-icon class="">
+                          <v-btn icon class="mr-3">
+                            <v-img src="../assets/icons/behance.png"></v-img>
+                          </v-btn> 
+                           <v-btn icon class="mr-3">
+                            <v-img src="../assets/icons/instagram.png"></v-img>
+                          </v-btn>
+                          <v-btn icon class="mr-3">
+                            <v-img src="../assets/icons/dribble.png"></v-img>
+                          </v-btn>
+                          <v-btn icon class="mr-3">
+                            <v-img src="../assets/icons/google.png"></v-img>
+                          </v-btn>
+                        </v-list-item-icon>
+                      </v-list-item-content>
 
                       <!-- Name -->
                     </v-list-item>
@@ -116,3 +82,13 @@
   color: #ffffff !important;
 }
 </style>
+
+<script>
+export default {
+  methods: {
+    hello() {
+      alert("Hello");
+    }
+  }
+};
+</script>
