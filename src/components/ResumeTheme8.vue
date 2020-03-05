@@ -5,7 +5,7 @@
       <v-col cols="12">
         <v-card color="#6152CF" class="parent-card" dark flat>
           <v-card-text>
-            <v-row class="mt-n5">
+            <v-row>
               <!-- Column 1 -->
               <v-col cols="12" md="5" sm="8" xs="8">
                 <v-card color="transparent" flat class="mx-5">
@@ -79,6 +79,7 @@
                                   <img class="mr-4" src="../assets/icons/phone.png" />Voice Call
                                 </v-btn>
                               </v-col>
+
                               <v-col cols="12" md="4" offset-md="2">
                                 <v-btn large color="#2400FF" class="btn-voice-call">
                                   <img src="../assets/icons/camera.png" class="mr-4" />Upload Video
@@ -89,7 +90,7 @@
                         </v-card>
                       </v-col>
                       <v-col cols="12" md="12">
-                        <v-card flat color="transparent" rounded>  
+                        <v-card flat color="transparent" rounded>
                           <v-card-text>
                             <v-row no-gutters align="center">
                               <v-col cols="12" md="3">
@@ -139,10 +140,18 @@
                 </v-card>
               </v-col>
               <!-- Column 2 -->
-
-              <!-- Column 3 the tab bar -->
-
-              <!-- Column 3 the tab bar -->
+              <!-- Coumn 3 tabs -->
+              <v-col cols="12" md="10" align="center" offset-md="1" class="mt-n8 mb-n7" >
+                <v-card color="transparent" flat>
+                  <v-tabs background-color="#00CDF7" height="64" class="parent-tab" centered dark hide-slider>
+                    <v-tab>Option</v-tab>
+                    <v-tab>Another Selection</v-tab>
+                    <v-tab>Items</v-tab>
+                    <v-tab>Another Screen</v-tab>
+                  </v-tabs>
+                </v-card>
+              </v-col>
+              <!-- Column3 tabs-->
             </v-row>
           </v-card-text>
         </v-card>
@@ -151,6 +160,31 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      currentTab: 1,
+      tabs: [
+        { title: "Portfolio", id: 1, image: "layer" },
+        { title: "Works", id: 2, image: "portfolio" },
+        { title: "Education", id: 3, image: "book" },
+        { title: "Design Skill", id: 4, image: "idea" }
+      ],
+      skills: [
+        { skill: "PS", value: 80, id: 1 },
+        { skill: "Al", value: 35, id: 2 },
+        { skill: "XD", value: 92, id: 3 },
+        { skill: "UI", value: 55, id: 4 },
+        { skill: "UX", value: 72, id: 5 }
+      ]
+    };
+  },
+
+  methods: {}
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
@@ -220,6 +254,28 @@
 .hourly-rate-icon {
   width: 20px;
 }
+
+/* tab styles */
+.parent-tab {
+  border-radius: 26px 26px 0 0 !important;
+}
+.ct-tab {
+  background-color: rgb(233, 233, 233);
+  color: rgb(87, 86, 86) !important;
+  transition: 0.2s;
+}
+
+.ct-tab-title {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+
+.active-tab {
+  background-color: #4e6ef1;
+  color: white !important;
+}
+/* tab styles */
+
 /* hire me card */
 @media screen and (max-width: 1200px) {
   .desktop-row {
