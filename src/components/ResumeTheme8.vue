@@ -294,6 +294,15 @@ export default {
   background-color: #ffffff !important;
   color: #fc5283 !important;
 }
+
+/* Corners */
+.round-left {
+  border-top-left-radius: 26px;
+}
+
+.round-right {
+  border-top-right-radius: 26px;
+}
 /* tab styles */
 
 /* hire me card */
