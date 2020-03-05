@@ -35,7 +35,12 @@
                             <v-img class="social-icon" src="../assets/icons/behance.png"></v-img>
                           </v-btn>
                           <v-btn small icon class="mr-2">
-                            <v-img height="30" width="30" class="social-icon" src="../assets/icons/instagram.png"></v-img>
+                            <v-img
+                              height="30"
+                              width="30"
+                              class="social-icon"
+                              src="../assets/icons/instagram.png"
+                            ></v-img>
                           </v-btn>
                           <v-btn small icon class="mr-2">
                             <v-img class="social-icon" src="../assets/icons/dribble.png"></v-img>
@@ -85,10 +90,42 @@
                     <v-card class="card-hire-me" color="#251D44">
                       <v-card-text>
                         <v-row no-gutters align="center">
+                          <v-col cols="12" md="3">
+                            <v-list disabled color="transparent">
+                              <v-list-item-group color="primary">
+                                <v-list-item>
+                                  <v-list-item-icon>
+                                    <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
+                                  </v-list-item-icon>
+                                  <v-list-item-content class="ml-n5">
+                                    <v-list-item-title>15$</v-list-item-title>
+                                    <v-list-item-title>Hourly Rate</v-list-item-title>
+                                  </v-list-item-content>
+                                </v-list-item>
+                              </v-list-item-group>
+                            </v-list>
+                          </v-col>
+
                           <v-col cols="12" md="4">
+                            <v-list disabled color="transparent">
+                              <v-list-item-group color="primary">
+                                <v-list-item>
+                                  <v-list-item-icon>
+                                    <v-img width="20" src="../assets/icons/availibility.png"></v-img>
+                                  </v-list-item-icon>
+                                  <v-list-item-content class="ml-n5">
+                                    <v-list-item-title>40</v-list-item-title>
+                                    <v-list-item-title>Weekly Availibility</v-list-item-title>
+                                  </v-list-item-content>
+                                </v-list-item>
+                              </v-list-item-group>
+                            </v-list>
+                          </v-col>
+
+                          <v-col cols="12" md="4" offset-md="1">
                             <v-btn block color="#00CDF7" class="btn-hire-me">
                               Hire Me
-                                <img class="ml-2" src="../assets/icons/chat2.png">
+                              <img class="ml-2"  src="../assets/icons/chat2.png">
                             </v-btn>
                           </v-col>
                         </v-row>
@@ -135,7 +172,7 @@
 }
 
 /* social icons */
-.social-icon{
+.social-icon {
   width: 30px;
   height: 30px;
 }
@@ -163,7 +200,7 @@
 
 .btn-hire-me {
   font-family: "Open Sans" !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   text-transform: capitalize !important;
   padding: 30px !important;
   border-radius: 38px !important;
