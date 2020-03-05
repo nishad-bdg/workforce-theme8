@@ -3,12 +3,12 @@
     <v-row no-gutters>
       <!-- Column for header section -->
       <v-col cols="12">
-        <v-card color="#6152CF" style="border-radius:0px;" dark flat>
+        <v-card color="#6152CF" class="parent-card" dark flat>
           <v-card-text>
             <v-row class="mt-n5">
               <!-- Column 1 -->
               <v-col cols="12" md="5" sm="8" xs="8">
-                <v-card color="transparent" flat>
+                <v-card color="transparent" flat class="mx-5">
                   <v-card-text>
                     <v-list-item>
                       <!-- avatar -->
@@ -63,76 +63,80 @@
               <!-- Column 1 -->
 
               <!-- Column 2 -->
-              <v-col cols="12" md="6" class="desktop-row">
-                <v-row no-gutters>
-                  <v-col cols="12" md="12">
-                    <v-card flat color="transparent">
-                      <v-card-text align="center">
-                        <v-row align="center">
-                          <v-col cols="12" md="3">
-                            <div class="interview-text mr-n10">Your Interviews:</div>
-                          </v-col>
-                          <v-col cols="12" md="2" class="custom-col mx-4">
-                            <v-btn large color="#03CA9F" class="btn-voice-call">
-                              <img class="mr-4" src="../assets/icons/phone.png" />Voice Call
-                            </v-btn>
-                          </v-col>
-                          <v-col cols="12" md="4" offset-md="2">
-                            <v-btn large color="#2400FF" class="btn-voice-call">
-                              <img src="../assets/icons/camera.png" class="mr-4" />Upload Video
-                            </v-btn>
-                          </v-col>
-                        </v-row>
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" md="12">
-                    <v-card class="card-hire-me" color="#251D44">
-                      <v-card-text>
-                        <v-row no-gutters align="center">
-                          <v-col cols="12" md="3">
-                            <v-list disabled color="transparent">
-                              <v-list-item-group color="primary">
-                                <v-list-item>
-                                  <v-list-item-icon>
-                                    <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
-                                  </v-list-item-icon>
-                                  <v-list-item-content class="ml-n5">
-                                    <v-list-item-title>15$</v-list-item-title>
-                                    <v-list-item-title>Hourly Rate</v-list-item-title>
-                                  </v-list-item-content>
-                                </v-list-item>
-                              </v-list-item-group>
-                            </v-list>
-                          </v-col>
+              <v-col cols="12" md="6" class="desktop-row ml-10">
+                <v-card flat color="transparent">
+                  <v-card-text>
+                    <v-row no-gutters>
+                      <v-col cols="12" md="12">
+                        <v-card flat color="transparent">
+                          <v-card-text align="center">
+                            <v-row align="center">
+                              <v-col cols="12" md="3">
+                                <div class="interview-text mr-n10">Your Interviews:</div>
+                              </v-col>
+                              <v-col cols="12" md="2" class="custom-col mx-4">
+                                <v-btn large color="#03CA9F" class="btn-voice-call">
+                                  <img class="mr-4" src="../assets/icons/phone.png" />Voice Call
+                                </v-btn>
+                              </v-col>
+                              <v-col cols="12" md="4" offset-md="2">
+                                <v-btn large color="#2400FF" class="btn-voice-call">
+                                  <img src="../assets/icons/camera.png" class="mr-4" />Upload Video
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col cols="12" md="12">
+                        <v-card class="card-hire-me" color="#251D44">
+                          <v-card-text>
+                            <v-row no-gutters align="center">
+                              <v-col cols="12" md="3">
+                                <v-list disabled color="transparent">
+                                  <v-list-item-group color="primary">
+                                    <v-list-item>
+                                      <v-list-item-icon>
+                                        <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
+                                      </v-list-item-icon>
+                                      <v-list-item-content class="ml-n5">
+                                        <v-list-item-title>15$</v-list-item-title>
+                                        <v-list-item-title>Hourly Rate</v-list-item-title>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                  </v-list-item-group>
+                                </v-list>
+                              </v-col>
 
-                          <v-col cols="12" md="4">
-                            <v-list disabled color="transparent">
-                              <v-list-item-group color="primary">
-                                <v-list-item>
-                                  <v-list-item-icon>
-                                    <v-img width="20" src="../assets/icons/availibility.png"></v-img>
-                                  </v-list-item-icon>
-                                  <v-list-item-content class="ml-n5">
-                                    <v-list-item-title>40</v-list-item-title>
-                                    <v-list-item-title>Weekly Availibility</v-list-item-title>
-                                  </v-list-item-content>
-                                </v-list-item>
-                              </v-list-item-group>
-                            </v-list>
-                          </v-col>
+                              <v-col cols="12" md="4">
+                                <v-list disabled color="transparent">
+                                  <v-list-item-group color="primary">
+                                    <v-list-item>
+                                      <v-list-item-icon>
+                                        <v-img width="20" src="../assets/icons/availibility.png"></v-img>
+                                      </v-list-item-icon>
+                                      <v-list-item-content class="ml-n5">
+                                        <v-list-item-title>40</v-list-item-title>
+                                        <v-list-item-title>Weekly Availibility</v-list-item-title>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                  </v-list-item-group>
+                                </v-list>
+                              </v-col>
 
-                          <v-col cols="12" md="4" offset-md="1">
-                            <v-btn block color="#00CDF7" class="btn-hire-me">
-                              Hire Me
-                              <img class="ml-2"  src="../assets/icons/chat2.png">
-                            </v-btn>
-                          </v-col>
-                        </v-row>
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                </v-row>
+                              <v-col cols="12" md="4" offset-md="1">
+                                <v-btn block color="#00CDF7" class="btn-hire-me">
+                                  Hire Me
+                                  <img class="ml-2" src="../assets/icons/chat2.png" />
+                                </v-btn>
+                              </v-col>
+                            </v-row>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
               </v-col>
               <!-- Column 2 -->
             </v-row>
@@ -146,6 +150,9 @@
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.parent-card {
+  border-radius: 0px !important;
+}
 .profile-avatar {
   border-radius: 22px !important;
 }
