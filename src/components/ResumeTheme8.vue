@@ -165,7 +165,10 @@
                       ]"
                     >
                       <v-avatar tile height="20" width="23">
-                        <img :src="getImgUrlIcon(tab.id)" class="mr-4" />
+                        <img
+                          :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
+                          class="mr-4"
+                        />
                       </v-avatar>
                       {{tab.title}}
                     </v-tab>
@@ -193,7 +196,7 @@ export default {
         { title: "Education", id: 3 },
         { title: "Skill", id: 4 },
         { title: "About Me", id: 5 },
-        { title: "Achievement", id: 6 },
+        { title: "Achievement", id: 6 }
       ],
       skills: [
         { skill: "PS", value: 80, id: 1 },
