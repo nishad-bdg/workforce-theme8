@@ -160,15 +160,12 @@
                       :class="[
                         currentTab == tab.id ? 'active-tab' : '',
                         tab.id == 1 ? 'round-left' : '',
-                        tab.id == 4 ? 'round-right' : '',
-                        tab.id != 4 ? 'mr-xs-2 mr-md-12' : ''
+                        tab.id == 6 ? 'round-right' : '',
+                        
                       ]"
                     >
                       <v-avatar tile height="20" width="23">
-                        <img
-                          src="../assets/icons/tabs/1.png"
-                          class="mr-4"
-                        />
+                        <img :src="getImgUrlIcon(tab.id)" class="mr-4" />
                       </v-avatar>
                       {{tab.title}}
                     </v-tab>
@@ -191,10 +188,12 @@ export default {
     return {
       currentTab: 1,
       tabs: [
-        { title: "Portfolio", id: 1, image: "layer" },
-        { title: "Works", id: 2, image: "portfolio" },
-        { title: "Education", id: 3, image: "book" },
-        { title: "Design Skill", id: 4, image: "idea" }
+        { title: "Portfolio", id: 1 },
+        { title: "Works", id: 2 },
+        { title: "Education", id: 3 },
+        { title: "Skill", id: 4 },
+        { title: "About Me", id: 5 },
+        { title: "Achievement", id: 6 },
       ],
       skills: [
         { skill: "PS", value: 80, id: 1 },
@@ -206,7 +205,21 @@ export default {
     };
   },
 
-  methods: {}
+  methods: {
+    getImgUrlIcon(icon) {
+      let image = require.context("../assets/icons/tabs", false, /\.png$/);
+      return image("./" + icon + ".png");
+    },
+
+    getImgUrlIconActive(icon) {
+      let image = require.context(
+        "../assets/icons/tabs-active",
+        false,
+        /\.png$/
+      );
+      return image("./" + icon + ".png");
+    }
+  }
 };
 </script>
 
