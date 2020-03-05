@@ -7,7 +7,7 @@
           <v-card-text>
             <v-row class="mt-n5">
               <!-- Column 1 -->
-              <v-col cols="12" md="5">
+              <v-col cols="12" md="5" sm="8" xs="8">
                 <v-card color="transparent" flat>
                   <v-card-text>
                     <v-list-item>
@@ -58,30 +58,75 @@
               <!-- Column 1 -->
 
               <!-- Column 2 -->
-              <v-col cols="12" md="7" class="desktop-row">
-                <v-row>
+              <v-col cols="12" md="6" class="desktop-row">
+                <v-row no-gutters>
                   <v-col cols="12" md="12">
                     <v-card flat color="transparent">
                       <v-card-text align="center">
                         <v-row align="center">
-                          <v-col cols="12" md="3" offset-md="1">
+                          <v-col cols="12" md="3">
                             <div class="interview-text mr-n10">Your Interviews:</div>
                           </v-col>
-                          <v-col cols="12" md="3" class="mr-10 custom-col"> 
-                            <v-btn x-large color="#03CA9F" class="btn-voice-call">
-                              <img width="16.35" height="16.35" src="../assets/icons/phone.png" class="mr-4"/>Voice Call
+                          <v-col cols="12" md="2" class="custom-col mx-4">
+                            <v-btn large color="#03CA9F" class="btn-voice-call">
+                              <img
+                                width="16.35"
+                                height="16.35"
+                                src="../assets/icons/phone.png"
+                                class="mr-4"
+                              />Voice Call
                             </v-btn>
                           </v-col>
-                          <v-col cols="12" md="3">
-                            <v-btn x-large color="#2400FF" class="btn-voice-call pa-0" >
-                              <img width="28.36" height="16.35" src="../assets/icons/camera.png" class="mr-4"/>Upload Video
+                          <v-col cols="12" md="4" offset-md="2">
+                            <v-btn large color="#2400FF" class="btn-voice-call">
+                              <img
+                                width="28.36"
+                                height="16.35"
+                                src="../assets/icons/camera.png"
+                                class="mr-4"
+                              />Upload Video
                             </v-btn>
                           </v-col>
                         </v-row>
                       </v-card-text>
                     </v-card>
                   </v-col>
-                  <v-col cols="12" md="12">2</v-col>
+                  <v-col cols="12" md="12">
+                    <v-card class="card-hire-me" color="#251D44">
+                      <v-card-text>
+                        <v-row no-gutters align="center">
+                          <v-col cols="12" md="4">
+                            <v-list-item>
+                              <v-list-item-icon class="hourly-rate-icon" >
+                                <v-img  src="../assets/icons/hourly-rate.png"></v-img>
+                              </v-list-item-icon>
+
+                              <v-list-item-content class="ml-n6">
+                                <v-list-item-title class="mt-1">$15</v-list-item-title>
+                                <v-list-item-subtitle class="mt-3">HOURLY RATE</v-list-item-subtitle>
+                              </v-list-item-content>
+                            </v-list-item>
+                          </v-col>
+                          
+                          <v-col cols="12" md="4">
+                            <v-list-item>
+                              <v-list-item-icon class="hourly-rate-icon" >
+                                <v-img  src="../assets/icons/hourly-rate.png"></v-img>
+                              </v-list-item-icon>
+
+                              <v-list-item-content class="ml-n6">
+                                <v-list-item-title class="mt-1">$15</v-list-item-title>
+                                <v-list-item-subtitle class="mt-3">HOURLY RATE</v-list-item-subtitle>
+                              </v-list-item-content>
+                            </v-list-item>
+                          </v-col>
+                          <v-col cols="12" md="4">
+                            <v-btn color="#00CDF7" rounded block>Hire Me</v-btn>
+                          </v-col>
+                        </v-row>
+                      </v-card-text>
+                    </v-card>
+                  </v-col>
                 </v-row>
               </v-col>
               <!-- Column 2 -->
@@ -131,15 +176,24 @@
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
   font-size: 14px !important;
-  width: 200px;
+  width: 220px;
   text-transform: capitalize !important;
 }
 
-@media screen and (max-width: 1250px) {
-    .custom-col{
-      margin-left: 15px !important;
-    }
+
+/* hire me card */
+.card-hire-me {
+  border-radius: 51px !important;
 }
 
+.hourly-rate-icon{
+  width: 20px;
+}
+/* hire me card */
+@media screen and (max-width: 1200px) {
+  .desktop-row {
+    display: none;
+  }
+}
 </style>
 
