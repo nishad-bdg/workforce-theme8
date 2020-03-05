@@ -15,8 +15,8 @@
                       <v-list-item-avatar
                         color="grey darken-3"
                         class="profile-avatar"
-                        size="180"
-                        max-width="180"
+                        size="215"
+                        max-width="215"
                       >
                         <v-img class="elevation-6 avatar-border" src="../assets/images/avatar.png"></v-img>
                       </v-list-item-avatar>
@@ -48,6 +48,9 @@
 
                       <!-- Name -->
                     </v-list-item>
+                    <v-btn color="#FF5231" class="chat-btn">TAP TO CHAT
+                      <v-img src="../assets/icons/chat.png" class="ml-2"></v-img>
+                    </v-btn>
                   </v-card-text>
                 </v-card>
               </v-col>
@@ -71,24 +74,25 @@
   border-radius: 22px !important;
 }
 .profile-title {
-  font-family: Open Sans !important;
+  font-family: 'Open Sans' !important;
   font-size: 40px !important;
 }
 
 .profile-subtitle {
-  font-family: Open Sans !important;
+  font-family: 'Open Sans' !important;
   font-size: 18px !important;
   padding: 5px;
   color: #ffffff !important;
 }
+
+.chat-btn{
+  font-family:'Open Sans' !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  border-radius: 23px !important;
+  padding: 25px !important;
+  margin-top: -50px;
+  margin-left: 26px;
+}
 </style>
 
-<script>
-export default {
-  methods: {
-    hello() {
-      alert("Hello");
-    }
-  }
-};
-</script>
