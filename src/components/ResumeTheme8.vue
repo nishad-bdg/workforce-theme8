@@ -89,7 +89,7 @@
                         </v-card>
                       </v-col>
                       <v-col cols="12" md="12">
-                        <v-card class="card-hire-me" color="#251D44">
+                        <v-card flat color="transparent" rounded>  
                           <v-card-text>
                             <v-row no-gutters align="center">
                               <v-col cols="12" md="3">
@@ -139,6 +139,10 @@
                 </v-card>
               </v-col>
               <!-- Column 2 -->
+
+              <!-- Column 3 the tab bar -->
+
+              <!-- Column 3 the tab bar -->
             </v-row>
           </v-card-text>
         </v-card>
