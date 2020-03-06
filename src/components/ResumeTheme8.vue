@@ -5,10 +5,10 @@
       <v-col cols="12">
         <v-card color="#6152CF" class="parent-card" dark flat>
           <v-card-text>
-            <v-row>
+            <v-row no-gutters>
               <!-- Column 1 -->
               <v-col cols="12" md="5" sm="8" xs="8">
-                <v-card color="transparent" flat class="mx-5">
+                <v-card color="transparent" flat class="mx-md-5 ml-xs-n10" >
                   <v-card-text>
                     <v-list-item>
                       <!-- avatar -->
@@ -63,11 +63,11 @@
               <!-- Column 1 -->
 
               <!-- Column 2 -->
-              <v-col cols="12" md="6" class="desktop-row ml-10">
+              <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8">
                 <v-card flat color="transparent">
                   <v-card-text>
                     <v-row no-gutters>
-                      <v-col cols="12" md="12">
+                      <v-col cols="12" md="10">
                         <v-card flat color="transparent">
                           <v-card-text align="center">
                             <v-row align="center">
@@ -75,13 +75,13 @@
                                 <div class="interview-text">Your Interviews:</div>
                               </v-col>
                               <v-col cols="12" md="4" class="custom-col">
-                                <v-btn large color="#03CA9F" class="btn-voice-call">
+                                <v-btn block color="#03CA9F" class="btn-voice-call">
                                   <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
                                 </v-btn>
                               </v-col>
 
                               <v-col cols="12" md="4">
-                                <v-btn large color="#2400FF" class="btn-upload">
+                                <v-btn block color="#2400FF" class="btn-upload">
                                   <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
                                 </v-btn>
                               </v-col>
@@ -90,9 +90,9 @@
                         </v-card>
                       </v-col>
                       <v-col cols="12" md="12">
-                        <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
+                        <v-card flat class="card-hire-me" height="70" color="rgba(37, 0, 0, 0.1)">
                           <v-card-text>
-                            <v-row no-gutters align="center" class="mt-n4">
+                            <v-row no-gutters align="center" class="mt-n5">
                               <v-col cols="12" md="4">
                                 <v-list disabled color="transparent">
                                   <v-list-item-group color="primary">
@@ -102,7 +102,7 @@
                                       </v-list-item-icon>
                                       <v-list-item-content class="ml-n5">
                                         <v-list-item-title>15$</v-list-item-title>
-                                        <v-list-item-title>Hourly Rate</v-list-item-title>
+                                        <v-list-item-subtitle>Hourly Rate</v-list-item-subtitle>
                                       </v-list-item-content>
                                     </v-list-item>
                                   </v-list-item-group>
@@ -117,15 +117,15 @@
                                         <v-img width="20" src="../assets/icons/availibility.png"></v-img>
                                       </v-list-item-icon>
                                       <v-list-item-content class="ml-n5">
-                                        <v-list-item-title>40</v-list-item-title>
-                                        <v-list-item-title>Weekly Availibility</v-list-item-title>
+                                        <v-list-item-title>40 Hours</v-list-item-title>
+                                        <v-list-item-subtitle>Weekly Availibility</v-list-item-subtitle>
                                       </v-list-item-content>
                                     </v-list-item>
                                   </v-list-item-group>
                                 </v-list>
                               </v-col>
 
-                              <v-col cols="12" md="4">
+                              <v-col cols="12" md="2" offset="1">
                                 <v-btn block color="#00CDF7" class="btn-hire-me">
                                   Hire Me
                                   <img class="ml-2" src="../assets/icons/chat2.png" />
@@ -141,18 +141,19 @@
               </v-col>
               <!-- Column 2 -->
               <!-- Coumn 3 tabs -->
-              <v-col cols="12" md="10" align="center" offset="1" class="mt-n2 mb-n11">
+              <v-col cols="12" md="10" sm="10" align="center" offset="1" class="mb-n8">
                 <v-card color="transparent" flat>
                   <v-card-text align="center">
+                    <!-- tabs -->
                     <v-tabs
+                      v-model="dataTabs"
                       background-color="#00CDF7"
-                      height="64"
+                      height="50"
                       class="parent-tab"
                       grow
                       centered
                       dark
                       hide-slider
-                      show-arrows
                     >
                       <v-tab
                         v-for="tab in tabs"
@@ -174,6 +175,7 @@
                         </v-avatar>
                         {{tab.title}}
                       </v-tab>
+                      <!-- tabs -->
                     </v-tabs>
                   </v-card-text>
                 </v-card>
@@ -184,6 +186,28 @@
         </v-card>
       </v-col>
       <!-- Column for header section -->
+
+      <v-row class="mx-8">
+        <v-col cols="12" md="12">
+          <v-card flat>
+            <!-- tab items -->
+            <v-tabs v-model="dataTabs">
+              <v-tab-item>
+                <v-card flat>
+                  <v-card-text>
+                    <p>Fusce a quam. Phasellus nec sem in justo pellentesque facilisis. Nam eget dui. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
+
+                    <p
+                      class="mb-0"
+                    >Cras sagittis. Phasellus nec sem in justo pellentesque facilisis. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nam at tortor in tellus interdum sagittis.</p>
+                  </v-card-text>
+                </v-card>
+              </v-tab-item>
+            </v-tabs>
+            <!-- tab items -->
+          </v-card>
+        </v-col>
+      </v-row>
     </v-row>
   </v-container>
 </template>
@@ -192,6 +216,7 @@
 export default {
   data() {
     return {
+      dataTabs: null,
       currentTab: 1,
       tabs: [
         { title: "Portfolio", id: 1 },
@@ -268,23 +293,34 @@ export default {
 
 .interview-text {
   font-family: "Open Sans" !important;
-  font-size: 20px !important;
+  font-size: 16px !important;
   color: #ffffff !important;
 }
 
 .btn-voice-call {
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   text-transform: capitalize !important;
-  width: 160px;
+  width: 160px !important;
+  height: 35px !important;
+  margin-left: -20px;
+}
+
+.btn-voice-call img {
+  width: 12px !important;
 }
 
 .btn-upload {
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   text-transform: capitalize !important;
+  width: 180px !important;
+}
+
+.btn-upload img {
+  width: 20px !important;
 }
 
 /* hire me card */
@@ -295,10 +331,14 @@ export default {
 
 .btn-hire-me {
   font-family: "Open Sans" !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   text-transform: capitalize !important;
   padding: 25px !important;
   border-radius: 38px !important;
+}
+
+.btn-hire-me img {
+  width: 20px !important;
 }
 
 .hourly-rate-icon {
@@ -312,8 +352,8 @@ export default {
 
 .ct-tab-title {
   color: #ffffff !important;
-  font-size: 1.0rem !important;
-  font-weight: 400 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
 
 .active-tab {
