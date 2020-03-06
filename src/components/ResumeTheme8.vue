@@ -201,7 +201,7 @@
                         <v-row>
                           <v-col cols="12" md="4" sm="6" xs="12">
                             <v-card elevation-12 class="card-portfolio">
-                              <v-img aspect-ratio="1.4" src="../assets/images/portfolio/1.png">
+                              <v-img src="../assets/images/portfolio/1.png">
                                 <v-overlay
                                   :absolute="absolute"
                                   :value="overlay"
