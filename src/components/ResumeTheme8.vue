@@ -198,7 +198,7 @@
       <!-- Row For Tab Items -->
       <v-row class="mx-8 my-n1-">
         <v-col cols="12" md="12">
-          <v-card flat class="#F5F5F5">
+          <v-card flat color="#F5F5F5">
             <!-- tab items -->
             <v-tabs v-model="dataTabs">
               <!-- Tab Item Portfolio -->
@@ -246,26 +246,31 @@
                   <v-card flat color="transparent" class="mt-n10">
                     <v-card-text>
                       <v-row>
-                        <v-col cols="12" md="6">
-                          <v-card flat color="transparent">
-                            <div class="d-flex">
-                              <v-avatar size="50">
-                                <v-img aspect-ratio="1" src="../assets/icons/work/1.png" ></v-img>
-                              </v-avatar>
-                              <div class="v-line"></div>
-                              <v-list class="mt-n3 ml-2">
-                                <v-list-item>
-                                  <v-list-item-content>
-                                    <v-list-item-title class="work-title">Product Designer</v-list-item-title>
-                                    <v-list-item-subtitle class="work-subtitle mt-2">Gps Bangla</v-list-item-subtitle>
-                                  </v-list-item-content>
-                                </v-list-item>
-                              </v-list>
-                            </div>
+                        <v-col cols="12" md="6" v-for="n in 6" :key="n">
+                          <v-card flat color="transparent" class="mx-10">
+                            <v-card-text>
+                              <v-list-item>
+                                <v-list-item-icon class="mt-2">
+                                  <v-img width="40" src="../assets/icons/work/1.png"></v-img>
+                                </v-list-item-icon>
+                                <div class="v-line" v-if="n<5"></div>
+                                <v-list-item-content>
+                                  <v-list-item-title class="work-title">Product Designer</v-list-item-title>
+                                  <v-list-item-subtitle class="work-subtitle mt-2">Gps Bangla</v-list-item-subtitle>
+                                  <v-list-item-subtitle
+                                    class="work-subtitle mt-2"
+                                  >Jan 2017 - Feb 2019</v-list-item-subtitle>
+                                  <div class="float-xs-left mt-4  work-text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing
+                                    elitr, sed diam nonumy eirmod tempor invidunt ut
+                                    labore et dolore magna aliquyam erat,
+                                  </div>
+                                </v-list-item-content>
+                              </v-list-item>
+                            </v-card-text>
                           </v-card>
                         </v-col>
 
-                        <v-col cols="12" md="6">Column 2</v-col>
                       </v-row>
                     </v-card-text>
                   </v-card>
@@ -500,7 +505,7 @@ export default {
 /* Work */
 .work-title {
   font-family: "Poppins" !important;
-  font-size: 20px !important;
+  font-size: 22px !important;
 }
 
 .work-subtitle {
@@ -508,6 +513,12 @@ export default {
   font-size: 14px !important;
   color: #4b4b4b !important;
   font-weight: 400 !important;
+}
+
+.work-text {
+  font-family: "Poppins" !important;
+  font-size: 12px !important;
+  color: #656565 !important;
 }
 /* Work */
 
@@ -518,11 +529,11 @@ export default {
   overflow-y: auto !important;
 }
 
-.v-line{
+.v-line {
   position: absolute;
-  margin-top:48px;
-  margin-left: 25px;
-  height: 100%;
+  margin-top: 115px;
+  margin-left: 19px;
+  height: 112%;
   border: 1px solid #707070;
 }
 /* hire me card */
