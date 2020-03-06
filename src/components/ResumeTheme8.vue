@@ -8,7 +8,7 @@
             <v-row no-gutters>
               <!-- Column 1 -->
               <v-col cols="12" md="5" sm="8" xs="8">
-                <v-card color="transparent" flat class="mx-md-5 ml-xs-n10" >
+                <v-card color="transparent" flat class="mx-md-5 ml-xs-n10">
                   <v-card-text>
                     <v-list-item>
                       <!-- avatar -->
@@ -187,22 +187,46 @@
       </v-col>
       <!-- Column for header section -->
 
-      <v-row class="mx-8">
+      <v-row class="mx-8 my-n1-">
         <v-col cols="12" md="12">
           <v-card flat>
             <!-- tab items -->
             <v-tabs v-model="dataTabs">
+              <!-- Tab Item Portfolio -->
               <v-tab-item>
                 <v-card flat>
-                  <v-card-text>
-                    <p>Fusce a quam. Phasellus nec sem in justo pellentesque facilisis. Nam eget dui. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
+                  <v-card-text align="center">
+                    <v-row>
+                      <v-col cols="12">
+                        <v-row>
+                          <v-col cols="12" md="4" sm="6" xs="12">
+                            <v-card elevation-12 class="card-portfolio">
+                              <v-img aspect-ratio="1.4" src="../assets/images/portfolio/1.png">
+                                <v-overlay
+                                  :absolute="absolute"
+                                  :value="overlay"
+                                  opacity="0.8"
+                                  color="#6152CF"
+                                >
+                                  <v-btn fab small color="#ffffff">
+                                    <img
+                                      src="../assets/icons/overlay-icon.png"
+                                    />
+                                  </v-btn>
+                                </v-overlay>
+                              </v-img>
 
-                    <p
-                      class="mb-0"
-                    >Cras sagittis. Phasellus nec sem in justo pellentesque facilisis. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nam at tortor in tellus interdum sagittis.</p>
+                              <v-card-title class="subtitle-1">Product Design</v-card-title>
+                              <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
+                            </v-card>
+                          </v-col>
+                        </v-row>
+                      </v-col>
+                    </v-row>
                   </v-card-text>
                 </v-card>
               </v-tab-item>
+              <!-- tab item portfolio -->
             </v-tabs>
             <!-- tab items -->
           </v-card>
@@ -216,6 +240,8 @@
 export default {
   data() {
     return {
+      overlay: true,
+      absolute: true,
       dataTabs: null,
       currentTab: 1,
       tabs: [
@@ -232,6 +258,9 @@ export default {
         { skill: "XD", value: 92, id: 3 },
         { skill: "UI", value: 55, id: 4 },
         { skill: "UX", value: 72, id: 5 }
+      ],
+      portfolio: [
+        { title: "Product Design", subtitle: "industrial,creative,idea", id: 1 }
       ]
     };
   },
@@ -370,6 +399,12 @@ export default {
   border-top-right-radius: 26px;
 }
 /* tab styles */
+
+/* Portfolio */
+.card-portfolio {
+  border-radius: 12px !important;
+}
+/* Portfolio */
 
 /* hire me card */
 @media screen and (max-width: 1200px) {
