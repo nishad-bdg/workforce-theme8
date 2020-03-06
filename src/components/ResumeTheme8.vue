@@ -1,188 +1,196 @@
 <template>
   <v-container fluid ma-0 pa-0>
-  <!-- Main Row -->
+    <!-- Main Row -->
     <v-row no-gutters>
       <!-- Column for header section -->
       <v-col cols="12">
         <v-card color="#6152CF" class="parent-card" dark flat>
           <v-card-text>
-            <v-row no-gutters>
-              <!-- Column 1 -->
-              <v-col cols="12" md="5" sm="8" xs="8">
-                <v-card color="transparent" flat class="mx-md-5 ml-xs-n10">
-                  <v-card-text>
-                    <v-list-item>
-                      <!-- avatar -->
-                      <v-list-item-avatar
-                        color="grey darken-3"
-                        class="profile-avatar"
-                        size="150"
-                        max-width="150"
-                      >
-                        <v-img class="elevation-6 avatar-border" src="../assets/images/avatar.png"></v-img>
-                      </v-list-item-avatar>
-                      <!-- Avatar -->
-                      <!-- Name -->
-                      <v-list-item-content>
-                        <v-list-item-title class="headline ml-4">
-                          <span class="profile-title">Olivia Emily</span>
-                        </v-list-item-title>
-                        <v-list-item-subtitle class="ml-4">
-                          <span class="profile-subtitle">UX/UI Designer</span>
-                        </v-list-item-subtitle>
-
-                        <v-list-item-icon>
-                          <v-btn small icon class="mr-2">
-                            <v-img class="social-icon" src="../assets/icons/behance.png"></v-img>
-                          </v-btn>
-                          <v-btn small icon class="mr-2">
+            <v-container fluid ma-0 pa-0>
+              <v-row no-gutters>
+                <!-- Column 1 -->
+                <v-col cols="12" md="5" sm="8" xs="8">
+                  <v-card color="transparent" flat class="mx-md-5 ml-xs-n10">
+                    <v-card-text>
+                      <div class="d-flex">
+                        <v-list-item>
+                          <!-- avatar -->
+                          <v-list-item-avatar
+                            color="grey darken-3"
+                            class="profile-avatar"
+                            size="150"
+                            max-width="150"
+                          >
                             <v-img
-                              height="30"
-                              width="30"
-                              class="social-icon"
-                              src="../assets/icons/instagram.png"
+                              class="elevation-6 avatar-border"
+                              src="../assets/images/avatar.png"
                             ></v-img>
-                          </v-btn>
-                          <v-btn small icon class="mr-2">
-                            <v-img class="social-icon" src="../assets/icons/dribble.png"></v-img>
-                          </v-btn>
-                          <v-btn small icon class="mr-2">
-                            <v-img class="social-icon" src="../assets/icons/google.png"></v-img>
-                          </v-btn>
-                        </v-list-item-icon>
-                      </v-list-item-content>
+                          </v-list-item-avatar>
+                          <!-- Avatar -->
+                          <!-- Name -->
+                          <v-list-item-content>
+                            <v-list-item-title class="headline ml-4">
+                              <span class="profile-title">Olivia Emily</span>
+                            </v-list-item-title>
+                            <v-list-item-subtitle class="ml-4">
+                              <span class="profile-subtitle">UX/UI Designer</span>
+                            </v-list-item-subtitle>
 
-                      <!-- Name -->
-                    </v-list-item>
-                    <v-btn color="#FF5231" class="chat-btn">
-                      TAP TO CHAT
-                      <v-img src="../assets/icons/chat.png" class="ml-1"></v-img>
-                    </v-btn>
-                  </v-card-text>
-                </v-card>
-              </v-col>
-              <!-- Column 1 -->
+                            <v-list-item-icon>
+                              <v-btn small icon class="mr-2">
+                                <v-img class="social-icon" src="../assets/icons/behance.png"></v-img>
+                              </v-btn>
+                              <v-btn small icon class="mr-2">
+                                <v-img
+                                  height="30"
+                                  width="30"
+                                  class="social-icon"
+                                  src="../assets/icons/instagram.png"
+                                ></v-img>
+                              </v-btn>
+                              <v-btn small icon class="mr-2">
+                                <v-img class="social-icon" src="../assets/icons/dribble.png"></v-img>
+                              </v-btn>
+                              <v-btn small icon class="mr-2">
+                                <v-img class="social-icon" src="../assets/icons/google.png"></v-img>
+                              </v-btn>
+                            </v-list-item-icon>
+                          </v-list-item-content>
 
-              <!-- Column 2 -->
-              <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8">
-                <v-card flat color="transparent">
-                  <v-card-text>
-                    <v-row no-gutters>
-                      <v-col cols="12" md="10">
-                        <v-card flat color="transparent">
-                          <v-card-text align="center">
-                            <v-row align="center">
-                              <v-col cols="12" md="4">
-                                <div class="interview-text">Your Interviews:</div>
-                              </v-col>
-                              <v-col cols="12" md="4" class="custom-col">
-                                <v-btn block color="#03CA9F" class="btn-voice-call">
-                                  <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
-                                </v-btn>
-                              </v-col>
+                          <!-- Name -->
+                        </v-list-item>
+                      </div>
 
-                              <v-col cols="12" md="4">
-                                <v-btn block color="#2400FF" class="btn-upload">
-                                  <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
-                                </v-btn>
-                              </v-col>
-                            </v-row>
-                          </v-card-text>
-                        </v-card>
-                      </v-col>
-                      <v-col cols="12" md="12">
-                        <v-card flat class="card-hire-me" height="70" color="rgba(37, 0, 0, 0.1)">
-                          <v-card-text>
-                            <v-row no-gutters align="center" class="mt-n5">
-                              <v-col cols="12" md="4">
-                                <v-list disabled color="transparent">
-                                  <v-list-item-group color="primary">
-                                    <v-list-item>
-                                      <v-list-item-icon>
-                                        <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
-                                      </v-list-item-icon>
-                                      <v-list-item-content class="ml-n5">
-                                        <v-list-item-title>15$</v-list-item-title>
-                                        <v-list-item-subtitle>Hourly Rate</v-list-item-subtitle>
-                                      </v-list-item-content>
-                                    </v-list-item>
-                                  </v-list-item-group>
-                                </v-list>
-                              </v-col>
+                      <v-btn color="#FF5231" class="chat-btn">
+                        TAP TO CHAT
+                        <v-img src="../assets/icons/chat.png" class="ml-1"></v-img>
+                      </v-btn>
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+                <!-- Column 1 -->
 
-                              <v-col cols="12" md="4">
-                                <v-list disabled color="transparent">
-                                  <v-list-item-group color="primary">
-                                    <v-list-item>
-                                      <v-list-item-icon>
-                                        <v-img width="20" src="../assets/icons/availibility.png"></v-img>
-                                      </v-list-item-icon>
-                                      <v-list-item-content class="ml-n5">
-                                        <v-list-item-title>40 Hours</v-list-item-title>
-                                        <v-list-item-subtitle>Weekly Availibility</v-list-item-subtitle>
-                                      </v-list-item-content>
-                                    </v-list-item>
-                                  </v-list-item-group>
-                                </v-list>
-                              </v-col>
+                <!-- Column 2 -->
+                <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8">
+                  <v-card flat color="transparent">
+                    <v-card-text>
+                      <v-row no-gutters>
+                        <v-col cols="12" md="10">
+                          <v-card flat color="transparent">
+                            <v-card-text align="center">
+                              <v-row align="center">
+                                <v-col cols="12" md="4">
+                                  <div class="interview-text">Your Interviews:</div>
+                                </v-col>
+                                <v-col cols="12" md="4" class="custom-col">
+                                  <v-btn block color="#03CA9F" class="btn-voice-call">
+                                    <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
+                                  </v-btn>
+                                </v-col>
 
-                              <v-col cols="12" md="2" offset="1">
-                                <v-btn block color="#00CDF7" class="btn-hire-me">
-                                  Hire Me
-                                  <img class="ml-2" src="../assets/icons/chat2.png" />
-                                </v-btn>
-                              </v-col>
-                            </v-row>
-                          </v-card-text>
-                        </v-card>
-                      </v-col>
-                    </v-row>
-                  </v-card-text>
-                </v-card>
-              </v-col>
-              <!-- Column 2 -->
-              <!-- Coumn 3 tabs -->
-              <v-col cols="12" md="10" sm="10" align="center" offset="1" class="mb-n8">
-                <v-card color="transparent" flat>
-                  <v-card-text align="center">
-                    <!-- tabs -->
-                    <v-tabs
-                      v-model="dataTabs"
-                      background-color="#00CDF7"
-                      height="50"
-                      class="parent-tab"
-                      grow
-                      centered
-                      dark
-                      hide-slider
-                    >
-                      <v-tab
-                        v-for="tab in tabs"
-                        :key="tab.id"
-                        @click="currentTab = tab.id"
-                        class="ct-tab-title text-capitalize"
-                        :class="[
+                                <v-col cols="12" md="4">
+                                  <v-btn block color="#2400FF" class="btn-upload">
+                                    <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
+                                  </v-btn>
+                                </v-col>
+                              </v-row>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col cols="12" md="12">
+                          <v-card flat class="card-hire-me" height="70" color="rgba(37, 0, 0, 0.1)">
+                            <v-card-text>
+                              <v-row no-gutters align="center" class="mt-n5">
+                                <v-col cols="12" md="4">
+                                  <v-list disabled color="transparent">
+                                    <v-list-item-group color="primary">
+                                      <v-list-item>
+                                        <v-list-item-icon>
+                                          <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
+                                        </v-list-item-icon>
+                                        <v-list-item-content class="ml-n5">
+                                          <v-list-item-title>15$</v-list-item-title>
+                                          <v-list-item-subtitle>Hourly Rate</v-list-item-subtitle>
+                                        </v-list-item-content>
+                                      </v-list-item>
+                                    </v-list-item-group>
+                                  </v-list>
+                                </v-col>
+
+                                <v-col cols="12" md="4">
+                                  <v-list disabled color="transparent">
+                                    <v-list-item-group color="primary">
+                                      <v-list-item>
+                                        <v-list-item-icon>
+                                          <v-img width="20" src="../assets/icons/availibility.png"></v-img>
+                                        </v-list-item-icon>
+                                        <v-list-item-content class="ml-n5">
+                                          <v-list-item-title>40 Hours</v-list-item-title>
+                                          <v-list-item-subtitle>Weekly Availibility</v-list-item-subtitle>
+                                        </v-list-item-content>
+                                      </v-list-item>
+                                    </v-list-item-group>
+                                  </v-list>
+                                </v-col>
+
+                                <v-col cols="12" md="2" offset="1">
+                                  <v-btn block color="#00CDF7" class="btn-hire-me">
+                                    Hire Me
+                                    <img class="ml-2" src="../assets/icons/chat2.png" />
+                                  </v-btn>
+                                </v-col>
+                              </v-row>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+                <!-- Column 2 -->
+                <!-- Coumn 3 tabs -->
+                <v-col cols="12" md="10" sm="10" align="center" offset="1" class="mb-n8">
+                  <v-card color="transparent" flat>
+                    <v-card-text align="center">
+                      <!-- tabs -->
+                      <v-tabs
+                        v-model="dataTabs"
+                        background-color="#00CDF7"
+                        height="50"
+                        class="parent-tab"
+                        grow
+                        centered
+                        dark
+                        hide-slider
+                      >
+                        <v-tab
+                          v-for="tab in tabs"
+                          :key="tab.id"
+                          @click="currentTab = tab.id"
+                          class="ct-tab-title text-capitalize"
+                          :class="[
                         currentTab == tab.id ? 'active-tab' : '',
                         tab.id == 1 ? 'round-left' : '',
                         tab.id == 6 ? 'round-right' : '',
                         
                       ]"
-                      >
-                        <v-avatar tile height="20" width="23">
-                          <img
-                            :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
-                            class="mr-4"
-                          />
-                        </v-avatar>
-                        {{tab.title}}
-                      </v-tab>
-                      <!-- tabs -->
-                    </v-tabs>
-                  </v-card-text>
-                </v-card>
-              </v-col>
-              <!-- Column3 tabs-->
-            </v-row>
+                        >
+                          <v-avatar tile height="20" width="23">
+                            <img
+                              :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
+                              class="mr-4"
+                            />
+                          </v-avatar>
+                          {{tab.title}}
+                        </v-tab>
+                        <!-- tabs -->
+                      </v-tabs>
+                    </v-card-text>
+                  </v-card>
+                </v-col>
+                <!-- Column3 tabs-->
+              </v-row>
+            </v-container>
           </v-card-text>
         </v-card>
       </v-col>
@@ -190,47 +198,80 @@
       <!-- Row For Tab Items -->
       <v-row class="mx-8 my-n1-">
         <v-col cols="12" md="12">
-          <v-card flat>
+          <v-card flat class="#F5F5F5">
             <!-- tab items -->
             <v-tabs v-model="dataTabs">
               <!-- Tab Item Portfolio -->
               <v-tab-item>
-                <v-card flat class="mt-n10">
-                  <v-card-text align="center">
-                    <v-row>
-                      <!-- Portfolio -->
-                      <v-col
-                        cols="12"
-                        md="4"
-                        sm="6"
-                        xs="12"
-                        v-for="item in portfolio"
-                        :key="item.id"
-                      >
-                        <v-card elevation-12 class="card-portfolio">
-                          <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
-                            <v-overlay
-                              :absolute="absolute"
-                              :value="item.id==1 ? overlay : false"
-                              opacity="0.8"
-                              color="#6152CF"
-                            >
-                              <v-btn fab small color="#ffffff">
-                                <img src="../assets/icons/overlay-icon.png" />
-                              </v-btn>
-                            </v-overlay>
-                          </v-img>
+                <v-container>
+                  <v-card flat color="transparent" class="mt-n10">
+                    <v-card-text align="center">
+                      <v-row>
+                        <v-col
+                          cols="12"
+                          md="4"
+                          sm="6"
+                          xs="12"
+                          v-for="item in portfolio"
+                          :key="item.id"
+                        >
+                          <v-card elevation-12 class="card-portfolio">
+                            <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
+                              <v-overlay
+                                :absolute="absolute"
+                                :value="item.id==1 ? overlay : false"
+                                opacity="0.8"
+                                color="#6152CF"
+                              >
+                                <v-btn fab small color="#ffffff">
+                                  <img src="../assets/icons/overlay-icon.png" />
+                                </v-btn>
+                              </v-overlay>
+                            </v-img>
 
-                          <v-card-title class="subtitle-1">Product Design</v-card-title>
-                          <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
-                        </v-card>
-                      </v-col>
-                      <!-- Porfolio -->
-                    </v-row>
-                  </v-card-text>
-                </v-card>
+                            <v-card-title class="subtitle-1">Product Design</v-card-title>
+                            <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                  </v-card>
+                </v-container>
               </v-tab-item>
               <!-- tab item portfolio -->
+
+              <!-- Tab Item For Work -->
+              <v-tab-item>
+                <v-container>
+                  <v-card flat color="transparent" class="mt-n10">
+                    <v-card-text>
+                      <v-row>
+                        <v-col cols="12" md="6">
+                          <v-card flat color="transparent">
+                            <div class="d-flex">
+                              <v-avatar size="50">
+                                <v-img aspect-ratio="1" src="../assets/icons/work/1.png" ></v-img>
+                              </v-avatar>
+                              <div class="v-line"></div>
+                              <v-list class="mt-n3 ml-2">
+                                <v-list-item>
+                                  <v-list-item-content>
+                                    <v-list-item-title class="work-title">Product Designer</v-list-item-title>
+                                    <v-list-item-subtitle class="work-subtitle mt-2">Gps Bangla</v-list-item-subtitle>
+                                  </v-list-item-content>
+                                </v-list-item>
+                              </v-list>
+                            </div>
+                          </v-card>
+                        </v-col>
+
+                        <v-col cols="12" md="6">Column 2</v-col>
+                      </v-row>
+                    </v-card-text>
+                  </v-card>
+                </v-container>
+              </v-tab-item>
+              <!-- Tab Item for work -->
             </v-tabs>
             <!-- tab items -->
           </v-card>
@@ -239,7 +280,9 @@
       <!-- Row For Tab Items -->
     </v-row>
     <!-- Main Row Ends Here -->
-    
+    <!-- Footer -->
+
+    <!-- Footer -->
   </v-container>
 </template>
 
@@ -251,6 +294,7 @@ export default {
       absolute: true,
       dataTabs: null,
       currentTab: 1,
+
       tabs: [
         { title: "Portfolio", id: 1 },
         { title: "Works", id: 2 },
@@ -292,7 +336,11 @@ export default {
           subtitle: "industrial,creative,idea",
           id: 5
         },
-        { title: "Product Design", subtitle: "industrial,creative,idea", id: 6 }
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 6
+        }
       ]
     };
   },
@@ -326,6 +374,8 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 .parent-card {
   border-radius: 0px !important;
 }
@@ -447,10 +497,34 @@ export default {
   width: 90% !important;
 }
 /* Portfolio */
-/* sticky images */
+/* Work */
+.work-title {
+  font-family: "Poppins" !important;
+  font-size: 20px !important;
+}
+
+.work-subtitle {
+  font-family: "Poppins" !important;
+  font-size: 14px !important;
+  color: #4b4b4b !important;
+  font-weight: 400 !important;
+}
+/* Work */
 
 /* sticky images */
 
+/* sticky images */
+.scroll {
+  overflow-y: auto !important;
+}
+
+.v-line{
+  position: absolute;
+  margin-top:48px;
+  margin-left: 25px;
+  height: 100%;
+  border: 1px solid #707070;
+}
 /* hire me card */
 @media screen and (max-width: 1200px) {
   .desktop-row {
