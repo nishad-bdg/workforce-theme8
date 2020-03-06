@@ -93,7 +93,7 @@
                         <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                           <v-card-text>
                             <v-row no-gutters align="center" class="mt-n4">
-                              <v-col cols="12" md="3">
+                              <v-col cols="12" md="4">
                                 <v-list disabled color="transparent">
                                   <v-list-item-group color="primary">
                                     <v-list-item>
@@ -125,7 +125,7 @@
                                 </v-list>
                               </v-col>
 
-                              <v-col cols="12" md="4" offset-md="1">
+                              <v-col cols="12" md="4">
                                 <v-btn block color="#00CDF7" class="btn-hire-me">
                                   Hire Me
                                   <img class="ml-2" src="../assets/icons/chat2.png" />
