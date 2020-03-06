@@ -71,18 +71,18 @@
                         <v-card flat color="transparent">
                           <v-card-text align="center">
                             <v-row align="center">
-                              <v-col cols="12" md="3">
-                                <div class="interview-text mr-n10">Your Interviews:</div>
+                              <v-col cols="12" md="4">
+                                <div class="interview-text">Your Interviews:</div>
                               </v-col>
-                              <v-col cols="12" md="2" class="custom-col mx-4">
+                              <v-col cols="12" md="4" class="custom-col">
                                 <v-btn large color="#03CA9F" class="btn-voice-call">
-                                  <img class="mr-4" src="../assets/icons/phone.png" />Voice Call
+                                  <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
                                 </v-btn>
                               </v-col>
 
-                              <v-col cols="12" md="4" offset-md="2">
-                                <v-btn large color="#2400FF" class="btn-voice-call">
-                                  <img src="../assets/icons/camera.png" class="mr-4" />Upload Video
+                              <v-col cols="12" md="4">
+                                <v-btn large color="#2400FF" class="btn-upload">
+                                  <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
                                 </v-btn>
                               </v-col>
                             </v-row>
@@ -141,38 +141,41 @@
               </v-col>
               <!-- Column 2 -->
               <!-- Coumn 3 tabs -->
-              <v-col cols="12" md="10" align="center" offset-md="1" class="mt-n2 mb-n7">
+              <v-col cols="12" md="10" align="center" offset="1" class="mt-n2 mb-n11">
                 <v-card color="transparent" flat>
-                  <v-tabs
-                    background-color="#00CDF7"
-                    height="64"
-                    class="parent-tab"
-                    grow
-                    centered
-                    dark
-                    hide-slider
-                  >
-                    <v-tab
-                      v-for="tab in tabs"
-                      :key="tab.id"
-                      @click="currentTab = tab.id"
-                      class="ct-tab-title text-capitalize"
-                      :class="[
+                  <v-card-text align="center">
+                    <v-tabs
+                      background-color="#00CDF7"
+                      height="64"
+                      class="parent-tab"
+                      grow
+                      centered
+                      dark
+                      hide-slider
+                      show-arrows
+                    >
+                      <v-tab
+                        v-for="tab in tabs"
+                        :key="tab.id"
+                        @click="currentTab = tab.id"
+                        class="ct-tab-title text-capitalize"
+                        :class="[
                         currentTab == tab.id ? 'active-tab' : '',
                         tab.id == 1 ? 'round-left' : '',
                         tab.id == 6 ? 'round-right' : '',
                         
                       ]"
-                    >
-                      <v-avatar tile height="20" width="23">
-                        <img
-                          :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
-                          class="mr-4"
-                        />
-                      </v-avatar>
-                      {{tab.title}}
-                    </v-tab>
-                  </v-tabs>
+                      >
+                        <v-avatar tile height="20" width="23">
+                          <img
+                            :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
+                            class="mr-4"
+                          />
+                        </v-avatar>
+                        {{tab.title}}
+                      </v-tab>
+                    </v-tabs>
+                  </v-card-text>
                 </v-card>
               </v-col>
               <!-- Column3 tabs-->
@@ -273,7 +276,14 @@ export default {
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
   font-size: 14px !important;
-  width: 220px;
+  text-transform: capitalize !important;
+  width: 160px;
+}
+
+.btn-upload {
+  font-family: "Open Sans" !important;
+  border-radius: 28px !important;
+  font-size: 14px !important;
   text-transform: capitalize !important;
 }
 
@@ -302,7 +312,7 @@ export default {
 
 .ct-tab-title {
   color: #ffffff !important;
-  font-size: 1.2rem !important;
+  font-size: 1.0rem !important;
   font-weight: 400 !important;
 }
 
