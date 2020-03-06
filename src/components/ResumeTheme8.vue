@@ -1,5 +1,6 @@
 <template>
   <v-container fluid ma-0 pa-0>
+  <!-- Main Row -->
     <v-row no-gutters>
       <!-- Column for header section -->
       <v-col cols="12">
@@ -186,7 +187,7 @@
         </v-card>
       </v-col>
       <!-- Column for header section -->
-
+      <!-- Row For Tab Items -->
       <v-row class="mx-8 my-n1-">
         <v-col cols="12" md="12">
           <v-card flat>
@@ -197,31 +198,34 @@
                 <v-card flat class="mt-n10">
                   <v-card-text align="center">
                     <v-row>
-                      <v-col cols="12">
-                        <v-row>
-                          <!-- Portfolio -->
-                          <v-col cols="12" md="4" sm="6" xs="12" v-for="item in portfolio" :key="item.id">
-                            <v-card elevation-12 class="card-portfolio">
-                              <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
-                                <v-overlay
-                                  :absolute="absolute"
-                                  :value="item.id==1 ? overlay : false"
-                                  opacity="0.8"
-                                  color="#6152CF"
-                                >
-                                  <v-btn fab small color="#ffffff">
-                                    <img src="../assets/icons/overlay-icon.png" />
-                                  </v-btn>
-                                </v-overlay>
-                              </v-img>
+                      <!-- Portfolio -->
+                      <v-col
+                        cols="12"
+                        md="4"
+                        sm="6"
+                        xs="12"
+                        v-for="item in portfolio"
+                        :key="item.id"
+                      >
+                        <v-card elevation-12 class="card-portfolio">
+                          <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
+                            <v-overlay
+                              :absolute="absolute"
+                              :value="item.id==1 ? overlay : false"
+                              opacity="0.8"
+                              color="#6152CF"
+                            >
+                              <v-btn fab small color="#ffffff">
+                                <img src="../assets/icons/overlay-icon.png" />
+                              </v-btn>
+                            </v-overlay>
+                          </v-img>
 
-                              <v-card-title class="subtitle-1">Product Design</v-card-title>
-                              <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
-                            </v-card>
-                          </v-col>
-                          <!-- Porfolio -->
-                        </v-row>
+                          <v-card-title class="subtitle-1">Product Design</v-card-title>
+                          <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
+                        </v-card>
                       </v-col>
+                      <!-- Porfolio -->
                     </v-row>
                   </v-card-text>
                 </v-card>
@@ -232,7 +236,10 @@
           </v-card>
         </v-col>
       </v-row>
+      <!-- Row For Tab Items -->
     </v-row>
+    <!-- Main Row Ends Here -->
+    
   </v-container>
 </template>
 
@@ -266,12 +273,12 @@ export default {
           id: 1
         },
         {
-          title: "Product Design",
+          title: "Website Design",
           subtitle: "industrial,creative,idea",
           id: 2
         },
         {
-          title: "Product Design",
+          title: "Pattern Design",
           subtitle: "industrial,creative,idea",
           id: 3
         },
@@ -440,6 +447,9 @@ export default {
   width: 90% !important;
 }
 /* Portfolio */
+/* sticky images */
+
+/* sticky images */
 
 /* hire me card */
 @media screen and (max-width: 1200px) {
