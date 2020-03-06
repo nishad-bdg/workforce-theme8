@@ -194,24 +194,23 @@
             <v-tabs v-model="dataTabs">
               <!-- Tab Item Portfolio -->
               <v-tab-item>
-                <v-card flat>
+                <v-card flat class="mt-n10">
                   <v-card-text align="center">
                     <v-row>
                       <v-col cols="12">
                         <v-row>
-                          <v-col cols="12" md="4" sm="6" xs="12">
+                          <!-- Portfolio -->
+                          <v-col cols="12" md="4" sm="6" xs="12" v-for="item in portfolio" :key="item.id">
                             <v-card elevation-12 class="card-portfolio">
-                              <v-img src="../assets/images/portfolio/1.png">
+                              <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
                                 <v-overlay
                                   :absolute="absolute"
-                                  :value="overlay"
+                                  :value="item.id==1 ? overlay : false"
                                   opacity="0.8"
                                   color="#6152CF"
                                 >
                                   <v-btn fab small color="#ffffff">
-                                    <img
-                                      src="../assets/icons/overlay-icon.png"
-                                    />
+                                    <img src="../assets/icons/overlay-icon.png" />
                                   </v-btn>
                                 </v-overlay>
                               </v-img>
@@ -220,6 +219,7 @@
                               <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
                             </v-card>
                           </v-col>
+                          <!-- Porfolio -->
                         </v-row>
                       </v-col>
                     </v-row>
@@ -260,7 +260,32 @@ export default {
         { skill: "UX", value: 72, id: 5 }
       ],
       portfolio: [
-        { title: "Product Design", subtitle: "industrial,creative,idea", id: 1 }
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 1
+        },
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 2
+        },
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 3
+        },
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 4
+        },
+        {
+          title: "Product Design",
+          subtitle: "industrial,creative,idea",
+          id: 5
+        },
+        { title: "Product Design", subtitle: "industrial,creative,idea", id: 6 }
       ]
     };
   },
@@ -278,6 +303,15 @@ export default {
         /\.png$/
       );
       return image("./" + icon + ".png");
+    },
+    // portfolio image
+    getImgUrlPortfolio(id) {
+      let image = require.context(
+        "../assets/images/portfolio",
+        false,
+        /\.png$/
+      );
+      return image("./" + id + ".png");
     }
   }
 };
@@ -403,6 +437,7 @@ export default {
 /* Portfolio */
 .card-portfolio {
   border-radius: 12px !important;
+  width: 90% !important;
 }
 /* Portfolio */
 
