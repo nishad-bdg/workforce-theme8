@@ -149,7 +149,14 @@
                 </v-col>
                 <!-- Column 2 -->
                 <!-- Coumn 3 tabs -->
-                <v-col cols="12" md="10" sm="10" align="center" offset="1" class="mb-n8">
+                <v-col
+                  cols="12"
+                  md="10"
+                  sm="10"
+                  align="center"
+                  offset="1"
+                  class="mb-n8 hidden-xs-only"
+                >
                   <v-card color="transparent" flat>
                     <v-card-text align="center">
                       <!-- tabs -->
@@ -229,8 +236,8 @@
                               </v-overlay>
                             </v-img>
 
-                            <v-card-title class="subtitle-1">Product Design</v-card-title>
-                            <v-card-subtitle align="left">industrial, creative, idea</v-card-subtitle>
+                            <v-card-title class="subtitle-1">{{item.title}}</v-card-title>
+                            <v-card-subtitle align="left">{{ item.subtitle }}</v-card-subtitle>
                           </v-card>
                         </v-col>
                       </v-row>
@@ -246,31 +253,28 @@
                   <v-card flat color="transparent" class="mt-n10">
                     <v-card-text>
                       <v-row>
-                        <v-col cols="12" md="6" v-for="n in 6" :key="n">
+                        <v-col cols="12" md="6" v-for="(item,index) in work" :key="index">
                           <v-card flat color="transparent" class="mx-10">
                             <v-card-text>
                               <v-list-item>
                                 <v-list-item-icon class="mt-2">
                                   <v-img width="40" src="../assets/icons/work/1.png"></v-img>
                                 </v-list-item-icon>
-                                <div class="v-line" v-if="n<5"></div>
+                                <div class="v-line" v-if="work.length-(index+1) >1"></div>
                                 <v-list-item-content>
-                                  <v-list-item-title class="work-title">Product Designer</v-list-item-title>
-                                  <v-list-item-subtitle class="work-subtitle mt-2">Gps Bangla</v-list-item-subtitle>
+                                  <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
+                                  <v-list-item-subtitle class="work-subtitle mt-2">{{ item.subtitle1 }}</v-list-item-subtitle>
                                   <v-list-item-subtitle
                                     class="work-subtitle mt-2"
-                                  >Jan 2017 - Feb 2019</v-list-item-subtitle>
-                                  <div class="float-xs-left mt-4  work-text">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing
-                                    elitr, sed diam nonumy eirmod tempor invidunt ut
-                                    labore et dolore magna aliquyam erat,
+                                  >{{ item.subtitle2}}</v-list-item-subtitle>
+                                  <div class="float-xs-left mt-4 work-text">
+                                    {{ item.bodyText }}
                                   </div>
                                 </v-list-item-content>
                               </v-list-item>
                             </v-card-text>
                           </v-card>
                         </v-col>
-
                       </v-row>
                     </v-card-text>
                   </v-card>
@@ -345,6 +349,56 @@ export default {
           title: "Product Design",
           subtitle: "industrial,creative,idea",
           id: 6
+        }
+      ],
+      work: [
+        {
+          id:1,
+          title: "Product Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id:2,
+          title: "Animation Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id:3,
+          title: "Visual Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id:4,
+          title: "Illustrator Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id:5,
+          title: "UX Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id:6,
+          title: "UX Designer",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         }
       ]
     };
