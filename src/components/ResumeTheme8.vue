@@ -324,11 +324,13 @@
               <v-container>
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
+                    <!-- Skill Child Tabs -->
                     <v-tabs
                       color="#6152CF"
                       v-model="skillTab"
                       background-color="transparent"
                       show-arrows
+                      mobile-break-point="599"
                     >
                       <v-tab
                         v-for="item in skills"
@@ -341,14 +343,33 @@
                           <v-card-text>
                             <v-row>
                               <!-- 1st inner column -->
-                              <v-col cols="12" md="12">
+                              <v-col cols="12" md="12" v-for="m in 2" :key="m">
                                 <v-card flat color="transparent">
                                   <v-card-title class="skill-child-title">Software</v-card-title>
                                   <v-card-text>
                                     <v-row>
-                                      <v-col cols="12" md="3" v-for="(n,index) in 4" :key="index">
-                                        <v-card flat color="#D5EEFF">
-                                          <v-card-text>Hello</v-card-text>
+                                      <v-col cols="12" md="3" sm="6" xs="12" v-for="(n,index) in 4" :key="index">
+                                        <v-card flat color="#D5EEFF" class="pa-0">
+                                          <v-card-text >
+                                           <v-list-item>
+                                             <v-list-item-icon>
+                                               <v-img width="35" src="../assets/icons/skills/illustrator.png"></v-img>
+                                             </v-list-item-icon>
+
+                                             <v-list-item-content class="ml-n6">
+                                               <v-list-item-subtitle>Illustrator</v-list-item-subtitle>
+                                               <v-list-item-subtitle>
+                                                 <v-row no-gutters>
+                                                   <v-col cols="12" md="9" sm="9" >
+                                                     <v-progress-linear height="8" background-color="#C5C5C5" color="#FF7C00" value="90"></v-progress-linear>
+                                                   </v-col>
+                                                   <v-col cols="12" md="2" sm="2" offset="1" class="mt-n1 caption">90%</v-col>
+                                                    
+                                                 </v-row>
+                                               </v-list-item-subtitle>
+                                             </v-list-item-content>
+                                           </v-list-item>
+                                          </v-card-text>
                                         </v-card>
                                       </v-col>
 
@@ -371,7 +392,7 @@
             </v-tab-item>
             <!-- Tab Item For Skills -->
           </v-tabs>
-          <!-- tab items -->
+          <!-- skill child tab -->
         </v-card>
       </v-col>
     </v-row>
@@ -405,7 +426,7 @@ export default {
         { skill: "Programming Languages", value: 80, id: 1 },
         { skill: "Framework/Databases", value: 35, id: 2 },
         { skill: "Software", value: 92, id: 3 },
-        { skill: "Desgign Skills", value: 55, id: 4 }
+        { skill: "Design Skills", value: 55, id: 4 }
       ],
       portfolio: [
         {
@@ -731,7 +752,7 @@ export default {
 /* Skill tabs */
 .skill-tab-text {
   font-family: "Averta-Regular" !important;
-  font-size: 15px !important;
+  font-size: 14px !important;
   text-transform: capitalize !important;
 }
 
