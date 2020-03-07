@@ -433,7 +433,29 @@
               <v-container>
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
-                    Hello
+                    <v-row>
+                      <v-col cols="12" md="6">
+                        <v-card color="transparent" flat>
+                          <v-card-text>
+                            <div class="hello-text">Hello I'm</div>
+                            <div class="hello-title">Mickel David</div>
+                            <div class="display-2 hello-designation">
+                              a
+                              <span style="color:#6152CF;">UI&UX</span> Designer
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col cols="12" md="5">
+                        <v-card flat color="transparent">
+                          <v-card-text align="right">
+                            <div class="pic-box">
+                              <v-img height="296" width="280" src="../assets/images/about-me/men.png" ></v-img>
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -877,16 +899,43 @@ export default {
 
 /* Skill tabs */
 .skill-tab-text {
-  font-family: "Averta-Regular" !important;
   font-size: 14px !important;
   text-transform: capitalize !important;
 }
 
 .skill-child-title {
-  font-family: "Averta-Regular" !important;
   font-weight: 500 !important;
 }
 /* Skills tabs */
+
+/* About Me Tab */
+.hello-text {
+  color: #373737;
+}
+
+.hello-title {
+  font-size: 35px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: #373737;
+}
+
+.hello-designation {
+  font-size: 37px;
+  font-weight: 400;
+  margin-top: 22px;
+  color: #373737;
+}
+
+.pic-box {
+  width: 280px;
+  height: 296px;
+  border-radius: 10px;
+  box-shadow: 48px 56px 0px -8px rgba(97, 82, 207, 1);
+}
+
+/* About Me Tab */
+
 /*  */
 /* sticky images */
 
