@@ -337,55 +337,77 @@
                         :key="item.id"
                         class="skill-tab-text"
                       >{{item.skill}}</v-tab>
-                      <!-- Inner Tab Items For Skill -->
+                    </v-tabs>
+                    <!-- Inner Tab Items -->
+                    <v-tabs-items v-model="skillTab">
+                      <!-- Inner tab first item -->
                       <v-tab-item>
                         <v-card color="transparent" flat>
                           <v-card-text>
                             <v-row>
                               <!-- 1st inner column -->
-                              <v-col cols="12" md="12" v-for="m in 2" :key="m">
+                              <v-col cols="12" md="12" v-for="skill in skillDetails" :key="skill.title">
                                 <v-card flat color="transparent">
-                                  <v-card-title class="skill-child-title">Software</v-card-title>
+                                  <v-card-title class="skill-child-title">{{skill.title}}</v-card-title>
                                   <v-card-text>
                                     <v-row>
-                                      <v-col cols="12" md="3" sm="6" xs="12" v-for="(n,index) in 4" :key="index">
+                                      <v-col
+                                        cols="12"
+                                        md="3"
+                                        sm="6"
+                                        xs="12"
+                                        v-for="software in skill.softwareList" :key="software.name"
+                                      >
                                         <v-card flat color="#D5EEFF" class="pa-0">
-                                          <v-card-text >
-                                           <v-list-item>
-                                             <v-list-item-icon>
-                                               <v-img width="35" src="../assets/icons/skills/illustrator.png"></v-img>
-                                             </v-list-item-icon>
+                                          <v-card-text>
+                                            <v-list-item>
+                                              <v-list-item-icon>
+                                                <v-img
+                                                  width="35"
+                                                  :src="getIconSkill(software.icon)"
+                                                ></v-img>
+                                              </v-list-item-icon>
 
-                                             <v-list-item-content class="ml-n6">
-                                               <v-list-item-subtitle>Illustrator</v-list-item-subtitle>
-                                               <v-list-item-subtitle>
-                                                 <v-row no-gutters>
-                                                   <v-col cols="12" md="9" sm="9" >
-                                                     <v-progress-linear height="8" background-color="#C5C5C5" color="#FF7C00" value="90"></v-progress-linear>
-                                                   </v-col>
-                                                   <v-col cols="12" md="2" sm="2" offset="1" class="mt-n1 caption">90%</v-col>
-                                                    
-                                                 </v-row>
-                                               </v-list-item-subtitle>
-                                             </v-list-item-content>
-                                           </v-list-item>
+                                              <v-list-item-content class="ml-n6">
+                                                <v-list-item-subtitle>{{software.name}}</v-list-item-subtitle>
+                                                <v-list-item-subtitle>
+                                                  <v-row no-gutters>
+                                                    <v-col cols="12" md="9" sm="9">
+                                                      <v-progress-linear
+                                                        height="8"
+                                                        background-color="#C5C5C5"
+                                                        :color="software.color"
+                                                        :value="software.value"
+                                                      ></v-progress-linear>
+                                                    </v-col>
+                                                    <v-col
+                                                      cols="12"
+                                                      md="2"
+                                                      sm="2"
+                                                      offset="1"
+                                                      class="mt-n1 caption"
+                                                    >{{software.valueText}}</v-col>
+                                                  </v-row>
+                                                </v-list-item-subtitle>
+                                              </v-list-item-content>
+                                            </v-list-item>
                                           </v-card-text>
                                         </v-card>
                                       </v-col>
-
                                     </v-row>
                                   </v-card-text>
                                 </v-card>
                               </v-col>
                               <!-- 1st inner column -->
-                              
                             </v-row>
                           </v-card-text>
                         </v-card>
                       </v-tab-item>
+                      <!-- inner tab 1st item -->
+                    </v-tabs-items>
+                    <!-- Inner tab Items -->
 
-                      <!-- Inner Tab Items For Skill -->
-                    </v-tabs>
+                    
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -418,15 +440,63 @@ export default {
         { title: "Portfolio", id: 1 },
         { title: "Works", id: 2 },
         { title: "Education", id: 3 },
-        { title: "Skill", id: 4 },
+        { title: "Skills", id: 4 },
         { title: "About Me", id: 5 },
         { title: "Achievement", id: 6 }
       ],
       skills: [
-        { skill: "Programming Languages", value: 80, id: 1 },
+        {
+          skill: "Programming Languages",
+          value: 80,
+          id: 1
+        },
         { skill: "Framework/Databases", value: 35, id: 2 },
         { skill: "Software", value: 92, id: 3 },
         { skill: "Design Skills", value: 55, id: 4 }
+      ],
+      skillDetails: [
+        {
+          title: "Softwares",
+          softwareList: [
+            {
+              name: "Illustrator",
+              icon: "illustrator",
+              color: "#FF7C00",
+              value: "90",
+              valueText:"90%"
+            },
+            { name: "Adobe XD", icon: "xd", color: "#FF21AF", value: "70",valueText:"70%" },
+            { name: "Photoshop", icon: "photoshop", color: "#00C8FF", value: "95", valueText:"95%" },
+            {
+              name: "Premier Pro",
+              icon: "premier",
+              color: "#E788FF",
+              value: "50",
+              valueText:"50%"
+            }
+          ]
+        },
+        {
+          title: "Languages",
+          softwareList: [
+            {
+              name: "HTML",
+              icon: "html",
+              color: "#E34F26",
+              value: "90",
+              valueText:"90%"
+            },
+            { name: "CSS", icon: "css", color: "#264DE4", value: "70",valueText:"70%" },
+            { name: "Javascript", icon: "js", color: "#FDD83C", value: "95",valueText:"95%" },
+            {
+              name: "Magento",
+              icon: "magento",
+              color: "#EC6737",
+              value: "50",
+              valueText:"50%"
+            }
+          ]
+        }
       ],
       portfolio: [
         {
@@ -598,6 +668,12 @@ export default {
     getIconEducation(id) {
       let image = require.context("../assets/icons/education", false, /\.png$/);
       return image("./" + id + ".png");
+    },
+
+     //skills icons
+    getIconSkill(icon) {
+      let image = require.context("../assets/icons/skills", false, /\.png$/);
+      return image("./" + icon + ".png");
     }
   }
 };
