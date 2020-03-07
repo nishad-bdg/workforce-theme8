@@ -426,7 +426,8 @@
             </v-tab-item>
             <!-- Tab Item For Skills -->
           </v-tabs>
-          <!-- skill child tab -->
+          <!-- Main Tab -->
+
         </v-card>
       </v-col>
     </v-row>
