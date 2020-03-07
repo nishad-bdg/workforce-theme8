@@ -341,7 +341,7 @@
                     <!-- Inner Tab Items -->
                     <v-tabs-items v-model="skillTab">
                       <!-- Inner tab first item -->
-                      <v-tab-item>
+                      <v-tab-item v-for="n in 4" :key="n">
                         <v-card color="transparent" flat>
                           <v-card-text>
                             <v-row>
