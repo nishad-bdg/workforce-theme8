@@ -258,18 +258,18 @@
                             <v-card-text>
                               <v-list-item>
                                 <v-list-item-icon class="mt-2">
-                                  <v-img width="40" src="../assets/icons/work/1.png"></v-img>
+                                  <v-img width="40" :src="getIconWork(item.id)"></v-img>
                                 </v-list-item-icon>
                                 <div class="v-line" v-if="work.length-(index+1) >1"></div>
                                 <v-list-item-content>
                                   <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
-                                  <v-list-item-subtitle class="work-subtitle mt-2">{{ item.subtitle1 }}</v-list-item-subtitle>
+                                  <v-list-item-subtitle
+                                    class="work-subtitle mt-2"
+                                  >{{ item.subtitle1 }}</v-list-item-subtitle>
                                   <v-list-item-subtitle
                                     class="work-subtitle mt-2"
                                   >{{ item.subtitle2}}</v-list-item-subtitle>
-                                  <div class="float-xs-left mt-4 work-text">
-                                    {{ item.bodyText }}
-                                  </div>
+                                  <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
                                 </v-list-item-content>
                               </v-list-item>
                             </v-card-text>
@@ -281,6 +281,42 @@
                 </v-container>
               </v-tab-item>
               <!-- Tab Item for work -->
+
+              <!-- Tab Item For Education -->
+              <v-tab-item>
+                <v-container>
+                  <v-card flat color="transparent" class="mt-n10">
+                    <v-card-text>
+                      <v-row>
+                        <v-col cols="12" md="6" v-for="(item,index) in education" :key="index">
+                          <v-card flat color="transparent" class="mx-10">
+                            <v-card-text>
+                              <v-list-item>
+                                <v-list-item-icon class="mt-2">
+                                  <v-img width="40" :src="getIconEducation(item.id)"></v-img>
+                                </v-list-item-icon>
+                                <div class="v-line" v-if="work.length-(index+1) >1"></div>
+                                <v-list-item-content>
+                                  <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
+                                  <v-list-item-subtitle
+                                    class="work-subtitle mt-2"
+                                  >{{ item.subtitle1 }}</v-list-item-subtitle>
+                                  <v-list-item-subtitle v-if="item.subtitle2"
+                                    class="work-subtitle mt-2"
+                                  >{{ item.subtitle2}}</v-list-item-subtitle>
+                                  <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
+                                </v-list-item-content>
+                              </v-list-item>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                  </v-card>
+                </v-container>
+              </v-tab-item>
+
+              <!-- Tab Item For Education -->
             </v-tabs>
             <!-- tab items -->
           </v-card>
@@ -299,6 +335,7 @@
 export default {
   data() {
     return {
+      page: 1,
       overlay: true,
       absolute: true,
       dataTabs: null,
@@ -353,7 +390,7 @@ export default {
       ],
       work: [
         {
-          id:1,
+          id: 1,
           title: "Product Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
@@ -361,7 +398,7 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         },
         {
-          id:2,
+          id: 2,
           title: "Animation Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
@@ -369,7 +406,7 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         },
         {
-          id:3,
+          id: 3,
           title: "Visual Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
@@ -377,7 +414,7 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         },
         {
-          id:4,
+          id: 4,
           title: "Illustrator Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
@@ -385,7 +422,7 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         },
         {
-          id:5,
+          id: 5,
           title: "UX Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
@@ -393,10 +430,61 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         },
         {
-          id:6,
+          id: 6,
           title: "UX Designer",
           subtitle1: "Gps Bangla",
           subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        }
+      ],
+      // Education
+       education: [
+        {
+          id: 1,
+          title: "Graphic Art Institute",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id: 2,
+          title: "Edx Ltd",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id: 3,
+          title: "Visual Design ltd",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id: 4,
+          title: "teachable",
+          subtitle1: "Gps Bangla",
+          subtitle2: "Jan 2017 - Feb 2019",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id: 5,
+          title: "Udemy",
+          subtitle1: "Gps Bangla",
+          subtitle2: "",
+          bodyText:
+            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
+        },
+        {
+          id: 6,
+          title: "learnworlds",
+          subtitle1: "Gps Bangla",
+          subtitle2: "",
           bodyText:
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         }
@@ -426,7 +514,19 @@ export default {
         /\.png$/
       );
       return image("./" + id + ".png");
-    }
+    },
+
+    //work icons
+    getIconWork(id) {
+      let image = require.context("../assets/icons/work", false, /\.png$/);
+      return image("./" + id + ".png");
+    },
+
+    //education icons
+    getIconEducation(id) {
+      let image = require.context("../assets/icons/education", false, /\.png$/);
+      return image("./" + id + ".png");
+    },
   }
 };
 </script>
