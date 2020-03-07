@@ -171,6 +171,7 @@
                         hide-slider
                       >
                         <v-tab
+                          show-arrows
                           v-for="tab in tabs"
                           :key="tab.id"
                           @click="currentTab = tab.id"
@@ -179,7 +180,6 @@
                         currentTab == tab.id ? 'active-tab' : '',
                         tab.id == 1 ? 'round-left' : '',
                         tab.id == 6 ? 'round-right' : '',
-                        
                       ]"
                         >
                           <v-avatar tile height="20" width="23">
@@ -203,126 +203,140 @@
       </v-col>
       <!-- Column for header section -->
       <!-- Row For Tab Items -->
-      <v-row class="mx-8 my-n1-">
-        <v-col cols="12" md="12">
-          <v-card flat color="#F5F5F5">
-            <!-- tab items -->
-            <v-tabs v-model="dataTabs">
-              <!-- Tab Item Portfolio -->
-              <v-tab-item>
-                <v-container>
-                  <v-card flat color="transparent" class="mt-n10">
-                    <v-card-text align="center">
-                      <v-row>
-                        <v-col
-                          cols="12"
-                          md="4"
-                          sm="6"
-                          xs="12"
-                          v-for="item in portfolio"
-                          :key="item.id"
-                        >
-                          <v-card elevation-12 class="card-portfolio">
-                            <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
-                              <v-overlay
-                                :absolute="absolute"
-                                :value="item.id==1 ? overlay : false"
-                                opacity="0.8"
-                                color="#6152CF"
-                              >
-                                <v-btn fab small color="#ffffff">
-                                  <img src="../assets/icons/overlay-icon.png" />
-                                </v-btn>
-                              </v-overlay>
-                            </v-img>
 
-                            <v-card-title class="subtitle-1">{{item.title}}</v-card-title>
-                            <v-card-subtitle align="left">{{ item.subtitle }}</v-card-subtitle>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-container>
-              </v-tab-item>
-              <!-- tab item portfolio -->
-
-              <!-- Tab Item For Work -->
-              <v-tab-item>
-                <v-container>
-                  <v-card flat color="transparent" class="mt-n10">
-                    <v-card-text>
-                      <v-row>
-                        <v-col cols="12" md="6" v-for="(item,index) in work" :key="index">
-                          <v-card flat color="transparent" class="mx-10">
-                            <v-card-text>
-                              <v-list-item>
-                                <v-list-item-icon class="mt-2">
-                                  <v-img width="40" :src="getIconWork(item.id)"></v-img>
-                                </v-list-item-icon>
-                                <div class="v-line" v-if="work.length-(index+1) >1"></div>
-                                <v-list-item-content>
-                                  <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
-                                  <v-list-item-subtitle
-                                    class="work-subtitle mt-2"
-                                  >{{ item.subtitle1 }}</v-list-item-subtitle>
-                                  <v-list-item-subtitle
-                                    class="work-subtitle mt-2"
-                                  >{{ item.subtitle2}}</v-list-item-subtitle>
-                                  <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
-                                </v-list-item-content>
-                              </v-list-item>
-                            </v-card-text>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-container>
-              </v-tab-item>
-              <!-- Tab Item for work -->
-
-              <!-- Tab Item For Education -->
-              <v-tab-item>
-                <v-container>
-                  <v-card flat color="transparent" class="mt-n10">
-                    <v-card-text>
-                      <v-row>
-                        <v-col cols="12" md="6" v-for="(item,index) in education" :key="index">
-                          <v-card flat color="transparent" class="mx-10">
-                            <v-card-text>
-                              <v-list-item>
-                                <v-list-item-icon class="mt-2">
-                                  <v-img width="40" :src="getIconEducation(item.id)"></v-img>
-                                </v-list-item-icon>
-                                <div class="v-line" v-if="work.length-(index+1) >1"></div>
-                                <v-list-item-content>
-                                  <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
-                                  <v-list-item-subtitle
-                                    class="work-subtitle mt-2"
-                                  >{{ item.subtitle1 }}</v-list-item-subtitle>
-                                  <v-list-item-subtitle v-if="item.subtitle2"
-                                    class="work-subtitle mt-2"
-                                  >{{ item.subtitle2}}</v-list-item-subtitle>
-                                  <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
-                                </v-list-item-content>
-                              </v-list-item>
-                            </v-card-text>
-                          </v-card>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                  </v-card>
-                </v-container>
-              </v-tab-item>
-
-              <!-- Tab Item For Education -->
-            </v-tabs>
-            <!-- tab items -->
-          </v-card>
-        </v-col>
-      </v-row>
       <!-- Row For Tab Items -->
+    </v-row>
+    <v-row class>
+      <v-col cols="12" md="12" xs="12">
+        <v-card flat color="#F5F5F5">
+          <!-- tab items -->
+          <v-tabs v-model="dataTabs">
+            <!-- Tab Item Portfolio -->
+            <v-tab-item>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text align="center">
+                    <v-row>
+                      <v-col
+                        cols="12"
+                        md="4"
+                        sm="6"
+                        xs="12"
+                        v-for="item in portfolio"
+                        :key="item.id"
+                      >
+                        <v-card elevation-12 class="card-portfolio">
+                          <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
+                            <v-overlay
+                              :absolute="absolute"
+                              :value="item.id==1 ? overlay : false"
+                              opacity="0.8"
+                              color="#6152CF"
+                            >
+                              <v-btn fab small color="#ffffff">
+                                <img src="../assets/icons/overlay-icon.png" />
+                              </v-btn>
+                            </v-overlay>
+                          </v-img>
+
+                          <v-card-title class="subtitle-1">{{item.title}}</v-card-title>
+                          <v-card-subtitle align="left">{{ item.subtitle }}</v-card-subtitle>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </v-container>
+            </v-tab-item>
+            <!-- tab item portfolio -->
+
+            <!-- Tab Item For Work -->
+            <v-tab-item>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text>
+                    <v-row>
+                      <v-col cols="12" md="6" v-for="(item,index) in work" :key="index">
+                        <v-card flat color="transparent" class="mx-10">
+                          <v-card-text>
+                            <v-list-item>
+                              <v-list-item-icon class="mt-2">
+                                <v-img width="40" :src="getIconWork(item.id)"></v-img>
+                              </v-list-item-icon>
+                              <div class="v-line" v-if="work.length-(index+1) >1"></div>
+                              <v-list-item-content>
+                                <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
+                                <v-list-item-subtitle
+                                  class="work-subtitle mt-2"
+                                >{{ item.subtitle1 }}</v-list-item-subtitle>
+                                <v-list-item-subtitle class="work-subtitle mt-2">{{ item.subtitle2}}</v-list-item-subtitle>
+                                <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
+                              </v-list-item-content>
+                            </v-list-item>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </v-container>
+            </v-tab-item>
+            <!-- Tab Item for work -->
+
+            <!-- Tab Item For Education -->
+            <v-tab-item>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text>
+                    <v-row>
+                      <v-col cols="12" md="6" v-for="(item,index) in education" :key="index">
+                        <v-card flat color="transparent" class="mx-md-10">
+                          <v-card-text>
+                            <v-list-item>
+                              <v-list-item-icon class="mt-2">
+                                <v-img width="40" :src="getIconEducation(item.id)"></v-img>
+                              </v-list-item-icon>
+                              <div class="v-line" v-if="work.length-(index+1) >1"></div>
+                              <v-list-item-content>
+                                <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
+                                <v-list-item-subtitle
+                                  class="work-subtitle mt-2"
+                                >{{ item.subtitle1 }}</v-list-item-subtitle>
+                                <v-list-item-subtitle
+                                  v-if="item.subtitle2"
+                                  class="work-subtitle mt-2"
+                                >{{ item.subtitle2}}</v-list-item-subtitle>
+                                <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
+                              </v-list-item-content>
+                            </v-list-item>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </v-container>
+            </v-tab-item>
+            <!-- Tab Item For Education -->
+
+            <!-- Tab Item for skills -->
+            <v-tab-item>
+              <v-card>
+                <v-card-text>
+                  <v-tabs fixed-tabs background-color="indigo" dark>
+                    <v-tab>Option</v-tab>
+                    <v-tab>Another Selection</v-tab>
+                    <v-tab>Items</v-tab>
+                    <v-tab>Another Screen</v-tab>
+                  </v-tabs>
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+            <!-- Tab Item For Skills -->
+          </v-tabs>
+          <!-- tab items -->
+        </v-card>
+      </v-col>
     </v-row>
     <!-- Main Row Ends Here -->
     <!-- Footer -->
@@ -335,6 +349,7 @@
 export default {
   data() {
     return {
+      skillTab: null,
       page: 1,
       overlay: true,
       absolute: true,
@@ -350,11 +365,10 @@ export default {
         { title: "Achievement", id: 6 }
       ],
       skills: [
-        { skill: "PS", value: 80, id: 1 },
-        { skill: "Al", value: 35, id: 2 },
-        { skill: "XD", value: 92, id: 3 },
-        { skill: "UI", value: 55, id: 4 },
-        { skill: "UX", value: 72, id: 5 }
+        { skill: "Programming Languages", value: 80, id: 1 },
+        { skill: "Framework/Databases", value: 35, id: 2 },
+        { skill: "Software", value: 92, id: 3 },
+        { skill: "Desgign Skills", value: 55, id: 4 }
       ],
       portfolio: [
         {
@@ -439,7 +453,7 @@ export default {
         }
       ],
       // Education
-       education: [
+      education: [
         {
           id: 1,
           title: "Graphic Art Institute",
@@ -526,7 +540,7 @@ export default {
     getIconEducation(id) {
       let image = require.context("../assets/icons/education", false, /\.png$/);
       return image("./" + id + ".png");
-    },
+    }
   }
 };
 </script>
@@ -534,6 +548,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url(//db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular);
 
 .parent-card {
   border-radius: 0px !important;
@@ -676,6 +691,14 @@ export default {
 }
 /* Work */
 
+/* Skill tabs */
+.skill-tab-text {
+  font-family: "Averta-Regular" !important;
+  font-size: 15px !important;
+  text-transform: capitalize !important;
+}
+/* Skills tabs */
+/*  */
 /* sticky images */
 
 /* sticky images */
@@ -694,6 +717,12 @@ export default {
 @media screen and (max-width: 1200px) {
   .desktop-row {
     display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .skill-tab-text {
+    font-size: 12px !important;
   }
 }
 </style>
