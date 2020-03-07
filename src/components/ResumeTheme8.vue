@@ -1,6 +1,6 @@
 <template>
   <v-container fluid ma-0 pa-0>
-    <!-- Main Row -->
+    <!-- Header Row -->
     <v-row no-gutters>
       <!-- Column for header section -->
       <v-col cols="12">
@@ -202,11 +202,11 @@
         </v-card>
       </v-col>
       <!-- Column for header section -->
-      <!-- Row For Tab Items -->
-
-      <!-- Row For Tab Items -->
     </v-row>
-    <v-row class>
+    <!-- header row -->
+
+    <!-- tabs details row -->
+    <v-row>
       <v-col cols="12" md="12" xs="12">
         <v-card flat color="#F5F5F5">
           <!-- tab items -->
@@ -321,16 +321,53 @@
 
             <!-- Tab Item for skills -->
             <v-tab-item>
-              <v-card>
-                <v-card-text>
-                  <v-tabs fixed-tabs background-color="indigo" dark>
-                    <v-tab>Option</v-tab>
-                    <v-tab>Another Selection</v-tab>
-                    <v-tab>Items</v-tab>
-                    <v-tab>Another Screen</v-tab>
-                  </v-tabs>
-                </v-card-text>
-              </v-card>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text>
+                    <v-tabs
+                      color="#6152CF"
+                      v-model="skillTab"
+                      background-color="transparent"
+                      show-arrows
+                    >
+                      <v-tab
+                        v-for="item in skills"
+                        :key="item.id"
+                        class="skill-tab-text"
+                      >{{item.skill}}</v-tab>
+                      <!-- Inner Tab Items For Skill -->
+                      <v-tab-item>
+                        <v-card color="transparent" flat>
+                          <v-card-text>
+                            <v-row>
+                              <!-- 1st inner column -->
+                              <v-col cols="12" md="12">
+                                <v-card flat color="transparent">
+                                  <v-card-title class="skill-child-title">Software</v-card-title>
+                                  <v-card-text>
+                                    <v-row>
+                                      <v-col cols="12" md="3" v-for="(n,index) in 4" :key="index">
+                                        <v-card flat color="#D5EEFF">
+                                          <v-card-text>Hello</v-card-text>
+                                        </v-card>
+                                      </v-col>
+
+                                    </v-row>
+                                  </v-card-text>
+                                </v-card>
+                              </v-col>
+                              <!-- 1st inner column -->
+                              
+                            </v-row>
+                          </v-card-text>
+                        </v-card>
+                      </v-tab-item>
+
+                      <!-- Inner Tab Items For Skill -->
+                    </v-tabs>
+                  </v-card-text>
+                </v-card>
+              </v-container>
             </v-tab-item>
             <!-- Tab Item For Skills -->
           </v-tabs>
@@ -696,6 +733,11 @@ export default {
   font-family: "Averta-Regular" !important;
   font-size: 15px !important;
   text-transform: capitalize !important;
+}
+
+.skill-child-title {
+  font-family: "Averta-Regular" !important;
+  font-weight: 500 !important;
 }
 /* Skills tabs */
 /*  */
