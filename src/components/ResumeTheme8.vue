@@ -341,9 +341,11 @@
                         >{{item.skill}}</v-tab>
                       </v-tabs>
                       <v-spacer></v-spacer>
-                      
-                      <v-btn icon small>
-                        <img height="16" width="20" src="../assets/icons/skills/view-list.png">
+                      <v-btn icon class="mx-md-3">
+                        <img width="40" src="../assets/icons/skills/arrange.png" />
+                      </v-btn>
+                      <v-btn icon small class="mr-sm-3">
+                        <img height="16" width="20" src="../assets/icons/skills/view-list.png" />
                       </v-btn>
                     </v-toolbar>
                     <!-- Inner Tab Items -->
@@ -425,9 +427,20 @@
               </v-container>
             </v-tab-item>
             <!-- Tab Item For Skills -->
+
+            <!-- Tab Item For About Me -->
+            <v-tab-item>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text>
+                    Hello
+                  </v-card-text>
+                </v-card>
+              </v-container>
+            </v-tab-item>
+            <!-- Tab Item for About Me -->
           </v-tabs>
           <!-- Main Tab -->
-
         </v-card>
       </v-col>
     </v-row>
