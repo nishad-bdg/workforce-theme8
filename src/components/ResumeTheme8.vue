@@ -325,19 +325,27 @@
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
                     <!-- Skill Child Tabs -->
-                    <v-tabs
-                      color="#6152CF"
-                      v-model="skillTab"
-                      background-color="transparent"
-                      show-arrows
-                      mobile-break-point="599"
-                    >
-                      <v-tab
-                        v-for="item in skills"
-                        :key="item.id"
-                        class="skill-tab-text"
-                      >{{item.skill}}</v-tab>
-                    </v-tabs>
+                    <v-toolbar flat class="ml-md-5">
+                      <v-tabs
+                        color="#6152CF"
+                        v-model="skillTab"
+                        background-color="transparent"
+                        show-arrows
+                        align-with-title
+                        mobile-break-point="599"
+                      >
+                        <v-tab
+                          v-for="item in skills"
+                          :key="item.id"
+                          class="skill-tab-text mx-md-4"
+                        >{{item.skill}}</v-tab>
+                      </v-tabs>
+                      <v-spacer></v-spacer>
+                      
+                      <v-btn icon small>
+                        <img height="16" width="20" src="../assets/icons/skills/view-list.png">
+                      </v-btn>
+                    </v-toolbar>
                     <!-- Inner Tab Items -->
                     <v-tabs-items v-model="skillTab">
                       <!-- Inner tab first item -->
@@ -346,7 +354,12 @@
                           <v-card-text>
                             <v-row>
                               <!-- 1st inner column -->
-                              <v-col cols="12" md="12" v-for="skill in skillDetails" :key="skill.title">
+                              <v-col
+                                cols="12"
+                                md="12"
+                                v-for="skill in skillDetails"
+                                :key="skill.title"
+                              >
                                 <v-card flat color="transparent">
                                   <v-card-title class="skill-child-title">{{skill.title}}</v-card-title>
                                   <v-card-text>
@@ -356,7 +369,8 @@
                                         md="3"
                                         sm="6"
                                         xs="12"
-                                        v-for="software in skill.softwareList" :key="software.name"
+                                        v-for="software in skill.softwareList"
+                                        :key="software.name"
                                       >
                                         <v-card flat color="#D5EEFF" class="pa-0">
                                           <v-card-text>
@@ -406,8 +420,6 @@
                       <!-- inner tab 1st item -->
                     </v-tabs-items>
                     <!-- Inner tab Items -->
-
-                    
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -463,16 +475,28 @@ export default {
               icon: "illustrator",
               color: "#FF7C00",
               value: "90",
-              valueText:"90%"
+              valueText: "90%"
             },
-            { name: "Adobe XD", icon: "xd", color: "#FF21AF", value: "70",valueText:"70%" },
-            { name: "Photoshop", icon: "photoshop", color: "#00C8FF", value: "95", valueText:"95%" },
+            {
+              name: "Adobe XD",
+              icon: "xd",
+              color: "#FF21AF",
+              value: "70",
+              valueText: "70%"
+            },
+            {
+              name: "Photoshop",
+              icon: "photoshop",
+              color: "#00C8FF",
+              value: "95",
+              valueText: "95%"
+            },
             {
               name: "Premier Pro",
               icon: "premier",
               color: "#E788FF",
               value: "50",
-              valueText:"50%"
+              valueText: "50%"
             }
           ]
         },
@@ -484,16 +508,28 @@ export default {
               icon: "html",
               color: "#E34F26",
               value: "90",
-              valueText:"90%"
+              valueText: "90%"
             },
-            { name: "CSS", icon: "css", color: "#264DE4", value: "70",valueText:"70%" },
-            { name: "Javascript", icon: "js", color: "#FDD83C", value: "95",valueText:"95%" },
+            {
+              name: "CSS",
+              icon: "css",
+              color: "#264DE4",
+              value: "70",
+              valueText: "70%"
+            },
+            {
+              name: "Javascript",
+              icon: "js",
+              color: "#FDD83C",
+              value: "95",
+              valueText: "95%"
+            },
             {
               name: "Magento",
               icon: "magento",
               color: "#EC6737",
               value: "50",
-              valueText:"50%"
+              valueText: "50%"
             }
           ]
         }
@@ -670,7 +706,7 @@ export default {
       return image("./" + id + ".png");
     },
 
-     //skills icons
+    //skills icons
     getIconSkill(icon) {
       let image = require.context("../assets/icons/skills", false, /\.png$/);
       return image("./" + icon + ".png");
