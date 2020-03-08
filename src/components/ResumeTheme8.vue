@@ -1013,7 +1013,7 @@ export default {
 }
 
 .pic-box {
-  width: 65%;
+  width: 75%;
   height: auto;
   border-radius: 15px;
   aspect-ratio: 0.9 !important;
@@ -1021,7 +1021,7 @@ export default {
 }
 
 .about-me-flex {
-  margin-top: -120px;
+  margin-top: -200px;
 }
 
 /* About Me Tab */
