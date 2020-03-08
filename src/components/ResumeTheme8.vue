@@ -252,7 +252,7 @@
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
                           <span class="title pagination-text">1/5</span>
-                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -301,7 +301,7 @@
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
                           <span class="title pagination-text">1/5</span>
-                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -352,7 +352,7 @@
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
                           <span class="title pagination-text">1/5</span>
-                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -470,7 +470,7 @@
                                     <v-icon disabled>mdi-arrow-left</v-icon>
                                   </v-btn>
                                   <span class="title pagination-text">1/5</span>
-                                  <v-btn dark small class="mx-8" fab color="#6152CF">
+                                  <v-btn dark x-small class="mx-8" fab color="#6152CF">
                                     <v-icon>mdi-arrow-right</v-icon>
                                   </v-btn>
                                 </div>
@@ -605,7 +605,7 @@
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
                           <span class="title pagination-text">1/5</span>
-                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
                         </div>
@@ -623,7 +623,20 @@
         </v-card>
       </v-col>
     </v-row>
-    <!-- Tab Detials Row -->
+    <!-- Tab Details Row -->
+    <!-- Footer Image Row -->
+    <v-footer class="pa-0 mt-n12" color="transparent" >
+      <v-row>
+        <v-col cols="12" md="6" sm="6" xs="6">
+          <v-img class="footer-left" src="../assets/images/left.png"></v-img>
+        </v-col>
+
+        <v-col cols="12" md="6" sm="6" xs="6" align="right" class="mt-md-10">
+          <v-img class="footer-right" src="../assets/images/right.png"></v-img>
+        </v-col>
+      </v-row>
+    </v-footer>
+    <!--  Footer Image Row-->
   </v-container>
 </template>
 
@@ -1130,9 +1143,20 @@ export default {
 }
 
 /* Footer Image */
-.footer-left{
-  position:fixed;
-  background-image: url('../assets/images/left.png');
+.footer-left {
+  position: fixed;
+  width: 40%;
+  height: auto;
+  bottom: 0px;
+}
+
+.footer-right {
+  margin-top: -120px !important;
+  margin-bottom: 0px !important;
+  position: fixed;
+  width: 40%;
+  height: auto;
+  right: 0 !important;
 }
 /* Footer Image */
 
