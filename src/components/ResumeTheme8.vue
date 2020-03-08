@@ -244,6 +244,21 @@
                         </v-card>
                       </v-col>
                     </v-row>
+                    <!-- Pagination -->
+                    <v-row class="mt-5">
+                      <v-col cols="12">
+                        <div class="text-center">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
+                            <v-icon disabled>mdi-arrow-left</v-icon>
+                          </v-btn>
+                          <span class="title pagination-text">1/5</span>
+                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                            <v-icon>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-col>
+                    </v-row>
+                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -277,6 +292,22 @@
                         </v-card>
                       </v-col>
                     </v-row>
+
+                    <!-- Pagination -->
+                    <v-row class="mt-5">
+                      <v-col cols="12">
+                        <div class="text-center">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
+                            <v-icon disabled>mdi-arrow-left</v-icon>
+                          </v-btn>
+                          <span class="title pagination-text">1/5</span>
+                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                            <v-icon>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-col>
+                    </v-row>
+                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -313,6 +344,21 @@
                         </v-card>
                       </v-col>
                     </v-row>
+                    <!-- Pagination -->
+                    <v-row class="mt-5">
+                      <v-col cols="12">
+                        <div class="text-center">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
+                            <v-icon disabled>mdi-arrow-left</v-icon>
+                          </v-btn>
+                          <span class="title pagination-text">1/5</span>
+                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                            <v-icon>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-col>
+                    </v-row>
+                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -416,6 +462,21 @@
                               </v-col>
                               <!-- 1st inner column -->
                             </v-row>
+                            <!-- Pagination -->
+                            <v-row class="mt-5">
+                              <v-col cols="12">
+                                <div class="text-center">
+                                  <v-btn dark x-small class="mx-8" fab color="#6152CF">
+                                    <v-icon disabled>mdi-arrow-left</v-icon>
+                                  </v-btn>
+                                  <span class="title pagination-text">1/5</span>
+                                  <v-btn dark small class="mx-8" fab color="#6152CF">
+                                    <v-icon>mdi-arrow-right</v-icon>
+                                  </v-btn>
+                                </div>
+                              </v-col>
+                            </v-row>
+                            <!-- Pagination -->
                           </v-card-text>
                         </v-card>
                       </v-tab-item>
@@ -536,6 +597,21 @@
                         <div class="d-flex flex-column mt-10"></div>
                       </v-col>
                     </v-row>
+                    <!-- Pagination -->
+                    <v-row class="mt-5">
+                      <v-col cols="12">
+                        <div class="text-center">
+                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
+                            <v-icon disabled>mdi-arrow-left</v-icon>
+                          </v-btn>
+                          <span class="title pagination-text">1/5</span>
+                          <v-btn dark small class="mx-8" fab color="#6152CF">
+                            <v-icon>mdi-arrow-right</v-icon>
+                          </v-btn>
+                        </div>
+                      </v-col>
+                    </v-row>
+                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -840,7 +916,9 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url(//db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular);
-
+.pagination-text {
+  color: #3d3d3d;
+}
 .parent-card {
   border-radius: 0px !important;
 }
