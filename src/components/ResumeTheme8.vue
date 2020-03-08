@@ -514,73 +514,27 @@
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
                     <v-row>
-                      <!-- About Me Me Name and Designation -->
-                      <v-col cols="12" md="6">
-                        <v-card color="transparent" flat>
-                          <v-card-text>
-                            <div class="hello-text">Hello I'm</div>
-                            <div class="hello-title">Mickel David</div>
-                            <div class="display-2 hello-designation">
-                              a
-                              <span style="color:#6152CF;">UI&UX</span> Designer
-                            </div>
-                          </v-card-text>
+                      <v-col cols="12" md="6" sm="6">
+                        <v-card flat color="transparent" elevation-12>
+                          <v-img src="../assets/images/about-me/certification.png"></v-img>
                         </v-card>
                       </v-col>
-                      <!-- ABout Me Name and Designation -->
 
-                      <!-- About Me Picture -->
-                      <v-col cols="12" md="5">
-                        <v-card flat color="transparent">
-                          <v-card-text align="right">
-                            <div class="pic-box">
-                              <v-img src="../assets/images/about-me/men.png"></v-img>
-                            </div>
-                          </v-card-text>
-                        </v-card>
+                      <v-col cols="12" md="6" sm="6">
+                        <div class="flex-column mb-12"></div>
+                        <div class="d-flex flex-column">
+                          <v-card flat color="transparent">
+                            <v-card-title class="mt-md-12">
+                              <span class="achievement-title">Hubspot Design Certification</span>
+                            </v-card-title>
+                            <v-card-subtitle class="achievement-subtitle">HubSpot Design Academy</v-card-subtitle>
+                            <v-card-text
+                              class="achievement-text caption"
+                            >The bearer of this certificate is hereby deemed proficient in crafting responsive, styled templates using HubSpot's design tools. The bearer has demonstrated that he/she can effectively apply template and style knowledge to HubSpot blog, page, landing page and email templates and is approved to sell these assets in the HubSpot Marketplace. Certification is active for 13 months after month issued.</v-card-text>
+                          </v-card>
+                        </div>
+                        <div class="d-flex flex-column mt-10"></div>
                       </v-col>
-                      <!-- About Me Picture -->
-                      <!-- About Me Main Text -->
-                      <v-col cols="12" md="8" class="about-me-flex">
-                        <v-card flat color="transparent">
-                          <v-card-title class="display-1">
-                            About Me
-                            <span style="color:#69C03E;">.</span>
-                          </v-card-title>
-                          <v-card-text>
-                            <v-row>
-                              <v-col cols="12" md="1">
-                                <v-img
-                                  class="about-me-line"
-                                  height="2.5"
-                                  width="35"
-                                  src="../assets/images/about-me/line85.png"
-                                ></v-img>
-                              </v-col>
-                              <v-col cols="12" md="10" class="mt-n7 ml-n7">
-                                <v-card flat color="transparent" class="pa-0">
-                                  <v-card-text
-                                    class="body-1"
-                                  >I have a great passion on designing and always love to create a new design. Thus now I am highly skilled, enthusiastic, self- motivated UI & UX Designer able to do any kinds of designing on upwork. Not only that I have worked for other company but I myself have also a website based on web programming and web developing of my own.</v-card-text>
-                                  <v-card-actions class="ml-2">
-                                    <v-btn
-                                      color="#414143"
-                                      height="35"
-                                      x-small
-                                      dark
-                                      v-for="media in socialMedia"
-                                      :key="media.title"
-                                    >
-                                      <v-icon small v-text="media.icon"></v-icon>
-                                    </v-btn>
-                                  </v-card-actions>
-                                </v-card>
-                              </v-col>
-                            </v-row>
-                          </v-card-text>
-                        </v-card>
-                      </v-col>
-                      <!-- About Me Main Text -->
                     </v-row>
                   </v-card-text>
                 </v-card>
@@ -1072,7 +1026,23 @@ export default {
 
 /* About Me Tab */
 
-/*  */
+/* Achievement */
+.achievement-title {
+  font-size: 22px;
+  color: #474747 !important;
+  font-weight: normal;
+}
+
+.achievement-subtitle {
+  color: #6152cf !important;
+}
+
+.achievement-text {
+  color: #808080 !important;
+}
+
+/* Achievement */
+
 /* sticky images */
 
 /* sticky images */
