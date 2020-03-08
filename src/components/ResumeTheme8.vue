@@ -214,7 +214,7 @@
             <!-- Tab Item Portfolio -->
             <v-tab-item>
               <v-container>
-                <v-card flat color="transparent" class="mt-n10">
+                <v-card flat color="transparent" class="mt-n10" style="z-index:1;">
                   <v-card-text align="center">
                     <v-row>
                       <v-col
@@ -623,8 +623,22 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row no-gutters class="ma-0">
+      <!-- Footer Column -->
+      <v-col cols="12" md="4" sm="4" class="mb-n0">
+        <v-card class="footer-left" flat color="transparent">
+          <img src="../assets/images/left.png" />
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="4" sm="4"></v-col>
+      <v-col cols="12" md="4" sm="4" align="right">
+        <v-card class="footer-right" flat color="transparent">
+          <img src="../assets/images/right.png" />
+        </v-card>
+      </v-col>
+      <!-- Footer Column -->
+    </v-row>
     <!-- Tab Details Row -->
-    
   </v-container>
 </template>
 
@@ -1138,20 +1152,22 @@ export default {
 
 /* Footer Image */
 .footer-left {
-  position: fixed;
-  width: 40%;
+  margin-top: -90px;
+}
+.footer-left img {
+  width: 60%;
   height: auto;
-  bottom: 0px;
-  top: auto !important;
 }
 
 .footer-right {
-  margin-top: -120px !important;
-  margin-bottom: 0px !important;
-  position: fixed;
-  width: 40%;
+  margin-top: -215px;
+  margin-bottom: 0px;
+}
+
+.footer-right img {
+  position: sticky;
+  width: 70%;
   height: auto;
-  right: 0 !important;
 }
 /* Footer Image */
 
@@ -1166,6 +1182,25 @@ export default {
 @media screen and (max-width: 599px) {
   .skill-tab-text {
     font-size: 12px !important;
+  }
+
+  .footer-left {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-left img {
+    width: 20%;
+    height: auto;
+  }
+
+  .footer-right {
+    margin-top: -130px;
+    margin-bottom: -100px;
+  }
+
+  .footer-right img {
+    width: 30%;
+    height: auto;
   }
 }
 </style>
