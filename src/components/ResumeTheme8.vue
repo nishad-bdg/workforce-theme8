@@ -1121,13 +1121,6 @@ export default {
 
 /* Achievement */
 
-/* sticky images */
-
-/* sticky images */
-.scroll {
-  overflow-y: auto !important;
-}
-
 .v-line {
   position: absolute;
   margin-top: 115px;
@@ -1135,6 +1128,15 @@ export default {
   height: 112%;
   border: 1px solid #707070;
 }
+
+/* Footer Image */
+.footer-left{
+  position:fixed;
+  background-image: url('../assets/images/left.png');
+}
+/* Footer Image */
+
+/* Media Query */
 /* hire me card */
 @media screen and (max-width: 1200px) {
   .desktop-row {
