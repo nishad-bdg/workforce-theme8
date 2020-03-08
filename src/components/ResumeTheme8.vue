@@ -22,7 +22,7 @@
                             max-width="150"
                           >
                             <v-img
-                              class="elevation-6 avatar-border"
+                              class="elevation-6 profile-avatar-img"
                               src="../assets/images/avatar.png"
                             ></v-img>
                           </v-list-item-avatar>
@@ -110,7 +110,7 @@
                                         </v-list-item-icon>
                                         <v-list-item-content class="ml-n5">
                                           <v-list-item-title>15$</v-list-item-title>
-                                          <v-list-item-subtitle>Hourly Rate</v-list-item-subtitle>
+                                          <v-list-item-subtitle class="caption">Hourly Rate</v-list-item-subtitle>
                                         </v-list-item-content>
                                       </v-list-item>
                                     </v-list-item-group>
@@ -126,14 +126,14 @@
                                         </v-list-item-icon>
                                         <v-list-item-content class="ml-n5">
                                           <v-list-item-title>40 Hours</v-list-item-title>
-                                          <v-list-item-subtitle>Weekly Availibility</v-list-item-subtitle>
+                                          <v-list-item-subtitle class="caption">Weekly Availibility</v-list-item-subtitle>
                                         </v-list-item-content>
                                       </v-list-item>
                                     </v-list-item-group>
                                   </v-list>
                                 </v-col>
 
-                                <v-col cols="12" md="2" offset="1">
+                                <v-col cols="12" md="2" lg="2" offset-md="1">
                                   <v-btn block color="#00CDF7" class="btn-hire-me">
                                     Hire Me
                                     <img class="ml-2" src="../assets/icons/chat2.png" />
@@ -182,7 +182,7 @@
                         tab.id == 6 ? 'round-right' : '',
                       ]"
                         >
-                          <v-avatar tile height="20" width="23">
+                          <v-avatar tile height="16" width="15">
                             <img
                               :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
                               class="mr-4"
@@ -624,19 +624,7 @@
       </v-col>
     </v-row>
     <!-- Tab Details Row -->
-    <!-- Footer Image Row -->
-    <v-footer class="pa-0 mt-n12" color="transparent" >
-      <v-row>
-        <v-col cols="12" md="6" sm="6" xs="6">
-          <v-img class="footer-left" src="../assets/images/left.png"></v-img>
-        </v-col>
-
-        <v-col cols="12" md="6" sm="6" xs="6" align="right" class="mt-md-10">
-          <v-img class="footer-right" src="../assets/images/right.png"></v-img>
-        </v-col>
-      </v-row>
-    </v-footer>
-    <!--  Footer Image Row-->
+    
   </v-container>
 </template>
 
@@ -938,6 +926,12 @@ export default {
 .profile-avatar {
   border-radius: 22px !important;
 }
+
+.profile-avatar-img {
+  width: 150px !important;
+  height: auto !important;
+}
+
 .profile-title {
   font-family: "Open Sans" !important;
   font-size: 30px !important;
@@ -953,7 +947,7 @@ export default {
 .chat-btn {
   font-family: "Open Sans" !important;
   border-radius: 23px !important;
-  padding: 10px !important;
+  padding: 8px !important;
   font-size: 12px !important;
   margin-top: -50px;
   margin-left: 24px;
@@ -1148,6 +1142,7 @@ export default {
   width: 40%;
   height: auto;
   bottom: 0px;
+  top: auto !important;
 }
 
 .footer-right {
