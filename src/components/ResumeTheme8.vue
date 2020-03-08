@@ -463,7 +463,10 @@
                       <!-- About Me Main Text -->
                       <v-col cols="12" md="8" class="about-me-flex">
                         <v-card flat color="transparent">
-                          <v-card-title class="display-1">About Me<span style="color:#69C03E;">.</span></v-card-title>
+                          <v-card-title class="display-1">
+                            About Me
+                            <span style="color:#69C03E;">.</span>
+                          </v-card-title>
                           <v-card-text>
                             <v-row>
                               <v-col cols="12" md="1">
@@ -504,15 +507,93 @@
               </v-container>
             </v-tab-item>
             <!-- Tab Item for About Me -->
+
+            <!-- Tab item for achievement -->
+            <v-tab-item>
+              <v-container>
+                <v-card flat color="transparent" class="mt-n10">
+                  <v-card-text>
+                    <v-row>
+                      <!-- About Me Me Name and Designation -->
+                      <v-col cols="12" md="6">
+                        <v-card color="transparent" flat>
+                          <v-card-text>
+                            <div class="hello-text">Hello I'm</div>
+                            <div class="hello-title">Mickel David</div>
+                            <div class="display-2 hello-designation">
+                              a
+                              <span style="color:#6152CF;">UI&UX</span> Designer
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <!-- ABout Me Name and Designation -->
+
+                      <!-- About Me Picture -->
+                      <v-col cols="12" md="5">
+                        <v-card flat color="transparent">
+                          <v-card-text align="right">
+                            <div class="pic-box">
+                              <v-img src="../assets/images/about-me/men.png"></v-img>
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <!-- About Me Picture -->
+                      <!-- About Me Main Text -->
+                      <v-col cols="12" md="8" class="about-me-flex">
+                        <v-card flat color="transparent">
+                          <v-card-title class="display-1">
+                            About Me
+                            <span style="color:#69C03E;">.</span>
+                          </v-card-title>
+                          <v-card-text>
+                            <v-row>
+                              <v-col cols="12" md="1">
+                                <v-img
+                                  class="about-me-line"
+                                  height="2.5"
+                                  width="35"
+                                  src="../assets/images/about-me/line85.png"
+                                ></v-img>
+                              </v-col>
+                              <v-col cols="12" md="10" class="mt-n7 ml-n7">
+                                <v-card flat color="transparent" class="pa-0">
+                                  <v-card-text
+                                    class="body-1"
+                                  >I have a great passion on designing and always love to create a new design. Thus now I am highly skilled, enthusiastic, self- motivated UI & UX Designer able to do any kinds of designing on upwork. Not only that I have worked for other company but I myself have also a website based on web programming and web developing of my own.</v-card-text>
+                                  <v-card-actions class="ml-2">
+                                    <v-btn
+                                      color="#414143"
+                                      height="35"
+                                      x-small
+                                      dark
+                                      v-for="media in socialMedia"
+                                      :key="media.title"
+                                    >
+                                      <v-icon small v-text="media.icon"></v-icon>
+                                    </v-btn>
+                                  </v-card-actions>
+                                </v-card>
+                              </v-col>
+                            </v-row>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <!-- About Me Main Text -->
+                    </v-row>
+                  </v-card-text>
+                </v-card>
+              </v-container>
+            </v-tab-item>
+
+            <!-- Tab item for achievement -->
           </v-tabs>
           <!-- Main Tab -->
         </v-card>
       </v-col>
     </v-row>
-    <!-- Main Row Ends Here -->
-    <!-- Footer -->
-
-    <!-- Footer -->
+    <!-- Tab Detials Row -->
   </v-container>
 </template>
 
@@ -985,10 +1066,9 @@ export default {
   box-shadow: 48px 56px 0px -8px rgba(97, 82, 207, 1);
 }
 
-.about-me-flex{
+.about-me-flex {
   margin-top: -120px;
 }
-
 
 /* About Me Tab */
 
