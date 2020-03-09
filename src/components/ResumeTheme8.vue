@@ -983,12 +983,12 @@ export default {
   border-radius: 51px !important;
 }
 
-.hire-me-title{
+.hire-me-title {
   font-size: 14px;
   color: #ffffff;
 }
 
-.hire-me-subtitle{
+.hire-me-subtitle {
   font-size: 13px;
   color: #ffffff;
 }
@@ -1118,7 +1118,8 @@ export default {
 /* Achievement */
 
 .v-line {
-  position: absolute;
+  -webkit-margin-start: 100px;
+  position: relative;
   margin-top: 115px;
   margin-left: 19px;
   height: 112%;
