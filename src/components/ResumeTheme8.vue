@@ -146,7 +146,7 @@
                       <v-tabs
                         v-model="dataTabs"
                         background-color="#00CDF7"
-                        height="50"
+                        height="60"
                         class="parent-tab"
                         grow
                         centered
@@ -222,7 +222,7 @@
                             </v-overlay>
                           </v-img>
 
-                          <v-card-title class="subtitle-1">{{item.title}}</v-card-title>
+                          <v-card-title>{{item.title}}</v-card-title>
                           <v-card-subtitle align="left">{{ item.subtitle }}</v-card-subtitle>
                         </v-card>
                       </v-col>
