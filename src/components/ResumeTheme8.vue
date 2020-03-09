@@ -267,7 +267,7 @@
                                 <v-list-item-subtitle
                                   class="work-subtitle mt-2"
                                 >{{ item.subtitle1 }}</v-list-item-subtitle>
-                                <v-list-item-subtitle class="work-subtitle mt-2">{{ item.subtitle2}}</v-list-item-subtitle>
+                                <v-list-item-subtitle class="work-subtitle">{{ item.subtitle2}}</v-list-item-subtitle>
                                 <div class="float-xs-left mt-4 work-text">{{ item.bodyText }}</div>
                               </v-list-item-content>
                             </v-list-item>
@@ -1041,18 +1041,19 @@ export default {
 .work-title {
   font-family: "Poppins" !important;
   font-size: 22px !important;
+  font-weight: 700;
 }
 
 .work-subtitle {
   font-family: "Poppins" !important;
-  font-size: 14px !important;
+  font-size: 18px !important;
   color: #4b4b4b !important;
   font-weight: 400 !important;
 }
 
 .work-text {
   font-family: "Poppins" !important;
-  font-size: 12px !important;
+  font-size: 16px !important;
   color: #656565 !important;
 }
 /* Work */
@@ -1088,7 +1089,7 @@ export default {
 }
 
 .pic-box {
-  width: 75%;
+  width: 50%;
   height: auto;
   border-radius: 15px;
   aspect-ratio: 0.9 !important;
@@ -1096,7 +1097,7 @@ export default {
 }
 
 .about-me-flex {
-  margin-top: -200px;
+  margin-top: -100px;
 }
 
 /* About Me Tab */
@@ -1120,7 +1121,7 @@ export default {
 /* for google chrome and safari */
 .v-line {
   position: absolute;
-  margin-top: 58px;
+  margin-top: 60px;
   margin-left: 19px;
   height: 112%;
   border: 1px solid #707070;
@@ -1128,7 +1129,7 @@ export default {
 @-moz-document url-prefix() {
   .v-line {
     position: absolute;
-    margin-top: 115px;
+    margin-top: 120px;
     margin-left: 19px;
     height: 112%;
     border: 1px solid #707070;
