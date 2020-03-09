@@ -29,7 +29,7 @@
                           <!-- Avatar -->
                           <!-- Name -->
                           <v-list-item-content>
-                            <v-list-item-title class="headline ml-4">
+                            <v-list-item-title class="ml-4">
                               <span class="profile-title">Olivia Emily</span>
                             </v-list-item-title>
                             <v-list-item-subtitle class="ml-4">
@@ -98,9 +98,9 @@
                           </v-card>
                         </v-col>
                         <v-col cols="10" md="11">
-                          <v-card flat class="card-hire-me" height="68" color="rgba(37, 0, 0, 0.1)">
+                          <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
-                              <v-row no-gutters align="center" class="mt-n2">
+                              <v-row no-gutters align="center">
                                 <v-col cols="12" md="1" class="mt-n5 mr-n4">
                                   <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
                                 </v-col>
@@ -919,7 +919,7 @@ export default {
 
 .profile-title {
   font-family: "Open Sans" !important;
-  font-size: 30px !important;
+  font-size:36px !important;
 }
 
 .profile-subtitle {
@@ -958,7 +958,7 @@ export default {
   font-size: 12px !important;
   text-transform: capitalize !important;
   width: 160px !important;
-  height: 35px !important;
+  height: 45px !important;
   margin-left: -20px;
 }
 
@@ -972,6 +972,7 @@ export default {
   font-size: 12px !important;
   text-transform: capitalize !important;
   width: 180px !important;
+  height: 45px !important;
 }
 
 .btn-upload img {
