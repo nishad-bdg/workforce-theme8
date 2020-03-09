@@ -1121,7 +1121,7 @@ export default {
 /* for google chrome and safari */
 .v-line {
   position: absolute;
-  margin-top: 60px;
+  margin-top: 58px;
   margin-left: 19px;
   height: 112%;
   border: 1px solid #707070;
