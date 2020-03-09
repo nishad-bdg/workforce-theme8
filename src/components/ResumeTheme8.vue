@@ -97,46 +97,29 @@
                             </v-card-text>
                           </v-card>
                         </v-col>
-                        <v-col cols="12" md="12">
-                          <v-card flat class="card-hire-me" height="70" color="rgba(37, 0, 0, 0.1)">
+                        <v-col cols="10" md="11">
+                          <v-card flat class="card-hire-me" height="68" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
-                              <v-row no-gutters align="center" class="mt-n5">
-                                <v-col cols="12" md="4">
-                                  <v-list disabled color="transparent">
-                                    <v-list-item-group color="primary">
-                                      <v-list-item>
-                                        <v-list-item-icon>
-                                          <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
-                                        </v-list-item-icon>
-                                        <v-list-item-content class="ml-n5">
-                                          <v-list-item-title>15$</v-list-item-title>
-                                          <v-list-item-subtitle class="caption">Hourly Rate</v-list-item-subtitle>
-                                        </v-list-item-content>
-                                      </v-list-item>
-                                    </v-list-item-group>
-                                  </v-list>
+                              <v-row no-gutters align="center" class="mt-n2">
+                                <v-col cols="12" md="1" class="mt-n5 mr-n4">
+                                  <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
+                                </v-col>
+                                <v-col cols="12" md="3">
+                                  <div class="hire-me-title">15$</div>
+                                  <div class="hire-me-subtitle">Hourly Rate</div>
+                                </v-col>
+                                <v-col cols="12" md="1" class="mt-n5 mr-n4">
+                                  <v-img width="20" src="../assets/icons/availibility.png"></v-img>
+                                </v-col>
+                                <v-col cols="12" md="3">
+                                  <div class="hire-me-title">40 Hours</div>
+                                  <div class="hire-me-subtitle">Weekly Availibility</div>
                                 </v-col>
 
-                                <v-col cols="12" md="4">
-                                  <v-list disabled color="transparent">
-                                    <v-list-item-group color="primary">
-                                      <v-list-item>
-                                        <v-list-item-icon>
-                                          <v-img width="20" src="../assets/icons/availibility.png"></v-img>
-                                        </v-list-item-icon>
-                                        <v-list-item-content class="ml-n5">
-                                          <v-list-item-title>40 Hours</v-list-item-title>
-                                          <v-list-item-subtitle class="caption">Weekly Availibility</v-list-item-subtitle>
-                                        </v-list-item-content>
-                                      </v-list-item>
-                                    </v-list-item-group>
-                                  </v-list>
-                                </v-col>
-
-                                <v-col cols="12" md="2" lg="2" offset-md="1">
-                                  <v-btn block color="#00CDF7" class="btn-hire-me">
+                                <v-col cols="12" md="4" class="ml-8">
+                                  <v-btn block color="#00CDF7" height="50" class="btn-hire-me">
                                     Hire Me
-                                    <img class="ml-2" src="../assets/icons/chat2.png" />
+                                    <img class="mx-1" src="../assets/icons/chat2.png" />
                                   </v-btn>
                                 </v-col>
                               </v-row>
@@ -623,22 +606,10 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row no-gutters class="ma-0">
-      <!-- Footer Column -->
-      <v-col cols="12" md="4" sm="4" class="mb-n0">
-        <v-card class="footer-left" flat color="transparent">
-          <img src="../assets/images/left.png" />
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="4" sm="4"></v-col>
-      <v-col cols="12" md="4" sm="4" align="right">
-        <v-card class="footer-right" flat color="transparent">
-          <img src="../assets/images/right.png" />
-        </v-card>
-      </v-col>
-      <!-- Footer Column -->
-    </v-row>
     <!-- Tab Details Row -->
+    <!-- footer row -->
+    <!-- n -->
+    <!-- footer row -->
   </v-container>
 </template>
 
@@ -1010,23 +981,27 @@ export default {
 /* hire me card */
 .card-hire-me {
   border-radius: 51px !important;
-  padding: -50px;
+}
+
+.hire-me-title{
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.hire-me-subtitle{
+  font-size: 13px;
+  color: #ffffff;
 }
 
 .btn-hire-me {
   font-family: "Open Sans" !important;
   font-size: 15px !important;
   text-transform: capitalize !important;
-  padding: 25px !important;
   border-radius: 38px !important;
 }
 
 .btn-hire-me img {
   width: 20px !important;
-}
-
-.hourly-rate-icon {
-  width: 20px;
 }
 
 /* tab styles */
