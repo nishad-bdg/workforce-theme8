@@ -1116,14 +1116,22 @@ export default {
 }
 
 /* Achievement */
-
+/* for google chrome and safari */
 .v-line {
-  -webkit-margin-start: 100px;
-  position: relative;
-  margin-top: 115px;
+  position: absolute;
+  margin-top: 58px;
   margin-left: 19px;
   height: 112%;
   border: 1px solid #707070;
+}
+@-moz-document url-prefix() {
+  .v-line {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 19px;
+    height: 112%;
+    border: 1px solid #707070;
+  }
 }
 
 /* Footer Image */
