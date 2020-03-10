@@ -8,9 +8,9 @@
           <v-card-text>
             <v-container fluid ma-0 pa-0>
               <v-row no-gutters>
-                <!-- Column 1 -->
-                <v-col cols="12" md="5" sm="8" xs="8">
-                  <v-card color="transparent" flat class="mx-md-5 ml-xs-n10">
+                <!-- Column 1 Profile -->
+                <v-col cols="12" md="5" sm="2" xs="8">
+                  <v-card color="transparent" flat class="mx-md-5 ml-xs-n10 ml-sm-n4">
                     <v-card-text>
                       <div class="d-flex">
                         <v-list-item>
@@ -18,24 +18,39 @@
                           <v-list-item-avatar
                             color="grey darken-3"
                             class="profile-avatar"
+                            size="150"
                             max-width="150"
                           >
                             <v-img
-                              class="elevation-6 profile-avatar-img"
+                              class="elevation-6"
                               src="../assets/images/avatar.png"
                             ></v-img>
                           </v-list-item-avatar>
                           <!-- Avatar -->
                           <!-- Name -->
                           <v-list-item-content>
-                            <v-list-item-title class="ml-4">
+                            <v-list-item-title class="ml-md-4">
                               <span class="profile-title">Olivia Emily</span>
                             </v-list-item-title>
-                            <v-list-item-subtitle class="ml-4">
+                            <v-list-item-subtitle class="ml-md-5">
                               <span class="profile-subtitle">UX/UI Designer</span>
                             </v-list-item-subtitle>
 
-                            <v-list-item-icon>
+                            <v-list-item-icon class="hidden-md-and-up">
+                              <v-btn
+                                height="30"
+                                x-small
+                                class="mr-1"
+                                v-for="icon in socialMedia"
+                                :key="icon.title"
+                                :color="icon.color"
+                              >
+                                <v-icon small v-text="icon.icon"></v-icon>
+                              </v-btn>
+                            </v-list-item-icon>
+
+                            <!-- Hidden in sm and xs devices -->
+                            <v-list-item-icon class="hidden-sm-and-down">
                               <v-btn
                                 small
                                 icon
@@ -47,6 +62,7 @@
                               </v-btn>
                             </v-list-item-icon>
                           </v-list-item-content>
+                          <!-- Hidden in sm and xs devices -->
 
                           <!-- Name -->
                         </v-list-item>
@@ -54,33 +70,62 @@
 
                       <v-btn color="#FF5231" class="chat-btn">
                         TAP TO CHAT
-                        <v-img src="../assets/icons/chat.png" class="ml-1"></v-img>
+                        <v-img src="../assets/icons/chat.png" class="chat-btn-img ml-1"></v-img>
                       </v-btn>
                     </v-card-text>
                   </v-card>
                 </v-col>
-                <!-- Column 1 -->
+                <!-- Column 1 Profile -->
 
-                <!-- Column 2 -->
-                <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8 hidden-sm-and-down">
+                <!-- Column 2 Interview-->
+                <v-col
+                  cols="12"
+                  md="6"
+                  sm="6"
+                  offset-sm="4"
+                  class="desktop-row ml-md-10 mt-md-n8 mt-sm-n12"
+                >
                   <v-card flat color="transparent">
                     <v-card-text>
                       <v-row no-gutters>
-                        <v-col cols="12" md="10">
+                        <!-- only shows on tablet version -->
+                        <!-- <v-col cols="12" sm="3" class="d-none d-sm-flex d-md-none mt-sm-5">
+                          <v-card flat color="transparent">
+                            <v-card-text>
+                              <v-btn color="#00CDF7" height="50">
+                                <v-icon color="#6D1CFF">fa-phone</v-icon>
+                              </v-btn>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col cols="12" sm="3" class="d-none d-sm-flex d-md-none mt-sm-5">
+                          <v-card-text>
+                            <v-btn color="#E8E5F6" height="50">
+                              <v-img
+                                style="width:20px !important;"
+                                src="../assets/icons/youtube-camera.png"
+                              ></v-img>
+                            </v-btn>
+                          </v-card-text>
+                        </v-col>-->
+                        <!-- only shows on tablet version -->
+
+                        <!-- Only shows on dekstop version -->
+                        <v-col cols="12" md="10" sm="12">
                           <v-card flat color="transparent">
                             <v-card-text align="center">
                               <v-row align="center">
                                 <v-col cols="12" md="4">
-                                  <div class="interview-text">Your Interviews:</div>
+                                  <div class="interview-text hidden-sm-and-down">Your Interviews:</div>
                                 </v-col>
-                                <v-col cols="12" md="4" class="custom-col">
-                                  <v-btn block color="#03CA9F" class="btn-voice-call">
+                                <v-col cols="12" md="4" sm="5" class>
+                                  <v-btn color="#03CA9F" class="btn-voice-call">
                                     <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
                                   </v-btn>
                                 </v-col>
 
-                                <v-col cols="12" md="4">
-                                  <v-btn block color="#2400FF" class="btn-upload">
+                                <v-col cols="12" md="4" sm="5" class>
+                                  <v-btn color="#2400FF" class="btn-upload">
                                     <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
                                   </v-btn>
                                 </v-col>
@@ -88,34 +133,47 @@
                             </v-card-text>
                           </v-card>
                         </v-col>
-                        <v-col cols="10" md="11">
+                        <!-- Only shows on desktop version -->
+
+                        <!-- Only shows in desktop version -->
+                        <v-col cols="10" md="11" sm="12">
                           <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
                               <v-row no-gutters align="center">
-                                <v-col cols="12" md="1" class="mt-md-n5 mr-md-n4">
+                                <v-col
+                                  cols="12"
+                                  md="1"
+                                  sm="1"
+                                  class="mt-md-n5 mr-md-n4 mt-sm-n5 mr-sm-n2"
+                                >
                                   <v-img
                                     width="20"
                                     class="img-hour"
                                     src="../assets/icons/hourly-rate.png"
                                   ></v-img>
                                 </v-col>
-                                <v-col cols="12" md="3">
+                                <v-col cols="12" md="3" sm="3">
                                   <div class="hire-me-title">15$</div>
                                   <div class="hire-me-subtitle">Hourly Rate</div>
                                 </v-col>
-                                <v-col cols="12" md="1" class="mt-md-n5 mr-md-n4">
+                                <v-col
+                                  cols="12"
+                                  md="1"
+                                  sm="1"
+                                  class="mt-md-n5 mr-md-n4 mt-sm-n5 mr-sm-n2"
+                                >
                                   <v-img
                                     width="20"
                                     class="img-hour"
                                     src="../assets/icons/availibility.png"
                                   ></v-img>
                                 </v-col>
-                                <v-col cols="12" md="3">
+                                <v-col cols="12" md="3" sm="4">
                                   <div class="hire-me-title">40 Hours</div>
                                   <div class="hire-me-subtitle">Weekly Availibility</div>
                                 </v-col>
 
-                                <v-col cols="12" md="4" class="ml-8">
+                                <v-col cols="12" md="4" sm="2" class="ml-md-8">
                                   <v-btn block color="#00CDF7" height="50" class="btn-hire-me">
                                     Hire Me
                                     <img class="mx-1" src="../assets/icons/chat2.png" />
@@ -125,6 +183,7 @@
                             </v-card-text>
                           </v-card>
                         </v-col>
+                        <!-- only shows on desktop version -->
                       </v-row>
                     </v-card-text>
                   </v-card>
@@ -838,10 +897,10 @@ export default {
       ],
 
       socialMedia: [
-        { title: "behance", icon: "fa-behance" },
-        { title: "dribbble", icon: "fa-dribbble" },
-        { title: "instagram", icon: "fa-instagram" },
-        { title: "google", icon: "fa-google-plus" }
+        { title: "behance", icon: "fa-behance", color: "#217BFF" },
+        { title: "dribbble", icon: "fa-dribbble", color: "#EE588A" },
+        { title: "instagram", icon: "fa-instagram", color: "#DD24BC" },
+        { title: "google", icon: "fa-google-plus", color: "#DC4E41" }
       ]
     };
   },
@@ -999,6 +1058,16 @@ export default {
 
 .btn-hire-me img {
   width: 20px !important;
+}
+
+.btn-hire-me-orange {
+  margin-top: -5px;
+  font-size: 12px !important;
+  text-transform: capitalize !important;
+}
+
+.btn-hire-me-orange img {
+  width: 15px !important;
 }
 
 /* tab styles */
@@ -1214,11 +1283,13 @@ export default {
   .hire-me-title {
     font-size: 13px;
     color: #ffffff;
+    margin-left: 5px;
   }
 
   .hire-me-subtitle {
     font-size: 11px;
     color: #ffffff;
+    margin-left: 5px;
   }
   .btn-hire-me {
     font-size: 12px !important;
@@ -1229,7 +1300,7 @@ export default {
     width: 15px !important;
   }
   .img-hour {
-    width: 13px !important;
+    width: 16px !important;
   }
 
   /* Hire me section */
@@ -1270,6 +1341,84 @@ export default {
   }
   /* achievement */
 }
+
+/* .................................................Tablet ................................. */
+
+/* Tablet */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  /* Profile */
+  .profile-avatar {
+    width: 140px !important;
+  }
+  .profile-title {
+    font-size: 26px !important;
+  }
+
+  .profile-subtitle {
+    font-size: 12px !important;
+  }
+
+  .chat-btn {
+    padding: 8px !important;
+    font-size: 10px !important;
+    margin-top: -50px;
+    margin-left: 30px;
+  }
+
+  .chat-btn-img {
+    width: 13px !important;
+  }
+  /* Profile */
+
+  /* Ineterview  */
+  .btn-voice-call {
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+    width: 120px !important;
+    height: 40px !important;
+    margin-left: -10px;
+  }
+
+  .btn-voice-call img {
+    width: 12px !important;
+  }
+
+  .btn-upload {
+    font-size: 12px !important;
+    width: 140px !important;
+    height: 40px !important;
+  }
+
+  .btn-upload img {
+    width: 20px !important;
+  }
+  /* Interview */
+
+  /* Hire me */
+  .card-hire-me {
+    height: 70px !important;
+  }
+  .hire-me-title {
+    margin-left: 8px !important;
+    font-size: 13px !important;
+  }
+  .hire-me-subtitle {
+    font-size: 11px !important;
+  }
+  .btn-hire-me {
+    margin-top: -5px;
+    font-size: 12px !important;
+    height: 38px !important;
+    width:100px !important;
+  }
+
+  .btn-hire-me img {
+    width: 15px !important;
+  }
+
+  /* Hire me */
+}
+/* Tablet */
 
 /* Mobile Screen */
 
