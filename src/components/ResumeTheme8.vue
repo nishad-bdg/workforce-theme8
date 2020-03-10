@@ -21,10 +21,7 @@
                             size="150"
                             max-width="150"
                           >
-                            <v-img
-                              class="elevation-6"
-                              src="../assets/images/avatar.png"
-                            ></v-img>
+                            <v-img class="elevation-6" src="../assets/images/avatar.png"></v-img>
                           </v-list-item-avatar>
                           <!-- Avatar -->
                           <!-- Name -->
@@ -110,7 +107,7 @@
                         </v-col>-->
                         <!-- only shows on tablet version -->
 
-                        <!-- Only shows on dekstop version -->
+                        <!-- Only shows on tablet and dekstop version -->
                         <v-col cols="12" md="10" sm="12">
                           <v-card flat color="transparent">
                             <v-card-text align="center">
@@ -133,9 +130,9 @@
                             </v-card-text>
                           </v-card>
                         </v-col>
-                        <!-- Only shows on desktop version -->
+                        <!-- Only shows on tablet desktop version -->
 
-                        <!-- Only shows in desktop version -->
+                        <!-- Only shows in desktop and tablet version -->
                         <v-col cols="10" md="11" sm="12">
                           <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
@@ -183,14 +180,14 @@
                             </v-card-text>
                           </v-card>
                         </v-col>
-                        <!-- only shows on desktop version -->
+                        <!-- only shows on desktop and tablet version -->
                       </v-row>
                     </v-card-text>
                   </v-card>
                 </v-col>
                 <!-- Column 2 -->
                 <!-- Coumn 3 tabs -->
-                <v-col cols="12" md="10" sm="10" offset="1" class="mb-n8 hidden-sm-and-down">
+                <v-col cols="12" md="10" sm="10" offset="1" class="mb-n8 hidden-xs-only">
                   <v-card color="transparent" flat>
                     <v-card-text>
                       <!-- tabs -->
@@ -198,13 +195,13 @@
                         v-model="dataTabs"
                         background-color="#00CDF7"
                         height="60"
-                        class="parent-tab"
                         grow
+                        class="parent-tab"
                         centered
                         dark
-                        show-arrows
                         hide-slider
                         mobile-break-point="1024"
+                        show-arrows
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -215,12 +212,13 @@
                         currentTab == tab.id ? 'active-tab' : '',
                         tab.id == 1 ? 'round-left' : '',
                         tab.id == 6 ? 'round-right' : '',
+
                       ]"
                         >
                           <v-avatar tile height="16" width="15">
                             <img
                               :src="[currentTab == tab.id ? getImgUrlIconActive(tab.id):getImgUrlIcon(tab.id) ]"
-                              class="mr-4"
+                              class="mr-md-4 mr-sm-n4"
                             />
                           </v-avatar>
                           {{tab.title}}
@@ -1359,7 +1357,7 @@ export default {
   }
 
   .chat-btn {
-    padding: 8px !important;
+    padding: 15px !important;
     font-size: 10px !important;
     margin-top: -50px;
     margin-left: 30px;
@@ -1409,7 +1407,7 @@ export default {
     margin-top: -5px;
     font-size: 12px !important;
     height: 38px !important;
-    width:100px !important;
+    width: 100px !important;
   }
 
   .btn-hire-me img {
@@ -1417,6 +1415,42 @@ export default {
   }
 
   /* Hire me */
+
+  /* tab */
+  .parent-tab {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  .ct-tab-title {
+    color: #ffffff !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    margin-left: -30px !important;
+  }
+
+  .active-tab {
+    text-align: center !important;
+    background-color: #ffffff !important;
+    color: #fc5283 !important;
+    font-size: 0.75rem !important;
+    margin-left: 5px !important;
+  }
+
+  .active-tab div {
+    margin-left: -21px !important;
+  }
+
+  .round-left {
+    border-top-left-radius: 0px;
+  }
+
+  .round-right {
+    border-top-right-radius: 0px;
+  }
+
+  .v-item-group.v-slide-group.v-slide-group--has-affixes.v-slide-group--is-overflowing.v-tabs-bar.v-tabs-bar--is-mobile.v-tabs-bar--show-arrows.white--text{
+    height: 45px !important;
+  }
+  /* tab */
 }
 /* Tablet */
 
