@@ -37,23 +37,10 @@
                             </v-list-item-subtitle>
 
                             <v-list-item-icon>
-                              <v-btn small icon class="mr-2">
-                                <v-img class="social-icon" src="../assets/icons/behance.png"></v-img>
+                              <v-btn small icon class="mr-2" v-for="icon in socialMedia" :key="icon.title">
+                                <v-img class="social-icon" :src="getIconSocial(icon.title)"></v-img>
                               </v-btn>
-                              <v-btn small icon class="mr-2">
-                                <v-img
-                                  height="30"
-                                  width="30"
-                                  class="social-icon"
-                                  src="../assets/icons/instagram.png"
-                                ></v-img>
-                              </v-btn>
-                              <v-btn small icon class="mr-2">
-                                <v-img class="social-icon" src="../assets/icons/dribble.png"></v-img>
-                              </v-btn>
-                              <v-btn small icon class="mr-2">
-                                <v-img class="social-icon" src="../assets/icons/google.png"></v-img>
-                              </v-btn>
+                              
                             </v-list-item-icon>
                           </v-list-item-content>
 
@@ -71,7 +58,7 @@
                 <!-- Column 1 -->
 
                 <!-- Column 2 -->
-                <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8">
+                <v-col cols="12" md="6" class="desktop-row ml-10 mt-n8 hidden-sm-and-down">
                   <v-card flat color="transparent">
                     <v-card-text>
                       <v-row no-gutters>
@@ -101,15 +88,19 @@
                           <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
                               <v-row no-gutters align="center">
-                                <v-col cols="12" md="1" class="mt-n5 mr-n4">
-                                  <v-img width="20" src="../assets/icons/hourly-rate.png"></v-img>
+                                <v-col
+                                  cols="12"
+                                  md="1"
+                                  class="mt-md-n5 mr-md-n4"
+                                >
+                                  <v-img width="20" class="img-hour" src="../assets/icons/hourly-rate.png"></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3">
                                   <div class="hire-me-title">15$</div>
                                   <div class="hire-me-subtitle">Hourly Rate</div>
                                 </v-col>
-                                <v-col cols="12" md="1" class="mt-n5 mr-n4">
-                                  <v-img width="20" src="../assets/icons/availibility.png"></v-img>
+                                <v-col cols="12" md="1" class="mt-md-n5 mr-md-n4">
+                                  <v-img width="20" class="img-hour" src="../assets/icons/availibility.png"></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3">
                                   <div class="hire-me-title">40 Hours</div>
@@ -623,7 +614,6 @@ export default {
       absolute: true,
       dataTabs: null,
       currentTab: 1,
-
       tabs: [
         { title: "Portfolio", id: 1 },
         { title: "Works", id: 2 },
@@ -845,10 +835,10 @@ export default {
       ],
 
       socialMedia: [
-        { title: "Behance", icon: "mdi-behance" },
-        { title: "Dribbble", icon: "mdi-dribbble" },
-        { title: "Instagram", icon: "mdi-instagram" },
-        { title: "Behance", icon: "mdi-google-plus" }
+        { title: "behance", icon: "mdi-behance", },
+        { title: "dribbble", icon: "mdi-dribbble" },
+        { title: "instagram", icon: "mdi-instagram" },
+        { title: "google", icon: "mdi-google-plus" }
       ]
     };
   },
@@ -893,7 +883,13 @@ export default {
     getIconSkill(icon) {
       let image = require.context("../assets/icons/skills", false, /\.png$/);
       return image("./" + icon + ".png");
-    }
+    },
+
+    //get social media image icons
+    getIconSocial(icon) {
+      let image = require.context("../assets/icons/", false, /\.png$/);
+      return image("./" + icon + ".png");
+    },
   }
 };
 </script>
@@ -919,7 +915,7 @@ export default {
 
 .profile-title {
   font-family: "Open Sans" !important;
-  font-size:36px !important;
+  font-size: 36px !important;
 }
 
 .profile-subtitle {
@@ -1159,11 +1155,76 @@ export default {
 
 /* Media Query */
 /* hire me card */
-@media screen and (max-width: 1200px) {
-  .desktop-row {
-    display: none;
+@media screen and (min-width: 960px) and (max-width: 1122px) {
+  /* Profile */
+  .profile-title{
+    font-size: 30px !important;
   }
+
+  .profile-subtitle{
+    font-size: 14px !important;
+  }
+
+  /* Profile */
+  /* Interview Section */
+  .interview-text {
+    font-size: 12px !important;
+  }
+  .btn-voice-call {
+    font-size: 11px !important;
+    width: 135px !important;
+    height: 40px !important;
+  }
+
+  .btn-voice-call img {
+    width: 10px !important;
+  }
+
+  .btn-upload {
+    font-size: 11px !important;
+    width: 135px !important;
+    height: 40px !important;
+  }
+
+  .btn-upload img {
+    width: 15px !important;
+  }
+
+  /* Interview section */
+  /* Hire Me Section */
+  .card-hire-me {
+    height: 75px !important;
+  }
+
+  .hire-me-title {
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  .hire-me-subtitle {
+    font-size: 11px;
+    color: #ffffff;
+  }
+  .btn-hire-me {
+    font-size: 12px !important;
+    height: 40px !important;
+  }
+
+  .btn-hire-me img {
+    width: 15px !important;
+  }
+  .img-hour{
+    width: 13px !important;
+  }
+
+  /* Hire me section */
 }
+
+/* tablet screen */
+
+/* tablet screen */
+
+/* Mobile Screen */
 
 @media screen and (max-width: 599px) {
   .skill-tab-text {
