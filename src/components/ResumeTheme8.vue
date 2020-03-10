@@ -127,12 +127,11 @@
                   cols="12"
                   md="10"
                   sm="10"
-                  align="center"
                   offset="1"
-                  class="mb-n8 hidden-xs-only"
+                  class="mb-n8 hidden-sm-and-down"
                 >
                   <v-card color="transparent" flat>
-                    <v-card-text align="center">
+                    <v-card-text>
                       <!-- tabs -->
                       <v-tabs
                         v-model="dataTabs"
@@ -142,10 +141,10 @@
                         grow
                         centered
                         dark
+                        show-arrows
                         hide-slider
                       >
                         <v-tab
-                          show-arrows
                           v-for="tab in tabs"
                           :key="tab.id"
                           @click="currentTab = tab.id"
@@ -1218,6 +1217,12 @@ export default {
   }
 
   /* Hire me section */
+
+  /* tabs */
+  .ct-tab-title{
+    font-size:0.8rem !important;
+  }
+  /* tabs */
 }
 
 /* tablet screen */
