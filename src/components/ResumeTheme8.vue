@@ -145,6 +145,7 @@
                         dark
                         show-arrows
                         hide-slider
+                        mobile-break-point="1024"
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -557,10 +558,10 @@
                       </v-col>
 
                       <v-col cols="12" md="6" sm="6">
-                        <div class="flex-column mb-12"></div>
-                        <div class="d-flex flex-column">
+                        <div class="flex-column mb-12 hidden-sm-and-down"></div>
+                        <div class="d-flex flex-column mt-xs-n12">
                           <v-card flat color="transparent">
-                            <v-card-title class="mt-md-12">
+                            <v-card-title class="certification">
                               <span class="achievement-title">Hubspot Design Certification</span>
                             </v-card-title>
                             <v-card-subtitle class="achievement-subtitle">HubSpot Design Academy</v-card-subtitle>
@@ -1117,7 +1118,7 @@ export default {
   position: absolute;
   margin-top: 58px;
   margin-left: 19px;
-  height: 112%;
+  height: 110%;
   border: 1px solid #707070;
 }
 @-moz-document url-prefix() {
@@ -1130,6 +1131,11 @@ export default {
   }
 }
 
+/* achievement */
+.certification {
+  margin-top: 50px;
+}
+/* achievement */
 /* Footer Image */
 .footer-left {
   margin-top: -90px;
@@ -1154,6 +1160,16 @@ export default {
 /* Media Query */
 /* hire me card */
 @media screen and (min-width: 960px) and (max-width: 1122px) {
+  /* tab styles */
+
+  .round-left {
+    border-top-left-radius: 0px;
+  }
+
+  .round-right {
+    border-top-right-radius: 0px;
+  }
+  /* tab styles */
   /* Profile */
   .profile-title {
     font-size: 30px !important;
@@ -1241,6 +1257,17 @@ export default {
     }
   }
   /* vertical line */
+
+  /* about me */
+  .about-me-flex {
+    margin-top: inherit;
+  }
+  /* about me */
+  /* achievement */
+  .certification {
+    margin-top: -10px;
+  }
+  /* achievement */
 }
 
 /* tablet screen */
