@@ -838,10 +838,10 @@ export default {
       ],
 
       socialMedia: [
-        { title: "behance", icon: "mdi-behance" },
-        { title: "dribbble", icon: "mdi-dribbble" },
-        { title: "instagram", icon: "mdi-instagram" },
-        { title: "google", icon: "mdi-google-plus" }
+        { title: "behance", icon: "fa-behance" },
+        { title: "dribbble", icon: "fa-dribbble" },
+        { title: "instagram", icon: "fa-instagram" },
+        { title: "google", icon: "fa-google-plus" }
       ]
     };
   },
