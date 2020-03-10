@@ -247,7 +247,7 @@
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
                     <v-row>
-                      <v-col cols="12" md="6" v-for="(item,index) in work" :key="index">
+                      <v-col cols="12" md="6" sm="12" v-for="(item,index) in work" :key="index">
                         <v-card flat color="transparent" class="mx-10">
                           <v-card-text>
                             <v-list-item>
@@ -784,6 +784,7 @@ export default {
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt utlabore et dolore magna aliquyam erat,"
         }
       ],
+
       // Education
       education: [
         {
@@ -1269,10 +1270,6 @@ export default {
   }
   /* achievement */
 }
-
-/* tablet screen */
-
-/* tablet screen */
 
 /* Mobile Screen */
 
