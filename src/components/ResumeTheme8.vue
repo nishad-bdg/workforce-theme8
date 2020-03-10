@@ -18,7 +18,6 @@
                           <v-list-item-avatar
                             color="grey darken-3"
                             class="profile-avatar"
-                            size="150"
                             max-width="150"
                           >
                             <v-img
@@ -37,10 +36,15 @@
                             </v-list-item-subtitle>
 
                             <v-list-item-icon>
-                              <v-btn small icon class="mr-2" v-for="icon in socialMedia" :key="icon.title">
+                              <v-btn
+                                small
+                                icon
+                                class="mr-2"
+                                v-for="icon in socialMedia"
+                                :key="icon.title"
+                              >
                                 <v-img class="social-icon" :src="getIconSocial(icon.title)"></v-img>
                               </v-btn>
-                              
                             </v-list-item-icon>
                           </v-list-item-content>
 
@@ -88,19 +92,23 @@
                           <v-card flat class="card-hire-me" height="80" color="rgba(37, 0, 0, 0.1)">
                             <v-card-text>
                               <v-row no-gutters align="center">
-                                <v-col
-                                  cols="12"
-                                  md="1"
-                                  class="mt-md-n5 mr-md-n4"
-                                >
-                                  <v-img width="20" class="img-hour" src="../assets/icons/hourly-rate.png"></v-img>
+                                <v-col cols="12" md="1" class="mt-md-n5 mr-md-n4">
+                                  <v-img
+                                    width="20"
+                                    class="img-hour"
+                                    src="../assets/icons/hourly-rate.png"
+                                  ></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3">
                                   <div class="hire-me-title">15$</div>
                                   <div class="hire-me-subtitle">Hourly Rate</div>
                                 </v-col>
                                 <v-col cols="12" md="1" class="mt-md-n5 mr-md-n4">
-                                  <v-img width="20" class="img-hour" src="../assets/icons/availibility.png"></v-img>
+                                  <v-img
+                                    width="20"
+                                    class="img-hour"
+                                    src="../assets/icons/availibility.png"
+                                  ></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3">
                                   <div class="hire-me-title">40 Hours</div>
@@ -123,13 +131,7 @@
                 </v-col>
                 <!-- Column 2 -->
                 <!-- Coumn 3 tabs -->
-                <v-col
-                  cols="12"
-                  md="10"
-                  sm="10"
-                  offset="1"
-                  class="mb-n8 hidden-sm-and-down"
-                >
+                <v-col cols="12" md="10" sm="10" offset="1" class="mb-n8 hidden-sm-and-down">
                   <v-card color="transparent" flat>
                     <v-card-text>
                       <!-- tabs -->
@@ -834,7 +836,7 @@ export default {
       ],
 
       socialMedia: [
-        { title: "behance", icon: "mdi-behance", },
+        { title: "behance", icon: "mdi-behance" },
         { title: "dribbble", icon: "mdi-dribbble" },
         { title: "instagram", icon: "mdi-instagram" },
         { title: "google", icon: "mdi-google-plus" }
@@ -888,7 +890,7 @@ export default {
     getIconSocial(icon) {
       let image = require.context("../assets/icons/", false, /\.png$/);
       return image("./" + icon + ".png");
-    },
+    }
   }
 };
 </script>
@@ -904,12 +906,9 @@ export default {
   border-radius: 0px !important;
 }
 .profile-avatar {
-  border-radius: 22px !important;
-}
-
-.profile-avatar-img {
   width: 150px !important;
   height: auto !important;
+  border-radius: 22px !important;
 }
 
 .profile-title {
@@ -1156,11 +1155,11 @@ export default {
 /* hire me card */
 @media screen and (min-width: 960px) and (max-width: 1122px) {
   /* Profile */
-  .profile-title{
+  .profile-title {
     font-size: 30px !important;
   }
 
-  .profile-subtitle{
+  .profile-subtitle {
     font-size: 14px !important;
   }
 
@@ -1212,17 +1211,36 @@ export default {
   .btn-hire-me img {
     width: 15px !important;
   }
-  .img-hour{
+  .img-hour {
     width: 13px !important;
   }
 
   /* Hire me section */
 
   /* tabs */
-  .ct-tab-title{
-    font-size:0.8rem !important;
+  .ct-tab-title {
+    font-size: 0.8rem !important;
   }
   /* tabs */
+
+  /* vertical line  */
+  .v-line {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 19px;
+    height: 108%;
+    border: 1px solid #707070;
+  }
+  @-moz-document url-prefix() {
+    .v-line {
+      position: absolute;
+      margin-top: 120px;
+      margin-left: 19px;
+      height: 110%;
+      border: 1px solid #707070;
+    }
+  }
+  /* vertical line */
 }
 
 /* tablet screen */
