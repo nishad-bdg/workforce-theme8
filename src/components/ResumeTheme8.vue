@@ -616,7 +616,7 @@
 
                       <v-col cols="12" md="6" sm="6">
                         <div class="flex-column mb-12 hidden-sm-and-down"></div>
-                        <div class="d-flex flex-column mt-xs-n12">
+                        <div class="d-flex flex-column mt-xs-n12 mt-sm-n9">
                           <v-card flat color="transparent">
                             <v-card-title class="certification">
                               <span class="achievement-title">Hubspot Design Certification</span>
@@ -1426,9 +1426,10 @@ export default {
   .parent-tab {
     border-radius: 26px 26px 0 0 !important;
   }
+
   .ct-tab-title {
     color: #ffffff !important;
-    font-size: 0.65rem !important;
+    font-size: 0.60rem !important;
     font-weight: 500 !important;
     margin-left: -20px !important;
   }
@@ -1437,7 +1438,7 @@ export default {
     text-align: center !important;
     background-color: #ffffff !important;
     color: #fc5283 !important;
-    font-size: 0.75rem !important;
+    font-size: 0.60rem !important;
     margin-left: 0px !important;
   }
 
