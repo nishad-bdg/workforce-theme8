@@ -529,14 +529,15 @@
                   <v-card-text>
                     <v-row>
                       <!-- About Me Me Name and Designation -->
-                      <v-col cols="12" md="6">
+                      <v-col cols="12" md="6" sm="6">
                         <v-card color="transparent" flat>
                           <v-card-text>
                             <div class="hello-text">Hello I'm</div>
                             <div class="hello-title">Mickel David</div>
                             <div class="display-2 hello-designation">
-                              a
-                              <span style="color:#6152CF;">UI&UX</span> Designer
+                              <div class="designation-for-tab">a
+                              <span style="color:#6152CF;">UI&UX</span> Designer</div>
+                              
                             </div>
                           </v-card-text>
                         </v-card>
@@ -544,7 +545,7 @@
                       <!-- ABout Me Name and Designation -->
 
                       <!-- About Me Picture -->
-                      <v-col cols="12" md="5">
+                      <v-col cols="12" md="5" sm="6">
                         <v-card flat color="transparent">
                           <v-card-text align="right">
                             <div class="pic-box">
@@ -555,7 +556,7 @@
                       </v-col>
                       <!-- About Me Picture -->
                       <!-- About Me Main Text -->
-                      <v-col cols="12" md="8" class="about-me-flex">
+                      <v-col cols="12" md="8" sm="12" class="about-me-flex">
                         <v-card flat color="transparent">
                           <v-card-title class="display-1">
                             About Me
@@ -563,7 +564,7 @@
                           </v-card-title>
                           <v-card-text>
                             <v-row>
-                              <v-col cols="12" md="1">
+                              <v-col cols="12" md="1" sm="1">
                                 <v-img
                                   class="about-me-line"
                                   height="2.5"
@@ -571,7 +572,7 @@
                                   src="../assets/images/about-me/line85.png"
                                 ></v-img>
                               </v-col>
-                              <v-col cols="12" md="10" class="mt-n7 ml-n7">
+                              <v-col cols="12" md="10" sm="11" class="mt-n7 ml-n7">
                                 <v-card flat color="transparent" class="pa-0">
                                   <v-card-text
                                     class="body-1"
@@ -1153,10 +1154,10 @@ export default {
 
 .pic-box {
   width: 50%;
-  height: auto;
-  border-radius: 15px;
+  height: auto !important;
+  border-radius: 15px !important;
   aspect-ratio: 0.9 !important;
-  box-shadow: 48px 56px 0px -8px rgba(97, 82, 207, 1);
+  box-shadow: 48px 56px 0px -8px rgba(97, 82, 207, 1) !important;
 }
 
 .about-me-flex {
@@ -1429,7 +1430,7 @@ export default {
 
   .ct-tab-title {
     color: #ffffff !important;
-    font-size: 0.60rem !important;
+    font-size: 0.6rem !important;
     font-weight: 500 !important;
     margin-left: -20px !important;
   }
@@ -1438,7 +1439,7 @@ export default {
     text-align: center !important;
     background-color: #ffffff !important;
     color: #fc5283 !important;
-    font-size: 0.60rem !important;
+    font-size: 0.6rem !important;
     margin-left: 0px !important;
   }
 
@@ -1454,11 +1455,35 @@ export default {
     border-top-right-radius: 26px;
   }
 
-  .v-item-group.theme--dark.v-slide-group.v-tabs-bar.v-tabs-bar--is-mobile.white--text{
+  .v-item-group.theme--dark.v-slide-group.v-tabs-bar.v-tabs-bar--is-mobile.white--text {
     height: 55px !important;
   }
 
   /* tab */
+
+  /* About Me */
+  .pic-box {
+    width: 50%;
+    margin-right: 80px;
+  }
+
+  .hello-title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #373737;
+  }
+
+  .designation-for-tab{
+    margin-top: -10px;
+    font-size:40px !important;
+  }
+
+  .about-me-flex {
+    margin-top: 0px;
+  }
+
+  /* About Me */
 }
 /* Tablet */
 
