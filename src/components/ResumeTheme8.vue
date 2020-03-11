@@ -202,7 +202,6 @@
                         dark
                         hide-slider
                         mobile-break-point="1024"
-                        show-arrows
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -1429,9 +1428,9 @@ export default {
   }
   .ct-tab-title {
     color: #ffffff !important;
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
     font-weight: 500 !important;
-    margin-left: -30px !important;
+    margin-left: -20px !important;
   }
 
   .active-tab {
@@ -1454,6 +1453,9 @@ export default {
     border-top-right-radius: 26px;
   }
 
+  .v-item-group.theme--dark.v-slide-group.v-tabs-bar.v-tabs-bar--is-mobile.white--text{
+    height: 55px !important;
+  }
 
   /* tab */
 }
