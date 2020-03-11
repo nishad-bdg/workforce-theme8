@@ -1464,7 +1464,8 @@ export default {
   /* About Me */
   .pic-box {
     width: 50%;
-    margin-right: 80px;
+    margin-right: 50px;
+    margin-top: -20px;
   }
 
   .hello-title {
@@ -1480,7 +1481,7 @@ export default {
   }
 
   .about-me-flex {
-    margin-top: 0px;
+    margin-top: -50px;
   }
 
   /* About Me */
