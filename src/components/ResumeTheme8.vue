@@ -108,7 +108,7 @@
                         <!-- only shows on tablet version -->
 
                         <!-- Only shows on tablet and dekstop version -->
-                        <v-col cols="12" md="10" sm="12">
+                        <v-col cols="12" md="10" sm="12" class="interview-flex">
                           <v-card flat color="transparent">
                             <v-card-text align="center">
                               <v-row align="center">
@@ -409,14 +409,13 @@
                         color="#6152CF"
                         v-model="skillTab"
                         background-color="transparent"
-                        show-arrows
                         align-with-title
                         mobile-break-point="599"
                       >
                         <v-tab
                           v-for="item in skills"
                           :key="item.id"
-                          class="skill-tab-text mx-md-4"
+                          class="skill-tab-text mx-md-4 mr-sm-n4"
                         >{{item.skill}}</v-tab>
                       </v-tabs>
                       <v-spacer></v-spacer>
@@ -535,9 +534,10 @@
                             <div class="hello-text">Hello I'm</div>
                             <div class="hello-title">Mickel David</div>
                             <div class="display-2 hello-designation">
-                              <div class="designation-for-tab">a
-                              <span style="color:#6152CF;">UI&UX</span> Designer</div>
-                              
+                              <div class="designation-for-tab">
+                                a
+                                <span style="color:#6152CF;">UI&UX</span> Designer
+                              </div>
                             </div>
                           </v-card-text>
                         </v-card>
@@ -1374,13 +1374,16 @@ export default {
   /* Profile */
 
   /* Ineterview  */
+  .interview-flex{
+    margin-top: 45px;
+    margin-bottom: -10px;
+  }
   .btn-voice-call {
     font-size: 12px !important;
     text-transform: capitalize !important;
     width: 140px !important;
     height: 40px !important;
     margin-left: -10px;
-    margin-top: 20px;
   }
 
   .btn-voice-call img {
@@ -1391,7 +1394,6 @@ export default {
     font-size: 12px !important;
     width: 140px !important;
     height: 40px !important;
-    margin-top: 20px;
   }
 
   .btn-upload img {
@@ -1430,7 +1432,7 @@ export default {
 
   .ct-tab-title {
     color: #ffffff !important;
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
     font-weight: 500 !important;
     margin-left: -20px !important;
   }
@@ -1439,7 +1441,7 @@ export default {
     text-align: center !important;
     background-color: #ffffff !important;
     color: #fc5283 !important;
-    font-size: 0.6rem !important;
+    font-size: 0.7rem !important;
     margin-left: 0px !important;
   }
 
@@ -1461,6 +1463,28 @@ export default {
 
   /* tab */
 
+  /* Work */
+  .work-title {
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+
+  .work-subtitle {
+    font-size: 16px !important;
+  }
+
+  .work-text {
+    font-size: 14px !important;
+  }
+  /* Work */
+
+  /* Skill tabs */
+  .skill-tab-text {
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+  }
+  /* Skill Tab */
+
   /* About Me */
   .pic-box {
     width: 50%;
@@ -1475,9 +1499,9 @@ export default {
     color: #373737;
   }
 
-  .designation-for-tab{
+  .designation-for-tab {
     margin-top: -10px;
-    font-size:40px !important;
+    font-size: 40px !important;
   }
 
   .about-me-flex {
@@ -1485,6 +1509,25 @@ export default {
   }
 
   /* About Me */
+
+  /* vertical line */
+  .v-line {
+    position: absolute;
+    margin-top: 56px;
+    margin-left: 19px;
+    height: 110%;
+    border: 1px solid #707070;
+  }
+  @-moz-document url-prefix() {
+    .v-line {
+      position: absolute;
+      margin-top: 113px;
+      margin-left: 19px;
+      height: 110%;
+      border: 1px solid #707070;
+    }
+  }
+  /* vertical line */
 }
 /* Tablet */
 
