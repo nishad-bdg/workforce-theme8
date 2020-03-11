@@ -112,9 +112,10 @@
                           <v-card flat color="transparent">
                             <v-card-text align="center">
                               <v-row align="center">
-                                <v-col cols="12" md="4">
-                                  <div class="interview-text hidden-sm-and-down">Your Interviews:</div>
+                                <v-col cols="12" md="4" class="interview-col hidden-sm-and-down">
+                                  <div class="interview-text">Your Interviews:</div>
                                 </v-col>
+                                <v-spacer class="hidden-md-only"></v-spacer>
                                 <v-col cols="12" md="4" sm="5" class>
                                   <v-btn color="#03CA9F" class="btn-voice-call">
                                     <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
@@ -187,7 +188,7 @@
                 </v-col>
                 <!-- Column 2 -->
                 <!-- Coumn 3 tabs -->
-                <v-col cols="12" md="10" sm="10" offset="1" class="mb-n8 hidden-xs-only">
+                <v-col cols="12" md="10" sm="12" offset-md="1" class="mb-n8 hidden-xs-only">
                   <v-card color="transparent" flat>
                     <v-card-text>
                       <!-- tabs -->
@@ -1229,7 +1230,9 @@ export default {
 /* hire me card */
 @media screen and (min-width: 960px) and (max-width: 1122px) {
   /* tab styles */
-
+  .interview-col {
+    display: none;
+  }
   .round-left {
     border-top-left-radius: 0px;
   }
@@ -1256,6 +1259,7 @@ export default {
     font-size: 11px !important;
     width: 135px !important;
     height: 40px !important;
+    margin-left: 100px;
   }
 
   .btn-voice-call img {
@@ -1266,6 +1270,7 @@ export default {
     font-size: 11px !important;
     width: 135px !important;
     height: 40px !important;
+    margin-left: 130px;
   }
 
   .btn-upload img {
@@ -1372,9 +1377,10 @@ export default {
   .btn-voice-call {
     font-size: 12px !important;
     text-transform: capitalize !important;
-    width: 120px !important;
+    width: 140px !important;
     height: 40px !important;
     margin-left: -10px;
+    margin-top: 20px;
   }
 
   .btn-voice-call img {
@@ -1385,10 +1391,11 @@ export default {
     font-size: 12px !important;
     width: 140px !important;
     height: 40px !important;
+    margin-top: 20px;
   }
 
   .btn-upload img {
-    width: 20px !important;
+    width: 15px !important;
   }
   /* Interview */
 
@@ -1418,7 +1425,7 @@ export default {
 
   /* tab */
   .parent-tab {
-    border-radius: 10px 10px 0 0 !important;
+    border-radius: 26px 26px 0 0 !important;
   }
   .ct-tab-title {
     color: #ffffff !important;
@@ -1432,24 +1439,22 @@ export default {
     background-color: #ffffff !important;
     color: #fc5283 !important;
     font-size: 0.75rem !important;
-    margin-left: 5px !important;
+    margin-left: 0px !important;
   }
 
   .active-tab div {
-    margin-left: -21px !important;
+    margin-left: -20px !important;
   }
 
   .round-left {
-    border-top-left-radius: 0px;
+    border-top-left-radius: 26px;
   }
 
   .round-right {
-    border-top-right-radius: 0px;
+    border-top-right-radius: 26px;
   }
 
-  .v-item-group.v-slide-group.v-slide-group--has-affixes.v-slide-group--is-overflowing.v-tabs-bar.v-tabs-bar--is-mobile.v-tabs-bar--show-arrows.white--text{
-    height: 45px !important;
-  }
+
   /* tab */
 }
 /* Tablet */
