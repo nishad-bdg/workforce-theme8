@@ -1779,17 +1779,17 @@ export default {
     width: 2px !important;
   }
   .social-sm-icon-btn {
-    margin-right: 2px !important;
+    margin-right: 4px !important;
     height: 20px !important ;
-    min-width: 10px !important;
+    min-width: 20px !important;
   }
   .social-sm-icon {
-    font-size: 8px !important;
+    font-size: 10px !important;
   }
 
   .phone-btn {
     margin-left: -5px;
-    margin-top:60px;
+    margin-top:55px;
     margin-bottom: -15px;
     height: 25px !important;
     width: 18px !important;
