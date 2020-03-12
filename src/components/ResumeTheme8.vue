@@ -9,7 +9,7 @@
             <v-container fluid ma-0 pa-0>
               <v-row no-gutters>
                 <!-- Column 1 Profile -->
-                <v-col cols="12" md="5" sm="2" xs="8">
+                <v-col md="5" sm="2">
                   <v-card color="transparent" flat class="mx-md-5 ml-xs-n12 ml-sm-n4">
                     <v-card-text>
                       <div class="d-flex">
@@ -72,10 +72,13 @@
                   </v-card>
                 </v-col>
                 <!-- Column 1 Profile -->
+               
+                  
+
 
                 <!-- Column 2 Interview-->
                 <v-col
-                  cols="12"
+                  cols="6"
                   md="6"
                   sm="6"
                   offset-sm="4"
@@ -84,28 +87,6 @@
                   <v-card flat color="transparent">
                     <v-card-text>
                       <v-row no-gutters>
-                        <!-- only shows on tablet version -->
-                        <!-- <v-col cols="12" sm="3" class="d-none d-sm-flex d-md-none mt-sm-5">
-                          <v-card flat color="transparent">
-                            <v-card-text>
-                              <v-btn color="#00CDF7" height="50">
-                                <v-icon color="#6D1CFF">fa-phone</v-icon>
-                              </v-btn>
-                            </v-card-text>
-                          </v-card>
-                        </v-col>
-                        <v-col cols="12" sm="3" class="d-none d-sm-flex d-md-none mt-sm-5">
-                          <v-card-text>
-                            <v-btn color="#E8E5F6" height="50">
-                              <v-img
-                                style="width:20px !important;"
-                                src="../assets/icons/youtube-camera.png"
-                              ></v-img>
-                            </v-btn>
-                          </v-card-text>
-                        </v-col>-->
-                        <!-- only shows on tablet version -->
-
                         <!-- Only shows on tablet and dekstop version -->
                         <v-col cols="12" md="10" sm="12" class="interview-flex">
                           <v-card flat color="transparent">
