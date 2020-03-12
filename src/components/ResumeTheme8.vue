@@ -305,13 +305,17 @@
                   <v-card-text>
                     <v-row>
                       <v-col cols="12" md="6" sm="12" v-for="(item,index) in work" :key="index">
-                        <v-card flat color="transparent" class="mx-10">
+                        <v-card flat color="transparent" class="mx-md-10">
                           <v-card-text>
                             <v-list-item>
                               <v-list-item-icon class="mt-2">
                                 <v-img width="40" :src="getIconWork(item.id)"></v-img>
                               </v-list-item-icon>
-                              <div class="v-line" v-if="work.length-(index+1) >1"></div>
+                              <div class="v-line" 
+                                :class="[
+                                  work.length-(index+1) <2 ? 'hidden-md-and-up':''
+                                ]"
+                              ></div>
                               <v-list-item-content>
                                 <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
                                 <v-list-item-subtitle
