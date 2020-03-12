@@ -10,7 +10,7 @@
               <v-row no-gutters>
                 <!-- Column 1 Profile -->
                 <v-col cols="12" md="5" sm="2" xs="8">
-                  <v-card color="transparent" flat class="mx-md-5 ml-xs-n10 ml-sm-n4">
+                  <v-card color="transparent" flat class="mx-md-5 ml-xs-n12 ml-sm-n4">
                     <v-card-text>
                       <div class="d-flex">
                         <v-list-item>
@@ -18,7 +18,6 @@
                           <v-list-item-avatar
                             color="grey darken-3"
                             class="profile-avatar"
-                            size="150"
                             max-width="150"
                           >
                             <v-img class="elevation-6" src="../assets/images/avatar.png"></v-img>
@@ -37,12 +36,12 @@
                               <v-btn
                                 height="30"
                                 x-small
-                                class="mr-1"
+                                class="mr-sm-1 social-sm-icon-btn"
                                 v-for="icon in socialMedia"
                                 :key="icon.title"
                                 :color="icon.color"
                               >
-                                <v-icon small v-text="icon.icon"></v-icon>
+                                <v-icon small v-text="icon.icon" class="social-sm-icon"></v-icon>
                               </v-btn>
                             </v-list-item-icon>
 
@@ -80,7 +79,7 @@
                   md="6"
                   sm="6"
                   offset-sm="4"
-                  class="desktop-row ml-md-10 mt-md-n8 mt-sm-n12"
+                  class="desktop-row ml-md-10 mt-md-n8 mt-sm-n12 hidden-xs-only"
                 >
                   <v-card flat color="transparent">
                     <v-card-text>
@@ -311,7 +310,8 @@
                               <v-list-item-icon class="mt-2">
                                 <v-img width="40" :src="getIconWork(item.id)"></v-img>
                               </v-list-item-icon>
-                              <div class="v-line" 
+                              <div
+                                class="v-line"
                                 :class="[
                                   work.length-(index+1) <2 ? 'hidden-md-and-up':''
                                 ]"
@@ -1378,7 +1378,7 @@ export default {
   /* Profile */
 
   /* Ineterview  */
-  .interview-flex{
+  .interview-flex {
     margin-top: 45px;
     margin-bottom: -10px;
   }
@@ -1535,9 +1535,49 @@ export default {
 }
 /* Tablet */
 
-/* Mobile Screen */
+/* .................................................................................................. */
+/* ..............................................Mobile Screen................................. */
 
 @media screen and (max-width: 599px) {
+  /*  profile */
+
+  .profile-avatar {
+    margin-left: -30px;
+    width: 120px !important;
+    height: auto !important;
+    border-radius: 22px !important;
+  }
+  .profile-title {
+    font-size: 24px !important;
+  }
+
+  .profile-subtitle {
+    font-size: 14px !important;
+    padding: 2px;
+    color: #ffffff !important;
+  }
+
+  .chat-btn {
+    padding: 10px !important;
+    font-size: 9px !important;
+    margin-top: -50px;
+    margin-left: -2px;
+    width: 100px !important;
+    text-align: center !important;
+  }
+
+  .chat-btn-img {
+    width: 2px !important;
+  }
+  .social-sm-icon-btn {
+    margin-right: 3px !important;
+    height: 25px !important ;
+    width: 10px !important;
+  }
+  .social-sm-icon {
+    font-size: 10px !important;
+  }
+  /* Profile */
   .skill-tab-text {
     font-size: 12px !important;
   }
