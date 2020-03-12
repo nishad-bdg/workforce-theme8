@@ -84,6 +84,46 @@
                     </v-btn>
                   </v-card>
                 </v-col>
+                <!-- Hourly rate -->
+                <v-col cols="12" class="hidden-sm-and-up">
+                  <v-card color="white" light height="50">
+                    <v-row>
+                      <v-col cols="4" class="mt-n2">
+                        <v-list-item>
+                          <v-list-item-icon>
+                            <img style="width:15px !important;" src="../assets/icons/hour.png">
+                          </v-list-item-icon>
+                          <v-list-item-content class="ml-n10">
+                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-col>
+
+                      <v-col cols="4" class="mt-n2">
+                        <v-list-item>
+                          <v-list-item-icon>
+                            <img style="width:15px !important;" src="../assets/icons/hour.png">
+                          </v-list-item-icon>
+                          <v-list-item-content class="ml-n10">
+                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-col>
+
+                      <v-col cols="4" class="mt-n2">
+                        <v-list-item>
+                          <v-list-item-icon>
+                            <img style="width:15px !important;" src="../assets/icons/hour.png">
+                          </v-list-item-icon>
+                          <v-list-item-content class="ml-n10">
+                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
+                          </v-list-item-content>
+                        </v-list-item>
+                      </v-col>
+                    </v-row>
+                  </v-card>
+                </v-col>
+                <!-- Hourly Rate -->
                 <!-- Hideen in sm and up phone icons -->
 
                 <!-- Column 2 Interview-->
@@ -1532,7 +1572,7 @@ export default {
   }
 
   .phone-btn {
-    margin-top:60px;
+    margin-top: 60px;
     margin-bottom: -15px;
     height: 30px !important;
     width: 20px !important;
@@ -1617,7 +1657,8 @@ export default {
   }
 
   .phone-btn {
-    margin-top:50px;
+    margin-left: 20px;
+    margin-top: 50px;
     margin-bottom: -15px;
     height: 30px !important;
     width: 20px !important;
@@ -1628,6 +1669,7 @@ export default {
   }
 
   .video-btn {
+    margin-left: 20px;
     height: 30px !important;
     width: 20px !important;
   }
@@ -1702,7 +1744,7 @@ export default {
 
   .phone-btn {
     margin-left: 15px;
-    margin-top:50px;
+    margin-top: 50px;
     margin-bottom: -15px;
     height: 30px !important;
     width: 20px !important;
@@ -1744,7 +1786,6 @@ export default {
     height: auto;
   }
 }
-
 
 /* iphone 5s */
 @media screen and (max-width: 340px) {
@@ -1789,7 +1830,7 @@ export default {
 
   .phone-btn {
     margin-left: -5px;
-    margin-top:55px;
+    margin-top: 55px;
     margin-bottom: -15px;
     height: 25px !important;
     width: 18px !important;
@@ -1835,6 +1876,5 @@ export default {
 /* iphone 5s */
 
 /* min screen devices*/
-
 </style>
 
