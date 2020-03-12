@@ -9,7 +9,7 @@
             <v-container fluid ma-0 pa-0>
               <v-row no-gutters>
                 <!-- Column 1 Profile -->
-                <v-col md="5" sm="2">
+                <v-col cols="8" md="5" sm="2">
                   <v-card color="transparent" flat class="mx-md-5 ml-xs-n12 ml-sm-n4">
                     <v-card-text>
                       <div class="d-flex">
@@ -59,11 +59,9 @@
                             </v-list-item-icon>
                           </v-list-item-content>
                           <!-- Hidden in sm and xs devices -->
-
                           <!-- Name -->
                         </v-list-item>
                       </div>
-
                       <v-btn color="#FF5231" class="chat-btn">
                         TAP TO CHAT
                         <v-img src="../assets/icons/chat.png" class="chat-btn-img ml-1"></v-img>
@@ -72,9 +70,21 @@
                   </v-card>
                 </v-col>
                 <!-- Column 1 Profile -->
-               
-                  
 
+                <!-- Hidden in sm and up phone icons -->
+                <v-col col="4" class="hidden-sm-and-up ml-12">
+                  <v-card flat color="transparent">
+                    <v-btn small color="#00CDF7" class="phone-btn">
+                      <v-icon color="#6D1CFF" class="phone-icon">fa-phone</v-icon>
+                    </v-btn>
+                  </v-card>
+                  <v-card flat color="transparent" class="mt-6">
+                    <v-btn small color="#E8E5F6" class="video-btn">
+                      <v-icon color="#6D1CFF" class="video-icon">mdi-video-box</v-icon>
+                    </v-btn>
+                  </v-card>
+                </v-col>
+                <!-- Hideen in sm and up phone icons -->
 
                 <!-- Column 2 Interview-->
                 <v-col
@@ -220,7 +230,7 @@
 
     <!-- tabs details row -->
     <v-row>
-      <v-col cols="12" md="12" xs="12">
+      <v-col cols="12" md="12">
         <v-card flat color="#F5F5F5">
           <!-- tab items -->
           <v-tabs v-model="dataTabs">
@@ -230,14 +240,7 @@
                 <v-card flat color="transparent" class="mt-n10" style="z-index:1;">
                   <v-card-text align="center">
                     <v-row>
-                      <v-col
-                        cols="12"
-                        md="4"
-                        sm="6"
-                        xs="12"
-                        v-for="item in portfolio"
-                        :key="item.id"
-                      >
+                      <v-col md="4" sm="6" v-for="item in portfolio" :key="item.id">
                         <v-card elevation-12 class="card-portfolio">
                           <v-img aspect-ratio="1.4" :src="getImgUrlPortfolio(item.id)">
                             <v-overlay
@@ -310,22 +313,6 @@
                         </v-card>
                       </v-col>
                     </v-row>
-
-                    <!-- Pagination -->
-                    <v-row class="mt-5">
-                      <v-col cols="12">
-                        <div class="text-center">
-                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
-                            <v-icon disabled>mdi-arrow-left</v-icon>
-                          </v-btn>
-                          <span class="title pagination-text">1/5</span>
-                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
-                            <v-icon>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </v-col>
-                    </v-row>
-                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -362,21 +349,6 @@
                         </v-card>
                       </v-col>
                     </v-row>
-                    <!-- Pagination -->
-                    <v-row class="mt-5">
-                      <v-col cols="12">
-                        <div class="text-center">
-                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
-                            <v-icon disabled>mdi-arrow-left</v-icon>
-                          </v-btn>
-                          <span class="title pagination-text">1/5</span>
-                          <v-btn dark x-small class="mx-8" fab color="#6152CF">
-                            <v-icon>mdi-arrow-right</v-icon>
-                          </v-btn>
-                        </div>
-                      </v-col>
-                    </v-row>
-                    <!-- Pagination -->
                   </v-card-text>
                 </v-card>
               </v-container>
@@ -1558,6 +1530,25 @@ export default {
   .social-sm-icon {
     font-size: 10px !important;
   }
+
+  .phone-btn {
+    margin-top:60px;
+    margin-bottom: -15px;
+    height: 30px !important;
+    width: 20px !important;
+  }
+
+  .phone-icon {
+    font-size: 20px !important;
+  }
+
+  .video-btn {
+    height: 30px !important;
+    width: 20px !important;
+  }
+  .video-icon {
+    font-size: 20px !important;
+  }
   /* Profile */
   .skill-tab-text {
     font-size: 12px !important;
@@ -1582,5 +1573,268 @@ export default {
     height: auto;
   }
 }
+/* mobile devices */
+
+/* min screen devices */
+@media screen and (max-width: 416px) {
+  /*  profile */
+
+  .profile-avatar {
+    margin-left: -30px;
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 22px !important;
+  }
+  .profile-title {
+    font-size: 22px !important;
+  }
+
+  .profile-subtitle {
+    font-size: 12px !important;
+    padding: 2px;
+  }
+
+  .chat-btn {
+    padding: 5px !important;
+    font-size: 9px !important;
+    margin-top: -50px;
+    margin-left: -10px;
+    width: 90px !important;
+    height: 25px !important;
+    text-align: center !important;
+  }
+
+  .chat-btn-img {
+    width: 2px !important;
+  }
+  .social-sm-icon-btn {
+    margin-right: 2px !important;
+    height: 25px !important ;
+    width: 10px !important;
+  }
+  .social-sm-icon {
+    font-size: 10px !important;
+  }
+
+  .phone-btn {
+    margin-top:50px;
+    margin-bottom: -15px;
+    height: 30px !important;
+    width: 20px !important;
+  }
+
+  .phone-icon {
+    font-size: 20px !important;
+  }
+
+  .video-btn {
+    height: 30px !important;
+    width: 20px !important;
+  }
+  .video-icon {
+    font-size: 20px !important;
+  }
+  /* Profile */
+  .skill-tab-text {
+    font-size: 12px !important;
+  }
+
+  .footer-left {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-left img {
+    width: 20%;
+    height: auto;
+  }
+
+  .footer-right {
+    margin-top: -130px;
+    margin-bottom: -100px;
+  }
+
+  .footer-right img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+/* min360 */
+@media screen and (max-width: 360px) {
+  /*  profile */
+
+  .profile-avatar {
+    margin-left: -30px;
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 22px !important;
+  }
+  .profile-title {
+    font-size: 22px !important;
+  }
+
+  .profile-subtitle {
+    font-size: 12px !important;
+    padding: 2px;
+  }
+
+  .chat-btn {
+    padding: 5px !important;
+    font-size: 9px !important;
+    margin-top: -50px;
+    margin-left: -10px;
+    width: 90px !important;
+    height: 25px !important;
+    text-align: center !important;
+  }
+
+  .chat-btn-img {
+    width: 2px !important;
+  }
+  .social-sm-icon-btn {
+    margin-right: 2px !important;
+    height: 25px !important ;
+    width: 10px !important;
+  }
+  .social-sm-icon {
+    font-size: 10px !important;
+  }
+
+  .phone-btn {
+    margin-left: 15px;
+    margin-top:50px;
+    margin-bottom: -15px;
+    height: 30px !important;
+    width: 20px !important;
+  }
+
+  .phone-icon {
+    font-size: 20px !important;
+  }
+
+  .video-btn {
+    margin-left: 15px;
+    height: 30px !important;
+    width: 20px !important;
+  }
+  .video-icon {
+    font-size: 20px !important;
+  }
+  /* Profile */
+  .skill-tab-text {
+    font-size: 12px !important;
+  }
+
+  .footer-left {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-left img {
+    width: 20%;
+    height: auto;
+  }
+
+  .footer-right {
+    margin-top: -130px;
+    margin-bottom: -100px;
+  }
+
+  .footer-right img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+
+/* iphone 5s */
+@media screen and (max-width: 340px) {
+  /*  profile */
+
+  .profile-avatar {
+    margin-left: -30px;
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 22px !important;
+  }
+  .profile-title {
+    font-size: 20px !important;
+  }
+
+  .profile-subtitle {
+    font-size: 12px !important;
+    padding: 2px;
+  }
+
+  .chat-btn {
+    padding: 5px !important;
+    font-size: 9px !important;
+    margin-top: -50px;
+    margin-left: -10px;
+    width: 90px !important;
+    height: 25px !important;
+    text-align: center !important;
+  }
+
+  .chat-btn-img {
+    width: 2px !important;
+  }
+  .social-sm-icon-btn {
+    margin-right: 2px !important;
+    height: 20px !important ;
+    min-width: 10px !important;
+  }
+  .social-sm-icon {
+    font-size: 8px !important;
+  }
+
+  .phone-btn {
+    margin-left: -5px;
+    margin-top:60px;
+    margin-bottom: -15px;
+    height: 25px !important;
+    width: 18px !important;
+  }
+
+  .phone-icon {
+    font-size: 20px !important;
+  }
+
+  .video-btn {
+    margin-left: -5px;
+    height: 25px !important;
+    width: 18px !important;
+  }
+  .video-icon {
+    font-size: 20px !important;
+  }
+  /* Profile */
+  .skill-tab-text {
+    font-size: 12px !important;
+  }
+
+  .footer-left {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-left img {
+    width: 20%;
+    height: auto;
+  }
+
+  .footer-right {
+    margin-top: -130px;
+    margin-bottom: -100px;
+  }
+
+  .footer-right img {
+    width: 30%;
+    height: auto;
+  }
+}
+
+/* iphone 5s */
+
+/* min screen devices*/
+
 </style>
 
