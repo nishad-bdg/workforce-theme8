@@ -176,11 +176,7 @@
                                   sm="1"
                                   class="mt-md-n5 mr-md-n4 mt-sm-n5 mr-sm-n2"
                                 >
-                                  <v-img
-                                    width="20"
-                                    class="img-hour"
-                                    src="../assets/icons/hourly-rate.png"
-                                  ></v-img>
+                                  <v-img class="img-hour" src="../assets/icons/hourly-rate.png"></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3" sm="3">
                                   <div class="hire-me-title">15$</div>
@@ -192,11 +188,7 @@
                                   sm="1"
                                   class="mt-md-n5 mr-md-n4 mt-sm-n5 mr-sm-n2"
                                 >
-                                  <v-img
-                                    width="20"
-                                    class="img-hour"
-                                    src="../assets/icons/availibility.png"
-                                  ></v-img>
+                                  <v-img class="img-hour" src="../assets/icons/availibility.png"></v-img>
                                 </v-col>
                                 <v-col cols="12" md="3" sm="4">
                                   <div class="hire-me-title">40 Hours</div>
@@ -233,7 +225,7 @@
                         centered
                         dark
                         hide-slider
-                        mobile-break-point="1024"
+                        
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -1112,17 +1104,19 @@ export default {
 }
 
 /* hire me card */
+
 .card-hire-me {
   border-radius: 51px !important;
 }
 
 .hire-me-title {
-  font-size: 14px;
+  font-size: 1vw !important;
   color: #ffffff;
+  margin-left: 0.2vw !important;
 }
 
 .hire-me-subtitle {
-  font-size: 13px;
+  font-size: 0.9vw !important;
   color: #ffffff;
 }
 
@@ -1133,29 +1127,23 @@ export default {
   border-radius: 38px !important;
 }
 
+.img-hour {
+  width: 1.8vw !important;
+}
+
 .btn-hire-me img {
   width: 20px !important;
 }
 
-.btn-hire-me-orange {
-  margin-top: -5px;
-  font-size: 12px !important;
-  text-transform: capitalize !important;
-}
-
-.btn-hire-me-orange img {
-  width: 15px !important;
-}
-
 /* tab styles */
 .parent-tab {
-  overflow:hidden !important;
+  overflow: hidden !important;
   border-radius: 26px 26px 0 0 !important;
 }
 
 .ct-tab-title {
   color: #ffffff !important;
-  font-size: 1rem !important;
+  font-size: 1.1vw !important;
   font-weight: 500 !important;
 }
 
@@ -1166,9 +1154,6 @@ export default {
 
 /* Corners */
 .round-left {
-  border-top-left-radius: 26px;
-}
-.round-left:hover {
   border-top-left-radius: 26px;
 }
 
@@ -1295,122 +1280,6 @@ export default {
 
 /* Media Query */
 /* hire me card */
-@media screen and (min-width: 960px) and (max-width: 1122px) {
-  /* tab styles */
-  .interview-col {
-    display: none;
-  }
-  .round-left {
-    border-top-left-radius: 0px;
-  }
-
-  .round-right {
-    border-top-right-radius: 0px;
-  }
-  /* tab styles */
-  /* Profile */
-  .profile-title {
-    font-size: 30px !important;
-  }
-
-  .profile-subtitle {
-    font-size: 14px !important;
-  }
-
-  /* Profile */
-  /* Interview Section */
-  .interview-text {
-    font-size: 12px !important;
-  }
-  .btn-voice-call {
-    font-size: 11px !important;
-    width: 135px !important;
-    height: 40px !important;
-    margin-left: 100px;
-  }
-
-  .btn-voice-call img {
-    width: 10px !important;
-  }
-
-  .btn-upload {
-    font-size: 11px !important;
-    width: 135px !important;
-    height: 40px !important;
-    margin-left: 130px;
-  }
-
-  .btn-upload img {
-    width: 15px !important;
-  }
-
-  /* Interview section */
-  /* Hire Me Section */
-  .card-hire-me {
-    height: 75px !important;
-  }
-
-  .hire-me-title {
-    font-size: 13px;
-    color: #ffffff;
-    margin-left: 5px;
-  }
-
-  .hire-me-subtitle {
-    font-size: 11px;
-    color: #ffffff;
-    margin-left: 5px;
-  }
-  .btn-hire-me {
-    font-size: 12px !important;
-    height: 40px !important;
-  }
-
-  .btn-hire-me img {
-    width: 15px !important;
-  }
-  .img-hour {
-    width: 16px !important;
-  }
-
-  /* Hire me section */
-
-  /* tabs */
-  .ct-tab-title {
-    font-size: 0.8rem !important;
-  }
-  /* tabs */
-
-  /* vertical line  */
-  .v-line {
-    position: absolute;
-    margin-top: 58px;
-    margin-left: 19px;
-    height: 108%;
-    border: 1px solid #707070;
-  }
-  @-moz-document url-prefix() {
-    .v-line {
-      position: absolute;
-      margin-top: 120px;
-      margin-left: 19px;
-      height: 110%;
-      border: 1px solid #707070;
-    }
-  }
-  /* vertical line */
-
-  /* about me */
-  .about-me-flex {
-    margin-top: inherit;
-  }
-  /* about me */
-  /* achievement */
-  .certification {
-    margin-top: -10px;
-  }
-  /* achievement */
-}
 
 /* .................................................Tablet ................................. */
 
@@ -1502,36 +1371,7 @@ export default {
     border-radius: 26px 26px 0 0 !important;
   }
 
-  .ct-tab-title {
-    color: #ffffff !important;
-    font-size: 0.7rem !important;
-    font-weight: 500 !important;
-    margin-left: -20px !important;
-  }
-
-  .active-tab {
-    text-align: center !important;
-    background-color: #ffffff !important;
-    color: #fc5283 !important;
-    font-size: 0.7rem !important;
-    margin-left: 0px !important;
-  }
-
-  .active-tab div {
-    margin-left: -20px !important;
-  }
-
-  .round-left {
-    border-top-left-radius: 26px;
-  }
-
-  .round-right {
-    border-top-right-radius: 26px;
-  }
-
-  .v-item-group.theme--dark.v-slide-group.v-tabs-bar.v-tabs-bar--is-mobile.white--text {
-    height: 55px !important;
-  }
+  
 
   /* tab */
 
