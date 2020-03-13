@@ -217,6 +217,7 @@
                     <v-card-text>
                       <!-- tabs -->
                       <v-tabs
+                        height="55"
                         v-model="dataTabs"
                         background-color="#00CDF7"
                         grow
