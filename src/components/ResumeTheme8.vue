@@ -272,6 +272,18 @@
 
     <!-- tabs details row -->
     <v-row>
+      <!-- Mobile Tabs -->
+      <v-col cols="12" class="hidden-sm-and-up">
+        <v-tabs background-color="transparent" light>
+          <v-tab>Option</v-tab>
+          <v-tab>Another Selection</v-tab>
+          <v-tab>Items</v-tab>
+          <v-tab>Another Screen</v-tab>
+        </v-tabs>
+      </v-col>
+      <!-- Mobile Tabs -->
+
+      <!-- Tab Details -->
       <v-col cols="12" md="12">
         <v-card flat color="#F5F5F5">
           <!-- tab items -->
@@ -1582,7 +1594,7 @@ export default {
   }
 
   .phone-icon {
-    font-size: 12px !important;
+    font-size: 15px !important;
   }
 
   .video-btn {
