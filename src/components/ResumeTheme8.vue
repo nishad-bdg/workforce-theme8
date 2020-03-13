@@ -273,27 +273,38 @@
     <!-- tabs details row -->
     <v-row>
       <!-- Mobile Tabs -->
-      <v-col cols="12" class="hidden-sm-and-up ml-n6" > 
-        <center>
+      <v-col cols="12" class="hidden-sm-and-up ml-n6">
           <v-card flat color="transparent" class="mobile-parent-tab-card" height="140">
-          <v-card-text>
-            <v-tabs background-color="transparent" height="120"  v-model="dataTabs" hide-slider center-active>
-              <v-tab v-for="item in tabs" :key="item.title" >
-                <v-btn 
-                  x-small 
-                  fab 
-                  color="#FF5231"
-                  @click="currentTab = item.id" 
-                  :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']" dark 
-                  depressed>
-                  <img width="15" :src="getImgUrlIcon(item.id)" />
-                </v-btn>
-              </v-tab>
-            </v-tabs>
-          </v-card-text>
-        </v-card>
-        </center>
-        
+            <v-card-text class="text-center">
+              <v-tabs
+                background-color="transparent"
+                height="120"
+                v-model="dataTabs"
+                hide-slider
+                center-active
+              >
+                <v-tab v-for="item in tabs" :key="item.title" class="">
+                  <v-btn
+                    x-small
+                    fab
+                    color="#FF5231"
+                    @click="currentTab = item.id"
+                    :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']"
+                    dark
+                    depressed
+                  >
+                    <img width="15" :src="getImgUrlIcon(item.id)" />
+                  </v-btn>
+                </v-tab>
+              </v-tabs>
+              <span class="ml-10"></span>
+              <span
+                :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
+                v-for="dot in tabs"
+                :key="dot.id"
+              ></span>
+            </v-card-text>
+          </v-card>
       </v-col>
       <!-- Mobile Tabs -->
 
@@ -1602,7 +1613,7 @@ export default {
     padding: 0px 8.444px !important;
     margin-left: 5vw;
     margin-top: 46px;
-    margin-bottom: -0.80vw;
+    margin-bottom: -0.8vw;
     height: 32px !important;
     min-width: 50% !important;
   }
@@ -1629,14 +1640,35 @@ export default {
   }
 
   /* tabs */
-  .tab-mobile-btn-active{
-    width: 18vw !important ;
-    height: 18vw !important;
+  .tab-mobile-btn-active {
+    width: 14vw !important ;
+    height: 14vw !important;
   }
-  .tab-mobile-btn-active img{
-    width: 8vw !important;
+  .tab-mobile-btn-active img {
+    width: 6vw !important;
     height: auto !important;
   }
+
+  .tab-dot {
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+    background: lightgray;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0px 0px 4px gray inset;
+  }
+
+  .tab-dot-active {
+    margin-right: 3px;
+    height: 10px;
+    width: 10px;
+    background: black;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0px 0px 4px gray inset;
+  }
+
   /* tabs */
 }
 /* mobile devices */
