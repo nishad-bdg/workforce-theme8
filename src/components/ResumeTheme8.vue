@@ -80,45 +80,42 @@
                   </v-card>
                   <v-card flat color="transparent" class="mt-6">
                     <v-btn small color="#E8E5F6" class="video-btn">
-                      <v-icon color="#6D1CFF" class="video-icon">mdi-video-box</v-icon>
+                      <img src="../assets/icons/youtube-camera.png">
                     </v-btn>
                   </v-card>
                 </v-col>
                 <!-- Hourly rate -->
                 <v-col cols="12" class="hidden-sm-and-up">
                   <v-card color="white" light height="50">
-                    <v-row>
-                      <v-col cols="4" class="mt-n2">
-                        <v-list-item>
+                    <v-row no-gutters>
+                      <v-col cols="4" class>
+                        <v-list-item align="center">
                           <v-list-item-icon>
-                            <img style="width:15px !important;" src="../assets/icons/hour.png">
+                            <img style="width:18px !important; " src="../assets/icons/hour.png" />
+                            <!-- <v-icon color="#00CDF7" small>mdi-clock-check</v-icon> -->
                           </v-list-item-icon>
                           <v-list-item-content class="ml-n10">
-                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
+                            <v-list-item-subtitle style="font-size:3.5vw;">15$/hour</v-list-item-subtitle>
                           </v-list-item-content>
                         </v-list-item>
                       </v-col>
 
-                      <v-col cols="4" class="mt-n2">
-                        <v-list-item>
+                      <v-col cols="4">
+                        <v-list-item class="center">
                           <v-list-item-icon>
-                            <img style="width:15px !important;" src="../assets/icons/hour.png">
+                            <v-icon color="#00CDF7" small>mdi-calendar-check</v-icon>
                           </v-list-item-icon>
                           <v-list-item-content class="ml-n10">
-                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
+                            <v-list-item-subtitle style="font-size:3.5vw;">15$/hour</v-list-item-subtitle>
                           </v-list-item-content>
                         </v-list-item>
                       </v-col>
 
-                      <v-col cols="4" class="mt-n2">
-                        <v-list-item>
-                          <v-list-item-icon>
-                            <img style="width:15px !important;" src="../assets/icons/hour.png">
-                          </v-list-item-icon>
-                          <v-list-item-content class="ml-n10">
-                            <v-list-item-subtitle>15$/hour</v-list-item-subtitle>
-                          </v-list-item-content>
-                        </v-list-item>
+                      <v-col cols="4" align="center">
+                        <v-btn  color="#FF5231" dark class="text-capitalize mt-2" style="font-size:2.5vw;">
+                          Hire Me
+                          <img class="ml-2" width="18" src="../assets/icons/chat2.png" />
+                        </v-btn>
                       </v-col>
                     </v-row>
                   </v-card>
@@ -1533,7 +1530,6 @@ export default {
 
 @media screen and (max-width: 599px) {
   /*  profile */
-
   .profile-avatar {
     margin-left: -30px;
     width: 120px !important;
@@ -1541,11 +1537,11 @@ export default {
     border-radius: 22px !important;
   }
   .profile-title {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
 
   .profile-subtitle {
-    font-size: 14px !important;
+    font-size: 12px !important;
     padding: 2px;
     color: #ffffff !important;
   }
@@ -1563,32 +1559,39 @@ export default {
     width: 2px !important;
   }
   .social-sm-icon-btn {
-    margin-right: 3px !important;
-    height: 25px !important ;
-    width: 10px !important;
+    margin-right: 1vw !important;
+    height: 6vw !important ;
+    min-width: 2vw !important;
   }
   .social-sm-icon {
-    font-size: 10px !important;
+    font-size: 8px !important;
   }
 
   .phone-btn {
-    margin-top: 60px;
+    padding:8px !important;
+    margin-left: 5vw;
+    margin-top: 70px;
     margin-bottom: -15px;
-    height: 30px !important;
-    width: 20px !important;
+    height: 22px !important;
+    min-width: 16px !important;
   }
 
   .phone-icon {
-    font-size: 20px !important;
+    font-size: 14px !important;
   }
 
   .video-btn {
-    height: 30px !important;
-    width: 20px !important;
+    margin-left: 5vw;
+    padding:5px !important;
+    max-height: 22px !important;
+    min-width: 16px !important;
   }
-  .video-icon {
-    font-size: 20px !important;
+
+  .video-btn img{
+    width: 16px !important;
+    height: auto !important;
   }
+
   /* Profile */
   .skill-tab-text {
     font-size: 12px !important;
@@ -1615,265 +1618,8 @@ export default {
 }
 /* mobile devices */
 
-/* min screen devices */
-@media screen and (max-width: 416px) {
-  /*  profile */
 
-  .profile-avatar {
-    margin-left: -30px;
-    width: 100px !important;
-    height: auto !important;
-    border-radius: 22px !important;
-  }
-  .profile-title {
-    font-size: 22px !important;
-  }
 
-  .profile-subtitle {
-    font-size: 12px !important;
-    padding: 2px;
-  }
-
-  .chat-btn {
-    padding: 5px !important;
-    font-size: 9px !important;
-    margin-top: -50px;
-    margin-left: -10px;
-    width: 90px !important;
-    height: 25px !important;
-    text-align: center !important;
-  }
-
-  .chat-btn-img {
-    width: 2px !important;
-  }
-  .social-sm-icon-btn {
-    margin-right: 2px !important;
-    height: 25px !important ;
-    width: 10px !important;
-  }
-  .social-sm-icon {
-    font-size: 10px !important;
-  }
-
-  .phone-btn {
-    margin-left: 20px;
-    margin-top: 50px;
-    margin-bottom: -15px;
-    height: 30px !important;
-    width: 20px !important;
-  }
-
-  .phone-icon {
-    font-size: 20px !important;
-  }
-
-  .video-btn {
-    margin-left: 20px;
-    height: 30px !important;
-    width: 20px !important;
-  }
-  .video-icon {
-    font-size: 20px !important;
-  }
-  /* Profile */
-  .skill-tab-text {
-    font-size: 12px !important;
-  }
-
-  .footer-left {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  .footer-left img {
-    width: 20%;
-    height: auto;
-  }
-
-  .footer-right {
-    margin-top: -130px;
-    margin-bottom: -100px;
-  }
-
-  .footer-right img {
-    width: 30%;
-    height: auto;
-  }
-}
-
-/* min360 */
-@media screen and (max-width: 360px) {
-  /*  profile */
-
-  .profile-avatar {
-    margin-left: -30px;
-    width: 100px !important;
-    height: auto !important;
-    border-radius: 22px !important;
-  }
-  .profile-title {
-    font-size: 22px !important;
-  }
-
-  .profile-subtitle {
-    font-size: 12px !important;
-    padding: 2px;
-  }
-
-  .chat-btn {
-    padding: 5px !important;
-    font-size: 9px !important;
-    margin-top: -50px;
-    margin-left: -10px;
-    width: 90px !important;
-    height: 25px !important;
-    text-align: center !important;
-  }
-
-  .chat-btn-img {
-    width: 2px !important;
-  }
-  .social-sm-icon-btn {
-    margin-right: 2px !important;
-    height: 25px !important ;
-    width: 10px !important;
-  }
-  .social-sm-icon {
-    font-size: 10px !important;
-  }
-
-  .phone-btn {
-    margin-left: 15px;
-    margin-top: 50px;
-    margin-bottom: -15px;
-    height: 30px !important;
-    width: 20px !important;
-  }
-
-  .phone-icon {
-    font-size: 20px !important;
-  }
-
-  .video-btn {
-    margin-left: 15px;
-    height: 30px !important;
-    width: 20px !important;
-  }
-  .video-icon {
-    font-size: 20px !important;
-  }
-  /* Profile */
-  .skill-tab-text {
-    font-size: 12px !important;
-  }
-
-  .footer-left {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  .footer-left img {
-    width: 20%;
-    height: auto;
-  }
-
-  .footer-right {
-    margin-top: -130px;
-    margin-bottom: -100px;
-  }
-
-  .footer-right img {
-    width: 30%;
-    height: auto;
-  }
-}
-
-/* iphone 5s */
-@media screen and (max-width: 340px) {
-  /*  profile */
-
-  .profile-avatar {
-    margin-left: -30px;
-    width: 100px !important;
-    height: auto !important;
-    border-radius: 22px !important;
-  }
-  .profile-title {
-    font-size: 20px !important;
-  }
-
-  .profile-subtitle {
-    font-size: 12px !important;
-    padding: 2px;
-  }
-
-  .chat-btn {
-    padding: 5px !important;
-    font-size: 9px !important;
-    margin-top: -50px;
-    margin-left: -10px;
-    width: 90px !important;
-    height: 25px !important;
-    text-align: center !important;
-  }
-
-  .chat-btn-img {
-    width: 2px !important;
-  }
-  .social-sm-icon-btn {
-    margin-right: 4px !important;
-    height: 20px !important ;
-    min-width: 20px !important;
-  }
-  .social-sm-icon {
-    font-size: 10px !important;
-  }
-
-  .phone-btn {
-    margin-left: -5px;
-    margin-top: 55px;
-    margin-bottom: -15px;
-    height: 25px !important;
-    width: 18px !important;
-  }
-
-  .phone-icon {
-    font-size: 20px !important;
-  }
-
-  .video-btn {
-    margin-left: -5px;
-    height: 25px !important;
-    width: 18px !important;
-  }
-  .video-icon {
-    font-size: 20px !important;
-  }
-  /* Profile */
-  .skill-tab-text {
-    font-size: 12px !important;
-  }
-
-  .footer-left {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  .footer-left img {
-    width: 20%;
-    height: auto;
-  }
-
-  .footer-right {
-    margin-top: -130px;
-    margin-bottom: -100px;
-  }
-
-  .footer-right img {
-    width: 30%;
-    height: auto;
-  }
-}
-
-/* iphone 5s */
 
 /* min screen devices*/
 </style>
