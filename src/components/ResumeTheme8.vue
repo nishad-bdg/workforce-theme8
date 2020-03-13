@@ -284,7 +284,11 @@
             dark
             style="border-radius:0px !important;"
           >
-            <v-tab class="text-capitalize caption" v-for="skill in skills" :key="skill.id">{{skill.skill}}</v-tab>
+            <v-tab
+              class="text-capitalize caption"
+              v-for="skill in skills"
+              :key="skill.id"
+            >{{skill.skill}}</v-tab>
           </v-tabs>
         </v-card>
       </v-col>
@@ -589,6 +593,18 @@
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
                     <v-row>
+                      <!-- About me pic shows only mobile devices -->
+                      <v-col cols="12" md="5" sm="6" class="hidden-sm-and-up">
+                        <v-card flat color="transparent">
+                          <v-card-text align>
+                            <div class="pic-box">
+                              <v-img src="../assets/images/about-me/men.png"></v-img>
+                            </div>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <!-- About me pic shows only mobile devices -->
+
                       <!-- About Me Me Name and Designation -->
                       <v-col cols="12" md="6" sm="6">
                         <v-card color="transparent" flat>
@@ -607,7 +623,7 @@
                       <!-- ABout Me Name and Designation -->
 
                       <!-- About Me Picture -->
-                      <v-col cols="12" md="5" sm="6">
+                      <v-col cols="12" md="5" sm="6" class="hidden-xs-only">
                         <v-card flat color="transparent">
                           <v-card-text align="right">
                             <div class="pic-box">
@@ -1196,6 +1212,9 @@ export default {
 /* Skills tabs */
 
 /* About Me Tab */
+.about-me-pic-flex {
+  text-align: right !important;
+}
 .hello-text {
   color: #373737;
 }
@@ -1267,25 +1286,7 @@ export default {
   margin-top: 50px;
 }
 /* achievement */
-/* Footer Image */
-.footer-left {
-  margin-top: -90px;
-}
-.footer-left img {
-  width: 60%;
-  height: auto;
-}
 
-.footer-right {
-  margin-top: -215px;
-  margin-bottom: 0px;
-}
-
-.footer-right img {
-  position: sticky;
-  width: 70%;
-  height: auto;
-}
 /* Footer Image */
 
 /* Media Query */
@@ -1694,8 +1695,31 @@ export default {
     display: inline-block;
     box-shadow: 0px 0px 4px gray inset;
   }
-
   /* tabs */
+  /* About Me */
+  .about-me-flex {
+    margin-top: 0px;
+  }
+
+  .pic-box {
+    width: 50%;
+    height: auto !important;
+    border-radius: 15px !important;
+    aspect-ratio: 0.9 !important;
+    box-shadow: 40px 30px 0px -8px rgba(97, 82, 207, 1) !important;
+  }
+
+  .hello-title {
+    font-size: 8vw;
+    font-weight: 400;
+    margin-top: 15px;
+    color: #373737;
+  }
+  .designation-for-tab {
+    margin-top: -10px;
+    font-size: 7vw !important;
+  }
+  /* About ME */
 }
 /* mobile devices */
 
