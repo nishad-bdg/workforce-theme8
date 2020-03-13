@@ -275,9 +275,9 @@
       <!-- Mobile Tabs -->
       <v-col cols="12" class="hidden-sm-and-up ml-n6" > 
         <center>
-          <v-card flat color="transparent" height="">
+          <v-card flat color="transparent" class="mobile-parent-tab-card" height="140">
           <v-card-text>
-            <v-tabs background-color="transparent" height="70"  v-model="dataTabs" hide-slider center-active>
+            <v-tabs background-color="transparent" height="120"  v-model="dataTabs" hide-slider center-active>
               <v-tab v-for="item in tabs" :key="item.title" >
                 <v-btn 
                   x-small 
@@ -1634,8 +1634,6 @@ export default {
     height: 18vw !important;
   }
   .tab-mobile-btn-active img{
-    margin-top: 5px;
-    margin-left: 1px ;
     width: 8vw !important;
     height: auto !important;
   }
