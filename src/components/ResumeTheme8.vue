@@ -1073,8 +1073,8 @@ export default {
 
 /* social icons */
 .social-icon {
-  width: 3.86vw;
-  height: 3.86vw;
+  width: 30px;
+  height: 30px;
 }
 /* social icons */
 
@@ -1149,6 +1149,7 @@ export default {
 
 /* tab styles */
 .parent-tab {
+  overflow:hidden !important;
   border-radius: 26px 26px 0 0 !important;
 }
 
@@ -1165,6 +1166,9 @@ export default {
 
 /* Corners */
 .round-left {
+  border-top-left-radius: 26px;
+}
+.round-left:hover {
   border-top-left-radius: 26px;
 }
 
@@ -1433,6 +1437,11 @@ export default {
 
   .chat-btn-img {
     width: 1.67vw !important;
+  }
+
+  .social-icon {
+    width: 3.86vw;
+    height: 3.86vw;
   }
   /* Profile */
 
