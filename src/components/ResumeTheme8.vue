@@ -1073,8 +1073,8 @@ export default {
 
 /* social icons */
 .social-icon {
-  width: 30px;
-  height: 30px;
+  width: 3.86vw;
+  height: 3.86vw;
 }
 /* social icons */
 
@@ -1414,25 +1414,25 @@ export default {
 @media screen and (min-width: 600px) and (max-width: 959px) {
   /* Profile */
   .profile-avatar {
-    width: 140px !important;
+    width: 18vw !important;
   }
   .profile-title {
-    font-size: 26px !important;
+    font-size: 3.5vw !important;
   }
 
   .profile-subtitle {
-    font-size: 12px !important;
+    font-size: 1.7vw !important;
   }
 
   .chat-btn {
-    padding: 15px !important;
-    font-size: 10px !important;
-    margin-top: -50px;
-    margin-left: 30px;
+    padding: 1.93vw !important;
+    font-size: 1.28vw !important;
+    margin-top: -6.44vw;
+    margin-left: 3.86vw;
   }
 
   .chat-btn-img {
-    width: 13px !important;
+    width: 1.67vw !important;
   }
   /* Profile */
 
@@ -1442,10 +1442,10 @@ export default {
     margin-bottom: -10px;
   }
   .btn-voice-call {
-    font-size: 12px !important;
+    font-size: 1.55vw !important;
     text-transform: capitalize !important;
-    width: 140px !important;
-    height: 40px !important;
+    width: 18vw !important;
+    height: 5.12vw !important;
     margin-left: -10px;
   }
 
@@ -1454,13 +1454,13 @@ export default {
   }
 
   .btn-upload {
-    font-size: 12px !important;
-    width: 140px !important;
-    height: 40px !important;
+    font-size: 1.55vw !important;
+    width: 18vw !important;
+    height: 5.12vw !important;
   }
 
   .btn-upload img {
-    width: 15px !important;
+    width: 1.93vw !important;
   }
   /* Interview */
 
@@ -1469,21 +1469,21 @@ export default {
     height: 70px !important;
   }
   .hire-me-title {
-    margin-left: 8px !important;
-    font-size: 13px !important;
+    margin-left: 1.02vw !important;
+    font-size: 1.67vw !important;
   }
   .hire-me-subtitle {
-    font-size: 11px !important;
+    font-size: 1.41vw !important;
   }
   .btn-hire-me {
-    margin-top: -5px;
-    font-size: 12px !important;
-    height: 38px !important;
-    width: 100px !important;
+    margin-top: -0.64vw;
+    font-size: 1.54vw !important;
+    height: 4.89vw !important;
+    width: 12.87vw !important;
   }
 
   .btn-hire-me img {
-    width: 15px !important;
+    width: 1.93vw !important;
   }
 
   /* Hire me */
