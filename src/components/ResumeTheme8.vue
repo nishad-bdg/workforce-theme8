@@ -273,13 +273,27 @@
     <!-- tabs details row -->
     <v-row>
       <!-- Mobile Tabs -->
-      <v-col cols="12" class="hidden-sm-and-up">
-        <v-tabs background-color="transparent" light>
-          <v-tab>Option</v-tab>
-          <v-tab>Another Selection</v-tab>
-          <v-tab>Items</v-tab>
-          <v-tab>Another Screen</v-tab>
-        </v-tabs>
+      <v-col cols="12" class="hidden-sm-and-up ml-n6" > 
+        <center>
+          <v-card flat color="transparent" height="">
+          <v-card-text>
+            <v-tabs background-color="transparent" height="70"  v-model="dataTabs" hide-slider center-active>
+              <v-tab v-for="item in tabs" :key="item.title" >
+                <v-btn 
+                  x-small 
+                  fab 
+                  color="#FF5231"
+                  @click="currentTab = item.id" 
+                  :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']" dark 
+                  depressed>
+                  <img width="15" :src="getImgUrlIcon(item.id)" />
+                </v-btn>
+              </v-tab>
+            </v-tabs>
+          </v-card-text>
+        </v-card>
+        </center>
+        
       </v-col>
       <!-- Mobile Tabs -->
 
@@ -1614,24 +1628,18 @@ export default {
     font-size: 12px !important;
   }
 
-  .footer-left {
-    margin-top: 0px;
-    margin-bottom: 0px;
+  /* tabs */
+  .tab-mobile-btn-active{
+    width: 18vw !important ;
+    height: 18vw !important;
   }
-  .footer-left img {
-    width: 20%;
-    height: auto;
+  .tab-mobile-btn-active img{
+    margin-top: 5px;
+    margin-left: 1px ;
+    width: 8vw !important;
+    height: auto !important;
   }
-
-  .footer-right {
-    margin-top: -130px;
-    margin-bottom: -100px;
-  }
-
-  .footer-right img {
-    width: 30%;
-    height: auto;
-  }
+  /* tabs */
 }
 /* mobile devices */
 
