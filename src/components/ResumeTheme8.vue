@@ -20,7 +20,7 @@
                             class="profile-avatar"
                             max-width="150"
                           >
-                            <v-img class="elevation-6" src="../assets/images/avatar.png"></v-img>
+                            <img class="elevation-6" src="../assets/images/avatar.png" />
                           </v-list-item-avatar>
                           <!-- Avatar -->
                           <!-- Name -->
@@ -80,7 +80,7 @@
                   </v-card>
                   <v-card flat color="transparent" class="mt-6">
                     <v-btn small color="#E8E5F6" class="video-btn">
-                      <img src="../assets/icons/youtube-camera.png">
+                      <img src="../assets/icons/youtube-camera.png" />
                     </v-btn>
                   </v-card>
                 </v-col>
@@ -112,7 +112,12 @@
                       </v-col>
 
                       <v-col cols="4" align="center">
-                        <v-btn  color="#FF5231" dark class="text-capitalize mt-2" style="font-size:2.5vw;">
+                        <v-btn
+                          color="#FF5231"
+                          dark
+                          class="text-capitalize mt-2"
+                          style="font-size:2.5vw;"
+                        >
                           Hire Me
                           <img class="ml-2" width="18" src="../assets/icons/chat2.png" />
                         </v-btn>
@@ -1559,37 +1564,37 @@ export default {
     width: 2px !important;
   }
   .social-sm-icon-btn {
-    margin-right: 1vw !important;
+    margin-right: 3px !important;
     height: 6vw !important ;
-    min-width: 2vw !important;
+    min-width: 1vw !important;
   }
   .social-sm-icon {
     font-size: 8px !important;
   }
 
   .phone-btn {
-    padding:8px !important;
+    padding: 0px 8.444px !important;
     margin-left: 5vw;
-    margin-top: 70px;
+    margin-top: 65px;
     margin-bottom: -15px;
-    height: 22px !important;
-    min-width: 16px !important;
+    height: 25px !important;
+    min-width: 50% !important;
   }
 
   .phone-icon {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 
   .video-btn {
     margin-left: 5vw;
-    padding:5px !important;
-    max-height: 22px !important;
-    min-width: 16px !important;
+    padding: 0px 4.444px !important;
+    max-height: 25px !important;
+    min-width: 50% !important;
   }
 
-  .video-btn img{
+  .video-btn img {
     width: 16px !important;
-    height: auto !important;
+    height: 13px !important;
   }
 
   /* Profile */
@@ -1617,9 +1622,6 @@ export default {
   }
 }
 /* mobile devices */
-
-
-
 
 /* min screen devices*/
 </style>
