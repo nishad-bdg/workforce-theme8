@@ -1542,11 +1542,11 @@ export default {
     border-radius: 22px !important;
   }
   .profile-title {
-    font-size: 20px !important;
+    font-size: 6vw !important;
   }
 
   .profile-subtitle {
-    font-size: 12px !important;
+    font-size: 4vw !important;
     padding: 2px;
     color: #ffffff !important;
   }
