@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid ma-0 pa-0>
+  <v-container fluid ma-0 pa-0 fill-height>
     <!-- Header Row -->
     <v-row no-gutters>
       <!-- Column for header section -->
@@ -274,37 +274,37 @@
     <v-row>
       <!-- Mobile Tabs -->
       <v-col cols="12" class="hidden-sm-and-up ml-n6">
-          <v-card flat color="transparent" class="mobile-parent-tab-card" height="140">
-            <v-card-text class="text-center">
-              <v-tabs
-                background-color="transparent"
-                height="120"
-                v-model="dataTabs"
-                hide-slider
-                center-active
-              >
-                <v-tab v-for="item in tabs" :key="item.title" class="">
-                  <v-btn
-                    x-small
-                    fab
-                    color="#FF5231"
-                    @click="currentTab = item.id"
-                    :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']"
-                    dark
-                    depressed
-                  >
-                    <img width="15" :src="getImgUrlIcon(item.id)" />
-                  </v-btn>
-                </v-tab>
-              </v-tabs>
-              <span class="ml-10"></span>
-              <span
-                :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
-                v-for="dot in tabs"
-                :key="dot.id"
-              ></span>
-            </v-card-text>
-          </v-card>
+        <v-card flat color="transparent" class="mobile-parent-tab-card" height="140">
+          <v-card-text class="text-center">
+            <v-tabs
+              background-color="transparent"
+              height="120"
+              v-model="dataTabs"
+              hide-slider
+              center-active
+            >
+              <v-tab v-for="item in tabs" :key="item.title" class>
+                <v-btn
+                  x-small
+                  fab
+                  color="#FF5231"
+                  @click="currentTab = item.id"
+                  :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']"
+                  dark
+                  depressed
+                >
+                  <img width="15" :src="getImgUrlIcon(item.id)" />
+                </v-btn>
+              </v-tab>
+            </v-tabs>
+            <span class="ml-12"></span>
+            <span
+              :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
+              v-for="dot in tabs"
+              :key="dot.id"
+            ></span>
+          </v-card-text>
+        </v-card>
       </v-col>
       <!-- Mobile Tabs -->
 
@@ -440,7 +440,7 @@
                 <v-card flat color="transparent" class="mt-n10">
                   <v-card-text>
                     <!-- Skill Child Tabs -->
-                    <v-toolbar flat class="ml-md-5">
+                    <v-toolbar flat class="ml-md-5 hidden-xs-only">
                       <v-tabs
                         color="#6152CF"
                         v-model="skillTab"
@@ -484,7 +484,6 @@
                                         cols="12"
                                         md="3"
                                         sm="6"
-                                        xs="12"
                                         v-for="software in skill.softwareList"
                                         :key="software.name"
                                       >
@@ -499,7 +498,12 @@
                                               </v-list-item-icon>
 
                                               <v-list-item-content class="ml-n6">
-                                                <v-list-item-subtitle>{{software.name}}</v-list-item-subtitle>
+                                                <v-list-item-subtitle>
+                                                  <v-row no-gutters>
+                                                    <v-col cols="9">{{software.name}}</v-col>
+                                                    <v-col cols="3" class="hidden-sm-and-up caption" align="right">{{software.valueText}}</v-col>
+                                                  </v-row>
+                                                </v-list-item-subtitle>
                                                 <v-list-item-subtitle>
                                                   <v-row no-gutters>
                                                     <v-col cols="12" md="9" sm="9">
@@ -511,11 +515,11 @@
                                                       ></v-progress-linear>
                                                     </v-col>
                                                     <v-col
-                                                      cols="12"
+                                                      cols="4"
                                                       md="2"
                                                       sm="2"
                                                       offset="1"
-                                                      class="mt-n1 caption"
+                                                      class="mt-n1 caption hidden-xs-only"
                                                     >{{software.valueText}}</v-col>
                                                   </v-row>
                                                 </v-list-item-subtitle>
