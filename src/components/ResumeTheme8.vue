@@ -1601,20 +1601,20 @@ export default {
   .phone-btn {
     padding: 0px 8.444px !important;
     margin-left: 5vw;
-    margin-top: 65px;
-    margin-bottom: -15px;
-    height: 25px !important;
+    margin-top: 46px;
+    margin-bottom: -0.80vw;
+    height: 32px !important;
     min-width: 50% !important;
   }
 
   .phone-icon {
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   .video-btn {
     margin-left: 5vw;
     padding: 0px 4.444px !important;
-    max-height: 25px !important;
+    max-height: 35px !important;
     min-width: 50% !important;
   }
 
