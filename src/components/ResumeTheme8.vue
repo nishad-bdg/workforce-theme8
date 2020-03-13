@@ -271,41 +271,59 @@
     <!-- header row -->
 
     <!-- tabs details row -->
-    <v-row>
+    <v-row no-gutters>
       <!-- Mobile Tabs -->
-      <v-col cols="12" class="hidden-sm-and-up ml-n6">
-        <v-card flat color="transparent" class="mobile-parent-tab-card" height="140">
-          <v-card-text class="text-center">
-            <v-tabs
-              background-color="transparent"
-              height="120"
-              v-model="dataTabs"
-              hide-slider
-              center-active
-            >
-              <v-tab v-for="item in tabs" :key="item.title" class>
-                <v-btn
-                  x-small
-                  fab
-                  color="#FF5231"
-                  @click="currentTab = item.id"
-                  :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']"
-                  dark
-                  depressed
-                >
-                  <img width="15" :src="getImgUrlIcon(item.id)" />
-                </v-btn>
-              </v-tab>
-            </v-tabs>
-            <span class="ml-12"></span>
-            <span
-              :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
-              v-for="dot in tabs"
-              :key="dot.id"
-            ></span>
-          </v-card-text>
+      <!-- Skill Tab  -->
+      <v-col cols="12" class="hidden-sm-and-up" :class="[currentTab == 4?'':'d-none']">
+        <v-card flat>
+          <v-tabs
+            v-model="skillTab"
+            background-color="#F15959"
+            show-arrows
+            grow
+            dark
+            style="border-radius:0px !important;"
+          >
+            <v-tab class="text-capitalize caption" v-for="skill in skills" :key="skill.id">{{skill.skill}}</v-tab>
+          </v-tabs>
         </v-card>
       </v-col>
+      <!-- Skill Tab -->
+      <v-col cols="12" class="hidden-sm-and-up mt-12" align="center">
+        <v-card flat>
+          <v-tabs
+            background-color="transparent"
+            height="100"
+            v-model="dataTabs"
+            hide-slider
+            center-active
+            style="margin-left:-55px;"
+          >
+            <v-tab v-for="item in tabs" :key="item.title" class>
+              <v-btn
+                x-small
+                fab
+                :color="currentTab == item.id ? '#FF5231':'#FFA797'"
+                @click="currentTab = item.id"
+                :class="[currentTab == item.id ? 'tab-mobile-btn-active':'']"
+                dark
+                depressed
+              >
+                <img width="15" :src="getImgUrlIcon(item.id)" />
+              </v-btn>
+            </v-tab>
+          </v-tabs>
+        </v-card>
+      </v-col>
+      <v-col cols="12" align="center" class="hidden-sm-and-up">
+        <span
+          class="mt-2"
+          :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
+          v-for="dot in tabs"
+          :key="dot.id"
+        ></span>
+      </v-col>
+
       <!-- Mobile Tabs -->
 
       <!-- Tab Details -->
@@ -501,7 +519,11 @@
                                                 <v-list-item-subtitle>
                                                   <v-row no-gutters>
                                                     <v-col cols="9">{{software.name}}</v-col>
-                                                    <v-col cols="3" class="hidden-sm-and-up caption" align="right">{{software.valueText}}</v-col>
+                                                    <v-col
+                                                      cols="3"
+                                                      class="hidden-sm-and-up caption"
+                                                      align="right"
+                                                    >{{software.valueText}}</v-col>
                                                   </v-row>
                                                 </v-list-item-subtitle>
                                                 <v-list-item-subtitle>
