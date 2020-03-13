@@ -219,13 +219,13 @@
                       <v-tabs
                         v-model="dataTabs"
                         background-color="#00CDF7"
-                        height="60"
                         grow
                         class="parent-tab"
                         centered
                         dark
                         hide-slider
-                        
+                        show-arrows
+                        mobile-break-point="599"
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -1079,11 +1079,11 @@ export default {
 .btn-voice-call {
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
-  font-size: 12px !important;
+  font-size: 0.97vw !important;
   text-transform: capitalize !important;
-  width: 160px !important;
-  height: 45px !important;
-  margin-left: -20px;
+  width: 13vw !important;
+  height: 3.65vw !important;
+  margin-left: -1.62vw !important;
 }
 
 .btn-voice-call img {
@@ -1093,10 +1093,10 @@ export default {
 .btn-upload {
   font-family: "Open Sans" !important;
   border-radius: 28px !important;
-  font-size: 12px !important;
+  font-size: 0.97vw !important;
   text-transform: capitalize !important;
-  width: 180px !important;
-  height: 45px !important;
+  width: 13vw !important;
+  height: 3.65vw !important;
 }
 
 .btn-upload img {
@@ -1143,7 +1143,7 @@ export default {
 
 .ct-tab-title {
   color: #ffffff !important;
-  font-size: 1.1vw !important;
+  font-size: 1.2vw !important;
   font-weight: 500 !important;
 }
 
@@ -1370,8 +1370,13 @@ export default {
   .parent-tab {
     border-radius: 26px 26px 0 0 !important;
   }
+  .v-slide-group__prev.v-slide-group__prev--disabled {
+    display: none !important;
+  }
 
-  
+  .round-right {
+    border-top-right-radius:0px;
+  }
 
   /* tab */
 
