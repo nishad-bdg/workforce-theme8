@@ -1309,7 +1309,7 @@ export default {
   }
 
   .chat-btn {
-    padding: 1.93vw !important;
+    padding: 1.5vw !important;
     font-size: 1.28vw !important;
     margin-top: -6.44vw;
     margin-left: 3.86vw;
@@ -1585,6 +1585,11 @@ export default {
     font-size: 7vw !important;
   }
   /* About ME */
+  /* achievement */
+  .achievement-title{
+    font-size: 5vw;
+  }
+  /* achievement */
 }
 /* mobile devices */
 
