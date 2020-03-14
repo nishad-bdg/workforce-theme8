@@ -225,7 +225,7 @@
                         centered
                         dark
                         hide-slider
-                        show-arrows
+                        
                         mobile-break-point="599"
                       >
                         <v-tab
@@ -1161,6 +1161,13 @@ export default {
 
 .round-right {
   border-top-right-radius: 26px;
+  width: 100% !important;
+}
+.v-slide-group__prev.v-slide-group__prev--disabled{
+  display: none !important;
+}
+.v-slide-group__next.v-slide-group__next--disabled{
+  display: none !important;
 }
 /* tab styles */
 
@@ -1274,7 +1281,7 @@ export default {
 
 /* achievement */
 .certification {
-  margin-top: 4.06vw !important;
+  margin-top: 4.06vw;
 }
 /* achievement */
 
@@ -1383,10 +1390,7 @@ export default {
     display: none !important;
   }
 
-  .round-right {
-    border-top-right-radius: 0px;
-  }
-
+  
   /* tab */
 
   /* Work */
