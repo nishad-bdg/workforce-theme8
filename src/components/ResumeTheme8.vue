@@ -1160,8 +1160,7 @@ export default {
 }
 
 .round-right {
-  border-top-right-radius: 26px;
-  width: 100% !important;
+  border-top-right-radius: 26px !important;
 }
 .v-slide-group__prev.v-slide-group__prev--disabled{
   display: none !important;
@@ -1390,7 +1389,10 @@ export default {
     display: none !important;
   }
 
-  
+  .round-right {
+    border-top-right-radius: 0px;
+  }
+
   /* tab */
 
   /* Work */
