@@ -225,7 +225,6 @@
                         centered
                         dark
                         hide-slider
-                        
                         mobile-break-point="599"
                       >
                         <v-tab
@@ -687,19 +686,15 @@
                       </v-col>
 
                       <v-col cols="12" md="6" sm="6">
-                        <div class="flex-column mb-12 hidden-sm-and-down"></div>
-                        <div class="d-flex flex-column">
-                          <v-card flat color="transparent">
-                            <v-card-title class="certification">
-                              <span class="achievement-title">Hubspot Design Certification</span>
-                            </v-card-title>
-                            <v-card-subtitle class="achievement-subtitle">HubSpot Design Academy</v-card-subtitle>
-                            <v-card-text
-                              class="achievement-text caption"
-                            >The bearer of this certificate is hereby deemed proficient in crafting responsive, styled templates using HubSpot's design tools. The bearer has demonstrated that he/she can effectively apply template and style knowledge to HubSpot blog, page, landing page and email templates and is approved to sell these assets in the HubSpot Marketplace. Certification is active for 13 months after month issued.</v-card-text>
-                          </v-card>
-                        </div>
-                        <div class="d-flex flex-column mt-10"></div>
+                        <v-card flat color="transparent" class="certification">
+                          <v-card-title>
+                            <span class="achievement-title">Hubspot Design Certification</span>
+                          </v-card-title>
+                          <v-card-subtitle class="achievement-subtitle">HubSpot Design Academy</v-card-subtitle>
+                          <v-card-text
+                            class="achievement-text caption"
+                          >The bearer of this certificate is hereby deemed proficient in crafting responsive, styled templates using HubSpot's design tools. The bearer has demonstrated that he/she can effectively apply template and style knowledge to HubSpot blog, page, landing page and email templates and is approved to sell these assets in the HubSpot Marketplace. Certification is active for 13 months after month issued.</v-card-text>
+                        </v-card>
                       </v-col>
                     </v-row>
                     <!-- Pagination -->
@@ -1162,10 +1157,10 @@ export default {
 .round-right {
   border-top-right-radius: 26px !important;
 }
-.v-slide-group__prev.v-slide-group__prev--disabled{
+.v-slide-group__prev.v-slide-group__prev--disabled {
   display: none !important;
 }
-.v-slide-group__next.v-slide-group__next--disabled{
+.v-slide-group__next.v-slide-group__next--disabled {
   display: none !important;
 }
 /* tab styles */
@@ -1279,9 +1274,7 @@ export default {
 }
 
 /* achievement */
-.certification {
-  margin-top: 4.06vw;
-}
+
 /* achievement */
 
 /* Footer Image */
@@ -1293,6 +1286,9 @@ export default {
 @media screen and (min-width: 960px) {
   .interview-flex {
     margin-left: 4.06vw !important;
+  }
+  .certification {
+    margin-top: 10% !important;
   }
 }
 /* special desktop case */
