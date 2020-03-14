@@ -1071,6 +1071,7 @@ export default {
 }
 /* social icons */
 
+/* interview */
 .interview-text {
   font-family: "Open Sans" !important;
   font-size: 16px !important;
@@ -1079,7 +1080,7 @@ export default {
 
 .btn-voice-call {
   font-family: "Open Sans" !important;
-  border-radius: 28px !important;
+  border-radius: 2.76vw !important;
   font-size: 0.97vw !important;
   text-transform: capitalize !important;
   width: 13vw !important;
@@ -1088,12 +1089,12 @@ export default {
 }
 
 .btn-voice-call img {
-  width: 12px !important;
+  width: 1vw !important;
 }
 
 .btn-upload {
   font-family: "Open Sans" !important;
-  border-radius: 28px !important;
+  border-radius: 2.76vw !important;
   font-size: 0.97vw !important;
   text-transform: capitalize !important;
   width: 13vw !important;
@@ -1103,7 +1104,7 @@ export default {
 .btn-upload img {
   width: 20px !important;
 }
-
+/* inerview */
 /* hire me card */
 
 .card-hire-me {
@@ -1282,8 +1283,15 @@ export default {
 /* Media Query */
 /* hire me card */
 
-/* .................................................Tablet ................................. */
+/* special desktop case */
+@media screen and (min-width: 960px) {
+  .interview-flex {
+    margin-left: 4.06vw !important;
+  }
+}
+/* special desktop case */
 
+/* .................................................Tablet ................................. */
 /* Tablet */
 @media screen and (min-width: 600px) and (max-width: 959px) {
   /* Profile */
@@ -1376,7 +1384,7 @@ export default {
   }
 
   .round-right {
-    border-top-right-radius:0px;
+    border-top-right-radius: 0px;
   }
 
   /* tab */
