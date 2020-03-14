@@ -688,7 +688,7 @@
 
                       <v-col cols="12" md="6" sm="6">
                         <div class="flex-column mb-12 hidden-sm-and-down"></div>
-                        <div class="d-flex flex-column mt-xs-n12 mt-sm-n9">
+                        <div class="d-flex flex-column">
                           <v-card flat color="transparent">
                             <v-card-title class="certification">
                               <span class="achievement-title">Hubspot Design Certification</span>
@@ -1274,7 +1274,7 @@ export default {
 
 /* achievement */
 .certification {
-  margin-top: 50px;
+  margin-top: 4.06vw !important;
 }
 /* achievement */
 
