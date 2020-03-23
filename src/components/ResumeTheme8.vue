@@ -685,7 +685,7 @@
                         </v-card>
                       </v-col>
 
-                      <v-col cols="12" md="6" sm="6">
+                      <v-col cols="12" md="6" sm="6" class="mt-md-6 mt-sm-n2">
                         <v-card flat color="transparent" class="certification">
                           <v-card-title>
                             <span class="achievement-title">Hubspot Design Certification</span>
@@ -1586,12 +1586,21 @@ export default {
   }
   /* About ME */
   /* achievement */
-  .achievement-title{
+  .achievement-title {
     font-size: 5vw;
   }
   /* achievement */
 }
 /* mobile devices */
+
+@media screen and (max-width: 320px) {
+  .video-btn {
+    margin-left: 6vw;
+    padding: 0px 4.444px !important;
+    max-height: 35px !important;
+    min-width: 60% !important;
+  }
+}
 
 /* min screen devices*/
 </style>
