@@ -1145,6 +1145,7 @@ export default {
 }
 
 .active-tab {
+  border-radius: 0px !important;
   background-color: #ffffff !important;
   color: #fc5283 !important;
 }
