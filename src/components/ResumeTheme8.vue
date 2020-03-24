@@ -1021,7 +1021,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss"> 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url(//db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular);
