@@ -739,7 +739,7 @@ export default {
       absolute: true,
       dataTabs: null,
       currentTab: 1,
-      imageLocation: "../assets/",
+      imageLocation: "assets",
       tabs: [
         { title: "Portfolio", id: 1 },
         { title: "Works", id: 2 },
@@ -972,50 +972,35 @@ export default {
 
   methods: {
     getImgUrlIcon(icon) {
-      let image = require.context("../assets/icons/tabs", false, /\.png$/);
-      return image("./" + icon + ".png");
+      return require(`../${this.imageLocation}/icons/tabs/${icon}.png`);
     },
 
     getImgUrlIconActive(icon) {
-      let image = require.context(
-        "../assets/icons/tabs-active",
-        false,
-        /\.png$/
-      );
-      return image("./" + icon + ".png");
+      return require(`../${this.imageLocation}/icons/tabs-active/${icon}.png`);
     },
     // portfolio image
     getImgUrlPortfolio(id) {
-      let image = require.context(
-        "../assets/images/portfolio",
-        false,
-        /\.png$/
-      );
-      return image("./" + id + ".png");
+      return require(`../${this.imageLocation}/images/portfolio/${id}.png`);
     },
 
     //work icons
     getIconWork(id) {
-      let image = require.context("../assets/icons/work", false, /\.png$/);
-      return image("./" + id + ".png");
+      return require(`../${this.imageLocation}/icons/work/${id}.png`);
     },
 
     //education icons
     getIconEducation(id) {
-      let image = require.context("../assets/icons/education", false, /\.png$/);
-      return image("./" + id + ".png");
+      return require(`../${this.imageLocation}/icons/education/${id}.png`);
     },
 
     //skills icons
-    getIconSkill(icon) {
-      let image = require.context("../assets/icons/skills", false, /\.png$/);
-      return image("./" + icon + ".png");
+    getIconSkill(id) {
+      return require(`../${this.imageLocation}/icons/skills/${id}.png`);
     },
 
     //get social media image icons
-    getIconSocial(icon) {
-      let image = require.context("../assets/icons/", false, /\.png$/);
-      return image("./" + icon + ".png");
+    getIconSocial(id) {
+      return require(`../${this.imageLocation}/icons/${id}.png`);
     }
   }
 };
@@ -1267,7 +1252,6 @@ export default {
 @-moz-document url-prefix() {
   .custom-vertical-line {
     margin-top: 115px !important;
-    height: 112% !important;
   }
 }
 
