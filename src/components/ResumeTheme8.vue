@@ -1246,7 +1246,7 @@ export default {
   position: absolute;
   margin-top: 56px;
   margin-left: 19px;
-  height: 110%;
+  height: 109%;
   border: 1px solid #707070;
 }
 @-moz-document url-prefix() {
