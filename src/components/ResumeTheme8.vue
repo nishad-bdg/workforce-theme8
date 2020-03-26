@@ -4,7 +4,7 @@
     <v-row no-gutters>
       <!-- Column for header section -->
       <v-col cols="12">
-        <v-card color="#6152CF" class="parent-card" dark flat>
+        <v-card color="#6152CF" class="custom-parent-card" dark flat>
           <v-card-text>
             <v-container fluid ma-0 pa-0>
               <v-row no-gutters>
@@ -17,7 +17,7 @@
                           <!-- avatar -->
                           <v-list-item-avatar
                             color="grey darken-3"
-                            class="profile-avatar"
+                            class="custom-profile-avatar"
                             max-width="150"
                           >
                             <img class="elevation-6" src="../assets/images/avatar.png" />
@@ -26,22 +26,22 @@
                           <!-- Name -->
                           <v-list-item-content>
                             <v-list-item-title class="ml-md-4">
-                              <span class="profile-title">Olivia Emily</span>
+                              <span class="profile-title-custom">Olivia Emily</span>
                             </v-list-item-title>
                             <v-list-item-subtitle class="ml-md-5">
-                              <span class="profile-subtitle">UX/UI Designer</span>
+                              <span class="profile-subtitle-custom">UX/UI Designer</span>
                             </v-list-item-subtitle>
 
                             <v-list-item-icon class="hidden-md-and-up">
                               <v-btn
                                 height="30"
                                 x-small
-                                class="mr-sm-1 social-sm-icon-btn"
+                                class="mr-sm-1 social-sm-icon-new-btn-custom"
                                 v-for="icon in socialMedia"
                                 :key="icon.title"
                                 :color="icon.color"
                               >
-                                <v-icon small v-text="icon.icon" class="social-sm-icon"></v-icon>
+                                <v-icon small v-text="icon.icon" class="social-sm-icon-new"></v-icon>
                               </v-btn>
                             </v-list-item-icon>
 
@@ -54,7 +54,7 @@
                                 v-for="icon in socialMedia"
                                 :key="icon.title"
                               >
-                                <v-img class="social-icon" :src="getIconSocial(icon.title)"></v-img>
+                                <v-img class="social-icon-new" :src="getIconSocial(icon.title)"></v-img>
                               </v-btn>
                             </v-list-item-icon>
                           </v-list-item-content>
@@ -75,11 +75,11 @@
                 <v-col col="4" class="hidden-sm-and-up ml-12">
                   <v-card flat color="transparent">
                     <v-btn small color="#00CDF7" class="phone-btn">
-                      <v-icon color="#6D1CFF" class="phone-icon">fa-phone</v-icon>
+                      <v-icon color="#6D1CFF" class="custom-phone-icon">fa-phone</v-icon>
                     </v-btn>
                   </v-card>
                   <v-card flat color="transparent" class="mt-6">
-                    <v-btn small color="#E8E5F6" class="video-btn">
+                    <v-btn small color="#E8E5F6" class="custom-video-btn">
                       <img src="../assets/icons/youtube-camera.png" />
                     </v-btn>
                   </v-card>
@@ -140,22 +140,22 @@
                     <v-card-text>
                       <v-row no-gutters>
                         <!-- Only shows on tablet and dekstop version -->
-                        <v-col cols="12" md="10" sm="12" class="interview-flex">
+                        <v-col cols="12" md="10" sm="12" class="custom-interview-flex">
                           <v-card flat color="transparent">
                             <v-card-text align="center">
                               <v-row align="center">
-                                <v-col cols="12" md="4" class="interview-col hidden-sm-and-down">
+                                <v-col cols="12" md="4" class="hidden-sm-and-down">
                                   <div class="interview-text">Your Interviews:</div>
                                 </v-col>
                                 <v-spacer class="hidden-md-only"></v-spacer>
                                 <v-col cols="12" md="4" sm="5" class>
-                                  <v-btn color="#03CA9F" class="btn-voice-call">
+                                  <v-btn color="#03CA9F" class="btn-voice-call-custom">
                                     <img class="mr-2" src="../assets/icons/phone.png" />Voice Call
                                   </v-btn>
                                 </v-col>
 
-                                <v-col cols="12" md="4" sm="5" class>
-                                  <v-btn color="#2400FF" class="btn-upload">
+                                <v-col cols="12" md="4" sm="5">
+                                  <v-btn color="#2400FF" class="btn-upload-custom">
                                     <img src="../assets/icons/camera.png" class="mr-2" />Upload Video
                                   </v-btn>
                                 </v-col>
@@ -221,11 +221,10 @@
                         v-model="dataTabs"
                         background-color="#00CDF7"
                         grow
-                        class="parent-tab"
+                        class="custom-parent-tab"
                         centered
                         dark
                         hide-slider
-                        mobile-break-point="599"
                       >
                         <v-tab
                           v-for="tab in tabs"
@@ -233,9 +232,9 @@
                           @click="currentTab = tab.id"
                           class="ct-tab-title text-capitalize"
                           :class="[
-                        currentTab == tab.id ? 'active-tab' : '',
-                        tab.id == 1 ? 'round-left' : '',
-                        tab.id == 6 ? 'round-right' : '',
+                        currentTab == tab.id ? 'custom-active-tab' : '',
+                        tab.id == 1 ? 'custom-round-left' : '',
+                        tab.id == 6 ? 'custom-round-right' : '',
 
                       ]"
                         >
@@ -314,7 +313,7 @@
       <v-col cols="12" align="center" class="hidden-sm-and-up">
         <span
           class="mt-2"
-          :class="[currentTab === dot.id?'tab-dot-active':'tab-dot']"
+          :class="[currentTab === dot.id?'custom-tab-dot-active':'custom-tab-dot']"
           v-for="dot in tabs"
           :key="dot.id"
         ></span>
@@ -360,7 +359,7 @@
                           <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
-                          <span class="title pagination-text">1/5</span>
+                          <span class="title custom-paginaton-text">1/5</span>
                           <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
@@ -388,7 +387,7 @@
                                 <v-img width="40" :src="getIconWork(item.id)"></v-img>
                               </v-list-item-icon>
                               <div
-                                class="v-line"
+                                class="custom-vertical-line"
                                 :class="[
                                   work.length-(index+1) <2 ? 'hidden-md-and-up':''
                                 ]"
@@ -425,7 +424,7 @@
                               <v-list-item-icon class="mt-2">
                                 <v-img width="40" :src="getIconEducation(item.id)"></v-img>
                               </v-list-item-icon>
-                              <div class="v-line" v-if="work.length-(index+1) >1"></div>
+                              <div class="custom-vertical-line" v-if="work.length-(index+1) >1"></div>
                               <v-list-item-content>
                                 <v-list-item-title class="work-title">{{item.title}}</v-list-item-title>
                                 <v-list-item-subtitle
@@ -559,7 +558,7 @@
                                   <v-btn dark x-small class="mx-8" fab color="#6152CF">
                                     <v-icon disabled>mdi-arrow-left</v-icon>
                                   </v-btn>
-                                  <span class="title pagination-text">1/5</span>
+                                  <span class="title custom-paginaton-text">1/5</span>
                                   <v-btn dark x-small class="mx-8" fab color="#6152CF">
                                     <v-icon>mdi-arrow-right</v-icon>
                                   </v-btn>
@@ -626,7 +625,7 @@
                       </v-col>
                       <!-- About Me Picture -->
                       <!-- About Me Main Text -->
-                      <v-col cols="12" md="8" sm="12" class="about-me-flex">
+                      <v-col cols="12" md="8" sm="12" class>
                         <v-card flat color="transparent">
                           <v-card-title class="display-1">
                             About Me
@@ -685,7 +684,7 @@
                         </v-card>
                       </v-col>
 
-                      <v-col cols="12" md="6" sm="6" class="mt-md-6 mt-sm-n2">
+                      <v-col cols="12" md="6" sm="6" class="mt-md-6 mt-sm-n2 d-flex">
                         <v-card flat color="transparent" class="certification">
                           <v-card-title>
                             <span class="achievement-title">Hubspot Design Certification</span>
@@ -704,7 +703,7 @@
                           <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon disabled>mdi-arrow-left</v-icon>
                           </v-btn>
-                          <span class="title pagination-text">1/5</span>
+                          <span class="title custom-paginaton-text">1/5</span>
                           <v-btn dark x-small class="mx-8" fab color="#6152CF">
                             <v-icon>mdi-arrow-right</v-icon>
                           </v-btn>
@@ -740,6 +739,7 @@ export default {
       absolute: true,
       dataTabs: null,
       currentTab: 1,
+      imageLocation: "../assets/",
       tabs: [
         { title: "Portfolio", id: 1 },
         { title: "Works", id: 2 },
@@ -1021,28 +1021,28 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"> 
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url(//db.onlinewebfonts.com/c/150037e11f159dca84bc4c04549094b6?family=Averta-Regular);
-.pagination-text {
+.custom-paginaton-text {
   color: #3d3d3d;
 }
-.parent-card {
+.custom-parent-card {
   border-radius: 0px !important;
 }
-.profile-avatar {
+.custom-profile-avatar {
   width: 150px !important;
   height: auto !important;
   border-radius: 22px !important;
 }
 
-.profile-title {
+.profile-title-custom {
   font-family: "Open Sans" !important;
   font-size: 36px !important;
 }
 
-.profile-subtitle {
+.profile-subtitle-custom {
   font-family: "Open Sans" !important;
   font-size: 16px !important;
   padding: 1px;
@@ -1060,7 +1060,7 @@ export default {
 }
 
 /* social icons */
-.social-icon {
+.social-icon-new {
   width: 30px;
   height: 30px;
 }
@@ -1073,7 +1073,7 @@ export default {
   color: #ffffff !important;
 }
 
-.btn-voice-call {
+.btn-voice-call-custom {
   font-family: "Open Sans" !important;
   border-radius: 2.76vw !important;
   font-size: 0.97vw !important;
@@ -1083,11 +1083,11 @@ export default {
   margin-left: -1.62vw !important;
 }
 
-.btn-voice-call img {
+.btn-voice-call-custom img {
   width: 1vw !important;
 }
 
-.btn-upload {
+.btn-upload-custom {
   font-family: "Open Sans" !important;
   border-radius: 2.76vw !important;
   font-size: 0.97vw !important;
@@ -1096,7 +1096,7 @@ export default {
   height: 3.65vw !important;
 }
 
-.btn-upload img {
+.btn-upload-custom img {
   width: 20px !important;
 }
 /* inerview */
@@ -1133,7 +1133,7 @@ export default {
 }
 
 /* tab styles */
-.parent-tab {
+.custom-parent-tab {
   overflow: hidden !important;
   border-radius: 26px 26px 0 0 !important;
 }
@@ -1144,18 +1144,18 @@ export default {
   font-weight: 500 !important;
 }
 
-.active-tab {
+.custom-active-tab {
   border-radius: 0px !important;
   background-color: #ffffff !important;
   color: #fc5283 !important;
 }
 
 /* Corners */
-.round-left {
+.custom-round-left {
   border-top-left-radius: 26px;
 }
 
-.round-right {
+.custom-round-right {
   border-top-right-radius: 26px !important;
 }
 .v-slide-group__prev.v-slide-group__prev--disabled {
@@ -1257,20 +1257,17 @@ export default {
 
 /* Achievement */
 /* for google chrome and safari */
-.v-line {
+.custom-vertical-line {
   position: absolute;
-  margin-top: 58px;
+  margin-top: 56px;
   margin-left: 19px;
   height: 110%;
   border: 1px solid #707070;
 }
 @-moz-document url-prefix() {
-  .v-line {
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 19px;
-    height: 112%;
-    border: 1px solid #707070;
+  .custom-vertical-line {
+    margin-top: 115px !important;
+    height: 112% !important;
   }
 }
 
@@ -1285,7 +1282,7 @@ export default {
 
 /* special desktop case */
 @media screen and (min-width: 960px) {
-  .interview-flex {
+  .custom-interview-flex {
     margin-left: 4.06vw !important;
   }
   .certification {
@@ -1298,14 +1295,14 @@ export default {
 /* Tablet */
 @media screen and (min-width: 600px) and (max-width: 959px) {
   /* Profile */
-  .profile-avatar {
+  .custom-profile-avatar {
     width: 18vw !important;
   }
-  .profile-title {
+  .profile-title-custom {
     font-size: 3.5vw !important;
   }
 
-  .profile-subtitle {
+  .profile-subtitle-custom {
     font-size: 1.7vw !important;
   }
 
@@ -1320,18 +1317,18 @@ export default {
     width: 1.67vw !important;
   }
 
-  .social-icon {
+  .social-icon-new {
     width: 3.86vw;
     height: 3.86vw;
   }
   /* Profile */
 
   /* Ineterview  */
-  .interview-flex {
+  .custom-interview-flex {
     margin-top: 45px;
     margin-bottom: -10px;
   }
-  .btn-voice-call {
+  .btn-voice-call-custom {
     font-size: 1.55vw !important;
     text-transform: capitalize !important;
     width: 18vw !important;
@@ -1339,17 +1336,17 @@ export default {
     margin-left: -10px;
   }
 
-  .btn-voice-call img {
+  .btn-voice-call-custom img {
     width: 12px !important;
   }
 
-  .btn-upload {
+  .btn-upload-custom {
     font-size: 1.55vw !important;
     width: 18vw !important;
     height: 5.12vw !important;
   }
 
-  .btn-upload img {
+  .btn-upload-custom img {
     width: 1.93vw !important;
   }
   /* Interview */
@@ -1379,14 +1376,14 @@ export default {
   /* Hire me */
 
   /* tab */
-  .parent-tab {
+  .custom-parent-tab {
     border-radius: 26px 26px 0 0 !important;
   }
   .v-slide-group__prev.v-slide-group__prev--disabled {
     display: none !important;
   }
 
-  .round-right {
+  .custom-round-right {
     border-top-right-radius: 0px;
   }
 
@@ -1440,7 +1437,7 @@ export default {
   /* About Me */
 
   /* vertical line */
-  .v-line {
+  .custom-vertical-line {
     position: absolute;
     margin-top: 56px;
     margin-left: 19px;
@@ -1448,7 +1445,7 @@ export default {
     border: 1px solid #707070;
   }
   @-moz-document url-prefix() {
-    .v-line {
+    .custom-vertical-line {
       position: absolute;
       margin-top: 113px;
       margin-left: 19px;
@@ -1465,17 +1462,17 @@ export default {
 
 @media screen and (max-width: 599px) {
   /*  profile */
-  .profile-avatar {
+  .custom-profile-avatar {
     margin-left: -30px;
     width: 120px !important;
     height: auto !important;
     border-radius: 22px !important;
   }
-  .profile-title {
+  .profile-title-custom {
     font-size: 6vw !important;
   }
 
-  .profile-subtitle {
+  .profile-subtitle-custom {
     font-size: 4vw !important;
     padding: 2px;
     color: #ffffff !important;
@@ -1493,12 +1490,12 @@ export default {
   .chat-btn-img {
     width: 2px !important;
   }
-  .social-sm-icon-btn {
+  .social-sm-icon-new-btn-custom {
     margin-right: 3px !important;
     height: 6vw !important ;
     min-width: 1vw !important;
   }
-  .social-sm-icon {
+  .social-sm-icon-new {
     font-size: 8px !important;
   }
 
@@ -1511,18 +1508,18 @@ export default {
     min-width: 50% !important;
   }
 
-  .phone-icon {
+  .custom-phone-icon {
     font-size: 18px !important;
   }
 
-  .video-btn {
+  .custom-video-btn {
     margin-left: 5vw;
     padding: 0px 4.444px !important;
     max-height: 35px !important;
     min-width: 50% !important;
   }
 
-  .video-btn img {
+  .custom-video-btn img {
     width: 16px !important;
     height: 13px !important;
   }
@@ -1542,7 +1539,7 @@ export default {
     height: auto !important;
   }
 
-  .tab-dot {
+  .custom-tab-dot {
     height: 10px;
     width: 10px;
     margin-right: 3px;
@@ -1552,7 +1549,7 @@ export default {
     box-shadow: 0px 0px 4px gray inset;
   }
 
-  .tab-dot-active {
+  .custom-tab-dot-active {
     margin-right: 3px;
     height: 10px;
     width: 10px;
@@ -1595,7 +1592,7 @@ export default {
 /* mobile devices */
 
 @media screen and (max-width: 320px) {
-  .video-btn {
+  .custom-video-btn {
     margin-left: 6vw;
     padding: 0px 4.444px !important;
     max-height: 35px !important;
